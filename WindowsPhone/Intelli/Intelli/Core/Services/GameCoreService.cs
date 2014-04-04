@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Intelli.Core.EventHandler
+namespace Intelli.Core.Services
 {
-    interface GameService
+    interface GameCoreService
     {
         Event.Game.ValidMovesEvent requestValidMoves(Event.Game.RequestValidMovesEvent e);
     }
