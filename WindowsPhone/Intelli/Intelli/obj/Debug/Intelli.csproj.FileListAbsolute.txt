@@ -1,0 +1,128 @@
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\ApplicationIcon.png
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\Background.png
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\Intelli.dll
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\Intelli.pdb
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\AppManifest.xaml
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\Intelli.xap
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\obj\Debug\Intelli.g.resources
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\obj\Debug\Intelli.dll
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\obj\Debug\Intelli.pdb
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\obj\Debug\XapCacheFile.xml
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\obj\Debug\GUI\App.g.i.cs
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\obj\Debug\GUI\MainPage.g.i.cs
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\obj\Debug\GUI\SquareControl.g.i.cs
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\Microsoft.Advertising.Mobile.dll
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\Microsoft.Advertising.Mobile.UI.dll
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\Microsoft.Phone.Controls.dll
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\Microsoft.Advertising.Mobile.UI.xml
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\Microsoft.Phone.Controls.xml
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\cs-CZ\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\da-DK\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\de-DE\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\el-GR\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\en-GB\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\es-ES\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\fi-FI\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\fr-FR\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\hu-HU\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\it-IT\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\ja-JP\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\ko-KR\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\nb-NO\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\nl-NL\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\pl-PL\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\pt-BR\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\pt-PT\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\ru-RU\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\sv-SE\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\zh-CN\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\documents\visual studio 2010\Projects\Intelli\Intelli\Bin\Debug\zh-TW\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\Documents\Visual Studio 2010\Projects\Intelli\Intelli\obj\Debug\SquareControl2.g.i.cs
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\ApplicationIcon.png
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\Background.png
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\Intelli.dll
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\Intelli.pdb
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\AppManifest.xaml
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\Intelli.xap
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\Microsoft.Advertising.Mobile.dll
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\Microsoft.Advertising.Mobile.UI.dll
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\Microsoft.Phone.Controls.dll
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\Microsoft.Advertising.Mobile.UI.xml
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\Microsoft.Phone.Controls.xml
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\cs-CZ\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\da-DK\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\de-DE\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\el-GR\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\en-GB\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\es-ES\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\fi-FI\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\fr-FR\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\hu-HU\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\it-IT\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\ja-JP\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\ko-KR\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\nb-NO\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\nl-NL\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\pl-PL\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\pt-BR\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\pt-PT\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\ru-RU\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\sv-SE\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\zh-CN\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\Bin\Debug\zh-TW\Microsoft.Advertising.Mobile.resources.dll
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\obj\Debug\GUI\App.g.i.cs
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\obj\Debug\GUI\MainPage.g.i.cs
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\obj\Debug\GUI\SquareControl.g.i.cs
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\obj\Debug\GUI\SquareControl2.g.i.cs
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\obj\Debug\Intelli.g.resources
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\obj\Debug\Intelli.dll
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\obj\Debug\Intelli.pdb
+C:\Users\tieubinhbinh\Desktop\Intelli\Intelli\obj\Debug\XapCacheFile.xml
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\ApplicationIcon.png
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\Background.png
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\Intelli.dll
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\Intelli.pdb
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\Microsoft.Advertising.Mobile.dll
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\Microsoft.Advertising.Mobile.UI.dll
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\Microsoft.Phone.Controls.dll
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\Microsoft.Advertising.Mobile.UI.xml
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\Microsoft.Phone.Controls.xml
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\cs-CZ\Microsoft.Advertising.Mobile.resources.dll
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\da-DK\Microsoft.Advertising.Mobile.resources.dll
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\de-DE\Microsoft.Advertising.Mobile.resources.dll
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\el-GR\Microsoft.Advertising.Mobile.resources.dll
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\en-GB\Microsoft.Advertising.Mobile.resources.dll
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\es-ES\Microsoft.Advertising.Mobile.resources.dll
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\fi-FI\Microsoft.Advertising.Mobile.resources.dll
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\fr-FR\Microsoft.Advertising.Mobile.resources.dll
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\hu-HU\Microsoft.Advertising.Mobile.resources.dll
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\it-IT\Microsoft.Advertising.Mobile.resources.dll
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\ja-JP\Microsoft.Advertising.Mobile.resources.dll
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\ko-KR\Microsoft.Advertising.Mobile.resources.dll
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\nb-NO\Microsoft.Advertising.Mobile.resources.dll
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\nl-NL\Microsoft.Advertising.Mobile.resources.dll
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\pl-PL\Microsoft.Advertising.Mobile.resources.dll
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\pt-BR\Microsoft.Advertising.Mobile.resources.dll
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\pt-PT\Microsoft.Advertising.Mobile.resources.dll
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\ru-RU\Microsoft.Advertising.Mobile.resources.dll
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\sv-SE\Microsoft.Advertising.Mobile.resources.dll
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\zh-CN\Microsoft.Advertising.Mobile.resources.dll
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\zh-TW\Microsoft.Advertising.Mobile.resources.dll
+E:\Games programming\Chinese Chess\Intelli\Intelli\obj\Debug\GUI\App.g.i.cs
+E:\Games programming\Chinese Chess\Intelli\Intelli\obj\Debug\GUI\MainPage.g.i.cs
+E:\Games programming\Chinese Chess\Intelli\Intelli\obj\Debug\GUI\SquareControl.g.i.cs
+E:\Games programming\Chinese Chess\Intelli\Intelli\obj\Debug\GUI\SquareControl2.g.i.cs
+E:\Games programming\Chinese Chess\Intelli\Intelli\obj\Debug\Intelli.g.resources
+E:\Games programming\Chinese Chess\Intelli\Intelli\obj\Debug\Intelli.dll
+E:\Games programming\Chinese Chess\Intelli\Intelli\obj\Debug\Intelli.pdb
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\AppManifest.xaml
+E:\Games programming\Chinese Chess\Intelli\Intelli\Bin\Debug\Intelli.xap
+E:\Games programming\Chinese Chess\Intelli\Intelli\obj\Debug\XapCacheFile.xml
+E:\Games programming\Intelli_30_03_14\Intelli\Intelli\obj\Debug\Intelli.csprojResolveAssemblyReference.cache
+E:\Games programming\Intelli_30_03_14\Intelli\Intelli\obj\Debug\Gui\TMP\App.g.i.cs
+E:\Games programming\Intelli_30_03_14\Intelli\Intelli\obj\Debug\Gui\TMP\MainPage.g.i.cs
+E:\Games programming\Intelli_30_03_14\Intelli\Intelli\obj\Debug\Gui\TMP\SquareControl.g.i.cs
+E:\Games programming\Intelli_30_03_14\Intelli\Intelli\obj\Debug\Gui\TMP\SquareControl2.g.i.cs
+E:\Games programming\Intelli_30_03_14\Intelli\Intelli\obj\Debug\Intelli.g.resources

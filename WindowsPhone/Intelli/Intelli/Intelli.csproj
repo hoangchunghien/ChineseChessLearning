@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7EE4A51C-AA09-48B9-8279-07CDD446478A}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intelli</RootNamespace>
+    <AssemblyName>Intelli</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>Intelli.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>Intelli.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Advertising.Mobile, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.Advertising.Mobile.UI, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e" />
+    <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml" />
+    <Reference Include="mscorlib.extensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config\Core\GameConfig.cs" />
+    <Compile Include="Core\EventHandler\GameService.cs" />
+    <Compile Include="Core\EventHandler\Implements\GameCoreEventHandler.cs" />
+    <Compile Include="Core\Game\GameState.cs" />
+    <Compile Include="Event\Base\CreatedEvent.cs" />
+    <Compile Include="Event\Base\CreateEvent.cs" />
+    <Compile Include="Event\Base\DeletedEvent.cs" />
+    <Compile Include="Event\Base\DeleteEvent.cs" />
+    <Compile Include="Event\Base\ReadEvent.cs" />
+    <Compile Include="Event\Base\RequestReadEvent.cs" />
+    <Compile Include="Event\Base\UpdatedEvent.cs" />
+    <Compile Include="Event\Base\UpdateEvent.cs" />
+    <Compile Include="Event\Game\GameStateDetail.cs" />
+    <Compile Include="Event\Game\PositionDetail.cs" />
+    <Compile Include="Event\Game\RequestValidMovesEvent.cs" />
+    <Compile Include="Event\Game\ValidMovesEvent.cs" />
+    <Compile Include="Gui\Test.cs" />
+    <Compile Include="Gui\TMP\Advisor.cs" />
+    <Compile Include="Gui\TMP\App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\TMP\Board.cs" />
+    <Compile Include="Gui\TMP\Cannon.cs" />
+    <Compile Include="Gui\TMP\Game.cs" />
+    <Compile Include="Gui\TMP\King.cs" />
+    <Compile Include="Gui\TMP\Knight.cs" />
+    <Compile Include="Gui\TMP\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\TMP\Minister.cs" />
+    <Compile Include="Gui\TMP\Pawn.cs" />
+    <Compile Include="Gui\TMP\Pieces.cs" />
+    <Compile Include="Gui\TMP\Player.cs" />
+    <Compile Include="Gui\TMP\Rook.cs" />
+    <Compile Include="Gui\TMP\SquareControl.xaml.cs">
+      <DependentUpon>SquareControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Gui\TMP\SquareControl2.xaml.cs">
+      <DependentUpon>SquareControl2.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="Gui\TMP\App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="Gui\TMP\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gui\TMP\SquareControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gui\TMP\SquareControl2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Gui\TMP\PNG\ba.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Gui\TMP\PNG\bb.png" />
+    <Resource Include="Gui\TMP\PNG\bc.png" />
+    <Resource Include="Gui\TMP\PNG\bk.png" />
+    <Resource Include="Gui\TMP\PNG\bn.png" />
+    <Resource Include="Gui\TMP\PNG\board.png" />
+    <Resource Include="Gui\TMP\PNG\bp.png" />
+    <Resource Include="Gui\TMP\PNG\br.png" />
+    <Resource Include="Gui\TMP\PNG\mask.png" />
+    <Resource Include="Gui\TMP\PNG\off.png" />
+    <Resource Include="Gui\TMP\PNG\on.png" />
+    <Resource Include="Gui\TMP\PNG\ra.png" />
+    <Resource Include="Gui\TMP\PNG\rb.png" />
+    <Resource Include="Gui\TMP\PNG\rc.png" />
+    <Resource Include="Gui\TMP\PNG\rk.png" />
+    <Resource Include="Gui\TMP\PNG\rn.png" />
+    <Resource Include="Gui\TMP\PNG\rp.png" />
+    <Resource Include="Gui\TMP\PNG\rr.png" />
+    <Resource Include="Gui\TMP\PNG\xy1.png" />
+    <Resource Include="Gui\TMP\PNG\xy2.png" />
+    <Content Include="SplashScreenImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Config\Gui\" />
+    <Folder Include="Config\Sound\" />
+    <Folder Include="Config\Timer\" />
+    <Folder Include="Core\Course\" />
+    <Folder Include="Core\Engine\" />
+    <Folder Include="Gui\TMP\Controls\" />
+    <Folder Include="Gui\TMP\Log\" />
+    <Folder Include="Gui\TMP\NewFolder1\" />
+    <Folder Include="Notification\" />
+    <Folder Include="Persistence\" />
+    <Folder Include="Sound\" />
+    <Folder Include="Timer\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>
