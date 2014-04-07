@@ -409,6 +409,163 @@ namespace Testing
         }
 
 
+        [Test]
+        public void testAdvisor_0()
+        {
+            char[,] testCase = {
+                {'r','k','m',' ',' ',' ',' ','C','P'},
+                {' ',' ',' ','c','g',' ',' ',' ',' '},
+                {' ',' ',' ','a','m',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ','R','G',' ',' ',' ',' '},
+                {' ',' ',' ','A','K','A',' ','c','p'}
+            };
+
+            Board board = new Board();
+            board.deserialize(testCase);
+            Piece rAdvisor = board.getPieces()[9, 3];
+            Piece bAdvisor = board.getPieces()[2, 3];
+            Assert.AreEqual(0, rAdvisor.getValidNextPositions().Count);
+            Assert.AreEqual(0, bAdvisor.getValidNextPositions().Count);
+
+        }
+
+        [Test]
+        public void testAdvisor_1()
+        {
+            char[,] testCase = {
+                {'r','k','m',' ',' ',' ',' ','C','P'},
+                {' ',' ',' ','c',' ',' ',' ',' ',' '},
+                {' ',' ',' ','a','m',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ','R','r',' ',' ',' ',' '},
+                {' ',' ',' ','A','K','A',' ','c','p'}
+            };
+
+            Board board = new Board();
+            board.deserialize(testCase);
+            Piece rAdvisor = board.getPieces()[9, 3];
+            Piece bAdvisor = board.getPieces()[2, 3];
+            Assert.AreEqual(1, rAdvisor.getValidNextPositions().Count);
+            Assert.AreEqual(1, bAdvisor.getValidNextPositions().Count);
+
+            Assert.True(rAdvisor.getValidNextPositions().Contains(new Position(8, 4)));
+
+            Assert.True(bAdvisor.getValidNextPositions().Contains(new Position(1, 4)));
+
+        }
+
+        [Test]
+        public void testAdvisor_2()
+        {
+            char[,] testCase = {
+                {'r','k','m',' ',' ',' ',' ','C','P'},
+                {' ',' ',' ','c','a',' ',' ',' ',' '},
+                {' ',' ',' ','g','m','c',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ','K',' ',' ',' '},
+                {' ',' ',' ','R','A',' ',' ',' ',' '},
+                {' ',' ',' ',' ','K','G',' ','c','p'}
+            };
+
+            Board board = new Board();
+            board.deserialize(testCase);
+            Piece rAdvisor = board.getPieces()[8, 4];
+            Piece bAdvisor = board.getPieces()[1, 4];
+            Assert.AreEqual(2, rAdvisor.getValidNextPositions().Count);
+            Assert.AreEqual(2, bAdvisor.getValidNextPositions().Count);
+
+            Assert.True(rAdvisor.getValidNextPositions().Contains(new Position(9, 3)));
+            Assert.True(rAdvisor.getValidNextPositions().Contains(new Position(7, 3)));
+
+            Assert.True(bAdvisor.getValidNextPositions().Contains(new Position(0, 3)));
+            Assert.True(bAdvisor.getValidNextPositions().Contains(new Position(0, 5)));
+
+        }
+
+        [Test]
+        public void testAdvisor_3()
+        {
+            char[,] testCase = {
+                {'r','k','m',' ',' ',' ',' ','C','P'},
+                {' ',' ',' ','c','a',' ',' ',' ',' '},
+                {' ',' ',' ','g','m',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ','K',' ',' ',' '},
+                {' ',' ',' ','R','A',' ',' ',' ',' '},
+                {' ',' ',' ',' ','K',' ',' ','c','p'}
+            };
+
+            Board board = new Board();
+            board.deserialize(testCase);
+            Piece rAdvisor = board.getPieces()[8, 4];
+            Piece bAdvisor = board.getPieces()[1, 4];
+            Assert.AreEqual(3, rAdvisor.getValidNextPositions().Count);
+            Assert.AreEqual(3, bAdvisor.getValidNextPositions().Count);
+
+            Assert.True(rAdvisor.getValidNextPositions().Contains(new Position(9, 3)));
+            Assert.True(rAdvisor.getValidNextPositions().Contains(new Position(7, 3)));
+            Assert.True(rAdvisor.getValidNextPositions().Contains(new Position(9, 5)));
+
+            Assert.True(bAdvisor.getValidNextPositions().Contains(new Position(0, 3)));
+            Assert.True(bAdvisor.getValidNextPositions().Contains(new Position(0, 5)));
+            Assert.True(bAdvisor.getValidNextPositions().Contains(new Position(2, 5)));
+
+        }
+
+        [Test]
+        public void testAdvisor_4()
+        {
+            char[,] testCase = {
+                {'r','k','m',' ',' ',' ',' ','C','P'},
+                {' ',' ',' ','c','a',' ',' ',' ',' '},
+                {' ',' ',' ',' ','m',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ','R','A',' ',' ',' ',' '},
+                {' ',' ',' ',' ','K',' ',' ','c','p'}
+            };
+
+            Board board = new Board();
+            board.deserialize(testCase);
+            Piece rAdvisor = board.getPieces()[8, 4];
+            Piece bAdvisor = board.getPieces()[1, 4];
+            Assert.AreEqual(4, rAdvisor.getValidNextPositions().Count);
+            Assert.AreEqual(4, bAdvisor.getValidNextPositions().Count);
+
+            Assert.True(rAdvisor.getValidNextPositions().Contains(new Position(9, 3)));
+            Assert.True(rAdvisor.getValidNextPositions().Contains(new Position(7, 3)));
+            Assert.True(rAdvisor.getValidNextPositions().Contains(new Position(9, 5)));
+            Assert.True(rAdvisor.getValidNextPositions().Contains(new Position(7, 5)));
+
+            Assert.True(bAdvisor.getValidNextPositions().Contains(new Position(0, 3)));
+            Assert.True(bAdvisor.getValidNextPositions().Contains(new Position(0, 5)));
+            Assert.True(bAdvisor.getValidNextPositions().Contains(new Position(2, 5)));
+            Assert.True(bAdvisor.getValidNextPositions().Contains(new Position(2, 3)));
+
+        }
     }
 
 }
