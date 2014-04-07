@@ -8,10 +8,9 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Intelli.Resources;
-using Intelli.GUI;
 using System.Windows.Input;
 
-namespace Intelli
+namespace Intelli.GUI
 {
     public partial class MainPage : PhoneApplicationPage
     {

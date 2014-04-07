@@ -1,5 +1,5 @@
 ﻿<phone:PhoneApplicationPage
-    x:Class="Intelli.MainPage"
+    x:Class="Intelli.GUI.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
@@ -40,7 +40,7 @@
         <!--ContentPanel - place additional content here-->
         <Grid Name="GrdSpace" Grid.Row="2" Grid.ColumnSpan="4"></Grid>
         <Grid Name="ContentBoard" Grid.Row="3" Grid.ColumnSpan="4">
-            <Image Name="ImgBoard" Margin="0,0,0,0" Source="/Intelli;component/GUI/PNG/board.png" HorizontalAlignment="Left"  VerticalAlignment="Top" />
+            <Image Name="ImgBoard" Margin="0,0,0,0" Source="/Intelli;component/GUI/TMP/PNG/board.png" HorizontalAlignment="Left"  VerticalAlignment="Top" />
         </Grid>
         <TextBlock Name="txtResult" Margin="10" Text="" Grid.Row="4" Grid.Column="0"></TextBlock>
     </Grid>

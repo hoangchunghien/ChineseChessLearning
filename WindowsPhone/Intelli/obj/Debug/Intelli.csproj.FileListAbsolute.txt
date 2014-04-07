@@ -22,3 +22,27 @@ C:\Users\Hien\Documents\Visual Studio 2013\Projects\Intelli\Intelli\obj\Debug\Gu
 C:\Users\Hien\Documents\Visual Studio 2013\Projects\Intelli\Intelli\Bin\Debug\nunit.framework.dll
 C:\Users\Hien\Documents\Visual Studio 2013\Projects\Intelli\Intelli\Bin\Debug\nunit.framework.xml
 C:\Users\Hien\Documents\Visual Studio 2013\Projects\Intelli\Intelli\obj\Debug\Intelli.csprojResolveAssemblyReference.cache
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\Bin\Debug\Assets\ApplicationIcon.png
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\Bin\Debug\Assets\Tiles\IconicTileSmall.png
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\Bin\Debug\Intelli.dll
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\Bin\Debug\Intelli.pdb
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\Bin\Debug\AppManifest.xaml
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\Bin\Debug\Properties\WMAppManifest.xml
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\Bin\Debug\Intelli_Debug_AnyCPU.xap
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\Bin\Debug\nunit.framework.dll
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\Bin\Debug\nunit.framework.xml
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\obj\Debug\Intelli.csprojResolveAssemblyReference.cache
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\obj\Debug\Gui\TMP\App.g.cs
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\obj\Debug\Gui\TMP\SquareControl.g.cs
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\obj\Debug\Gui\TMP\SquareControl2.g.cs
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\obj\Debug\Gui\TMP\MainPage.g.cs
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\obj\Debug\Intelli.g.resources
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\obj\Debug\Intelli.Resources.AppResources.resources
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\obj\Debug\Intelli.csproj.GenerateResource.Cache
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\obj\Debug\Intelli.dll
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\obj\Debug\Intelli.pdb
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\obj\Debug\XapCacheFile.xml

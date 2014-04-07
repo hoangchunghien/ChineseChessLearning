@@ -23,7 +23,7 @@ namespace Intelli.GUI
             InitializeComponent();
 
             // Show the position that piece can move into
-            imgMask.Source = new BitmapImage(new Uri("/Intelli;component/GUI/PNG/mask.png", UriKind.Relative));
+            imgMask.Source = new BitmapImage(new Uri("/Intelli;component/GUI/TMP/PNG/mask.png", UriKind.Relative));
             
 
             this.MouseEnter += new MouseEventHandler(SquareControl2_MouseEnter);

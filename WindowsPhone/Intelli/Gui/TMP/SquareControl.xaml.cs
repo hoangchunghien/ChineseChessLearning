@@ -28,38 +28,38 @@ namespace Intelli.GUI
             if (color == 1)
             {
                 if (name == "king")
-                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/PNG/rk.png", UriKind.Relative));
+                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/TMP/PNG/rk.png", UriKind.Relative));
                 if (name == "advisor")
-                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/PNG/ra.png", UriKind.Relative));
+                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/TMP/PNG/ra.png", UriKind.Relative));
                 if (name == "minister")
-                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/PNG/rb.png", UriKind.Relative));
+                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/TMP/PNG/rb.png", UriKind.Relative));
                 if (name == "rook")
-                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/PNG/rr.png", UriKind.Relative));
+                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/TMP/PNG/rr.png", UriKind.Relative));
                 if (name == "cannon")
-                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/PNG/rc.png", UriKind.Relative));
+                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/TMP/PNG/rc.png", UriKind.Relative));
                 if (name == "knight")
-                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/PNG/rn.png", UriKind.Relative));
+                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/TMP/PNG/rn.png", UriKind.Relative));
                 if (name == "pawn")
-                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/PNG/rp.png", UriKind.Relative));
+                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/TMP/PNG/rp.png", UriKind.Relative));
             }
 
             // Black pieces
             if (color == -1)
             {
                 if (name == "king")
-                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/PNG/bk.png", UriKind.Relative));
+                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/TMP/PNG/bk.png", UriKind.Relative));
                 if (name == "advisor")
-                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/PNG/ba.png", UriKind.Relative));
+                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/TMP/PNG/ba.png", UriKind.Relative));
                 if (name == "minister")
-                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/PNG/bb.png", UriKind.Relative));
+                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/TMP/PNG/bb.png", UriKind.Relative));
                 if (name == "rook")
-                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/PNG/br.png", UriKind.Relative));
+                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/TMP/PNG/br.png", UriKind.Relative));
                 if (name == "cannon")
-                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/PNG/bc.png", UriKind.Relative));
+                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/TMP/PNG/bc.png", UriKind.Relative));
                 if (name == "knight")
-                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/PNG/bn.png", UriKind.Relative));
+                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/TMP/PNG/bn.png", UriKind.Relative));
                 if (name == "pawn")
-                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/PNG/bp.png", UriKind.Relative));
+                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/TMP/PNG/bp.png", UriKind.Relative));
             }
         }
 
@@ -79,42 +79,42 @@ namespace Intelli.GUI
             if (piece.Color == 1)
             {
                 if (piece.PieceName == "king")
-                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/PNG/rk.png", UriKind.Relative));
+                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/TMP/PNG/rk.png", UriKind.Relative));
                 if (piece.PieceName == "advisor")
-                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/PNG/ra.png", UriKind.Relative));
+                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/TMP/PNG/ra.png", UriKind.Relative));
                 if (piece.PieceName == "minister")
-                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/PNG/rb.png", UriKind.Relative));
+                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/TMP/PNG/rb.png", UriKind.Relative));
                 if (piece.PieceName == "rook")
-                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/PNG/rr.png", UriKind.Relative));
+                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/TMP/PNG/rr.png", UriKind.Relative));
                 if (piece.PieceName == "cannon")
-                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/PNG/rc.png", UriKind.Relative));
+                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/TMP/PNG/rc.png", UriKind.Relative));
                 if (piece.PieceName == "knight")
-                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/PNG/rn.png", UriKind.Relative));
+                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/TMP/PNG/rn.png", UriKind.Relative));
                 if (piece.PieceName == "pawn")
-                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/PNG/rp.png", UriKind.Relative));
+                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/TMP/PNG/rp.png", UriKind.Relative));
             }
             
             // Black pieces
             if (piece.Color == -1)
             {
                 if (piece.PieceName == "king")
-                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/PNG/bk.png", UriKind.Relative));
+                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/TMP/PNG/bk.png", UriKind.Relative));
                 if (piece.PieceName == "advisor")
-                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/PNG/ba.png", UriKind.Relative));
+                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/TMP/PNG/ba.png", UriKind.Relative));
                 if (piece.PieceName == "minister")
-                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/PNG/bb.png", UriKind.Relative));
+                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/TMP/PNG/bb.png", UriKind.Relative));
                 if (piece.PieceName == "rook")
-                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/PNG/br.png", UriKind.Relative));
+                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/TMP/PNG/br.png", UriKind.Relative));
                 if (piece.PieceName == "cannon")
-                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/PNG/bc.png", UriKind.Relative));
+                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/TMP/PNG/bc.png", UriKind.Relative));
                 if (piece.PieceName == "knight")
-                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/PNG/bn.png", UriKind.Relative));
+                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/TMP/PNG/bn.png", UriKind.Relative));
                 if (piece.PieceName == "pawn")
-                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/PNG/bp.png", UriKind.Relative));
+                    imgPiece.Source = new BitmapImage(new Uri("/Intelli;component/GUI/TMP/PNG/bp.png", UriKind.Relative));
             }
 
             // The mask hint for the piece
-            //mask.Source = new BitmapImage(new Uri("/Intelli;component/GUI/PNG/mask.png"));
+            //mask.Source = new BitmapImage(new Uri("/Intelli;component/GUI/TMP/PNG/mask.png"));
             MouseLeftButtonDown += new MouseButtonEventHandler(SquareControl_MouseLeftButtonDown);
             MouseLeave += new MouseEventHandler(SquareControl_MouseLeave);
             MouseEnter += new MouseEventHandler(SquareControl_MouseEnter);
@@ -127,7 +127,7 @@ namespace Intelli.GUI
             {
                 if (!this.Piece.IsLock)
                 {
-                    //imgMask.Source = new BitmapImage(new Uri("/Intelli;component/GUI/PNG/mask.png", UriKind.Relative));
+                    //imgMask.Source = new BitmapImage(new Uri("/Intelli;component/GUI/TMP/PNG/mask.png", UriKind.Relative));
                     Game.Marked = true;
                     Game.PieceMarked = new Pieces();
                     Game.PieceMarked = this.Piece;

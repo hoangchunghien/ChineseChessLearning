@@ -8,7 +8,7 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Intelli.Resources;
 
-namespace Intelli
+namespace Intelli.GUI
 {
     public partial class App : Application
     {
