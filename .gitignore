@@ -1,0 +1,5 @@
+*/Bin/
+*/Debug/
+*.suo
+*.~vsdx
+*.exe
