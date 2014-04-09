@@ -566,6 +566,269 @@ namespace Testing
             Assert.True(bAdvisor.getValidNextPositions().Contains(new Position(2, 3)));
 
         }
+
+        [Test]
+        public void testMinister_0()
+        {
+            char[,] testCase = {
+                {' ','k',' ','a','g','a',' ','k',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {'m',' ',' ',' ','m',' ',' ',' ','m'},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {'M',' ',' ',' ','M',' ',' ',' ','M'},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ','K',' ','A','G','A',' ','K',' '}
+            };
+
+            Board board = new Board();
+            board.deserialize(testCase);
+
+            // 20, 70
+            Piece rMinister = board.getPieces()[7, 0];
+            Piece bMinister = board.getPieces()[2, 0];
+            Piece rMinister1 = board.getPieces()[7, 8];
+            Piece bMinister1 = board.getPieces()[2, 8];
+            Assert.AreEqual(2, rMinister.getValidNextPositions().Count);
+            Assert.AreEqual(2, bMinister.getValidNextPositions().Count);
+            Assert.AreEqual(2, rMinister1.getValidNextPositions().Count);
+            Assert.AreEqual(2, bMinister1.getValidNextPositions().Count);
+
+            // 24, 74
+            rMinister = board.getPieces()[7, 4];
+            bMinister = board.getPieces()[2, 4];
+            Assert.AreEqual(4, rMinister.getValidNextPositions().Count);
+            Assert.AreEqual(4, bMinister.getValidNextPositions().Count);
+        }
+
+        [Test]
+        public void testMinister_1()
+        {
+            char[,] testCase = {
+                {' ','k','R','a','g','a','R','k',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {'m',' ',' ',' ','m',' ',' ',' ','m'},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ','R',' ',' ',' ','R',' ',' '},
+
+                {' ',' ','r',' ',' ',' ','r',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {'M',' ',' ',' ','M',' ',' ',' ','M'},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ','K','r','A','G','A','r','K',' '}
+            };
+
+            Board board = new Board();
+            board.deserialize(testCase);
+
+            // 20, 70
+            Piece rMinister = board.getPieces()[7, 0];
+            Piece bMinister = board.getPieces()[2, 0];
+            Piece rMinister1 = board.getPieces()[7, 8];
+            Piece bMinister1 = board.getPieces()[2, 8];
+            Assert.AreEqual(2, rMinister.getValidNextPositions().Count);
+            Assert.AreEqual(2, bMinister.getValidNextPositions().Count);
+            Assert.AreEqual(2, rMinister1.getValidNextPositions().Count);
+            Assert.AreEqual(2, bMinister1.getValidNextPositions().Count);
+
+            // 24, 74
+            rMinister = board.getPieces()[7, 4];
+            bMinister = board.getPieces()[2, 4];
+            Assert.AreEqual(4, rMinister.getValidNextPositions().Count);
+            Assert.AreEqual(4, bMinister.getValidNextPositions().Count);
+        }
+
+        [Test]
+        public void testMinister_2()
+        {
+            char[,] testCase = {
+                {' ','k','r','a','g','a','r','k',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {'m',' ',' ',' ','m',' ',' ',' ','m'},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ','r',' ',' ',' ','r',' ',' '},
+
+                {' ',' ','R',' ',' ',' ','R',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {'M',' ',' ',' ','M',' ',' ',' ','M'},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ','K','R','A','G','A','R','K',' '}
+            };
+
+            Board board = new Board();
+            board.deserialize(testCase);
+
+            // 20, 70
+            Piece rMinister = board.getPieces()[7, 0];
+            Piece bMinister = board.getPieces()[2, 0];
+            Piece rMinister1 = board.getPieces()[7, 8];
+            Piece bMinister1 = board.getPieces()[2, 8];
+            Assert.AreEqual(0, rMinister.getValidNextPositions().Count);
+            Assert.AreEqual(0, bMinister.getValidNextPositions().Count);
+            Assert.AreEqual(0, rMinister1.getValidNextPositions().Count);
+            Assert.AreEqual(0, bMinister1.getValidNextPositions().Count);
+
+            // 24, 74
+            rMinister = board.getPieces()[7, 4];
+            bMinister = board.getPieces()[2, 4];
+            Assert.AreEqual(0, rMinister.getValidNextPositions().Count);
+            Assert.AreEqual(0, bMinister.getValidNextPositions().Count);
+        }
+
+        [Test]
+        public void testMinister_3()
+        {
+            char[,] testCase = {
+                {' ','k',' ','a','g','a',' ','k',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {'m',' ',' ',' ','m',' ',' ',' ','m'},
+                {' ','r',' ','r',' ','r',' ','r',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ','r',' ','r',' ','r',' ','r',' '},
+                {'M',' ',' ',' ','M',' ',' ',' ','M'},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ','K',' ','A','G','A',' ','K',' '}
+            };
+
+            Board board = new Board();
+            board.deserialize(testCase);
+
+            // 20, 70
+            Piece rMinister = board.getPieces()[7, 0];
+            Piece bMinister = board.getPieces()[2, 0];
+            Piece rMinister1 = board.getPieces()[7, 8];
+            Piece bMinister1 = board.getPieces()[2, 8];
+            Assert.AreEqual(1, rMinister.getValidNextPositions().Count);
+            Assert.AreEqual(1, bMinister.getValidNextPositions().Count);
+            Assert.AreEqual(1, rMinister1.getValidNextPositions().Count);
+            Assert.AreEqual(1, bMinister1.getValidNextPositions().Count);
+
+            // 24, 74
+            rMinister = board.getPieces()[7, 4];
+            bMinister = board.getPieces()[2, 4];
+            Assert.AreEqual(2, rMinister.getValidNextPositions().Count);
+            Assert.AreEqual(2, bMinister.getValidNextPositions().Count);
+        }
+
+        [Test]
+        public void testMinister_4()
+        {
+            char[,] testCase = {
+                {' ','k',' ','a','g','a',' ','k',' '},
+                {' ','r',' ','r',' ','r',' ','r',' '},
+                {'m',' ',' ',' ','m',' ',' ',' ','m'},
+                {' ','r',' ','r',' ','r',' ','r',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ','r',' ','r',' ','r',' ','r',' '},
+                {'M',' ',' ',' ','M',' ',' ',' ','M'},
+                {' ','r',' ','r',' ','r',' ','r',' '},
+                {' ','K',' ','A','G','A',' ','K',' '}
+            };
+
+            Board board = new Board();
+            board.deserialize(testCase);
+
+            // 20, 70
+            Piece rMinister = board.getPieces()[7, 0];
+            Piece bMinister = board.getPieces()[2, 0];
+            Piece rMinister1 = board.getPieces()[7, 8];
+            Piece bMinister1 = board.getPieces()[2, 8];
+            Assert.AreEqual(0, rMinister.getValidNextPositions().Count);
+            Assert.AreEqual(0, bMinister.getValidNextPositions().Count);
+            Assert.AreEqual(0, rMinister1.getValidNextPositions().Count);
+            Assert.AreEqual(0, bMinister1.getValidNextPositions().Count);
+
+            // 24, 74
+            rMinister = board.getPieces()[7, 4];
+            bMinister = board.getPieces()[2, 4];
+            Assert.AreEqual(0, rMinister.getValidNextPositions().Count);
+            Assert.AreEqual(0, bMinister.getValidNextPositions().Count);
+        }
+
+        [Test]
+        public void testMinister_5()
+        {
+            char[,] testCase = {
+                {' ','k','m','a','g','a','m','k',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {'m',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ','m',' ',' ',' ','m',' ',' '},
+
+                {' ',' ','M',' ',' ',' ','M',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {'M',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ','K','M','A','G','A','M','K',' '}
+            };
+
+            Board board = new Board();
+            board.deserialize(testCase);
+
+            // 42, 52
+            Piece rMinister = board.getPieces()[5, 2];
+            Piece bMinister = board.getPieces()[4, 2];
+            Piece rMinister1 = board.getPieces()[5, 6];
+            Piece bMinister1 = board.getPieces()[4, 6];
+            Assert.AreEqual(1, rMinister.getValidNextPositions().Count);
+            Assert.AreEqual(1, bMinister.getValidNextPositions().Count);
+            Assert.AreEqual(2, rMinister1.getValidNextPositions().Count);
+            Assert.AreEqual(2, bMinister1.getValidNextPositions().Count);
+
+            // 02, 06, 92, 96
+            rMinister = board.getPieces()[9, 2];
+            bMinister = board.getPieces()[0, 2];
+            rMinister1 = board.getPieces()[9, 6];
+            bMinister1 = board.getPieces()[0, 6];
+            Assert.AreEqual(1, rMinister.getValidNextPositions().Count);
+            Assert.AreEqual(1, bMinister.getValidNextPositions().Count);
+            Assert.AreEqual(2, rMinister1.getValidNextPositions().Count);
+            Assert.AreEqual(2, bMinister1.getValidNextPositions().Count);
+        }
+
+        [Test]
+        public void testRook_0()
+        {
+            char[,] testCase = {
+                {'r','k','m','a','g','a','m','k','r'},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {'r',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ','m',' ','R',' ','m',' ',' '},
+
+                {' ',' ','M',' ',' ',' ','M',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {'R','k','M','A','G','A','M','k','R'}
+            };
+
+            Board board = new Board();
+            board.deserialize(testCase);
+
+            // 42, 52
+            Piece rRook = board.getPieces()[4, 4];
+            Piece bRook = board.getPieces()[2, 0];
+            Assert.AreEqual(12, rRook.getValidNextPositions().Count);
+            Assert.AreEqual(16, bRook.getValidNextPositions().Count);
+
+            Piece bRook1 = board.getPieces()[0, 0];
+            Piece bRook2 = board.getPieces()[0, 8];
+            Piece rRook1 = board.getPieces()[9, 0];
+            Piece rRook2 = board.getPieces()[9, 8];
+            Assert.AreEqual(1, bRook1.getValidNextPositions().Count);
+            Assert.AreEqual(9, bRook2.getValidNextPositions().Count);
+            Assert.AreEqual(8, rRook1.getValidNextPositions().Count);
+            Assert.AreEqual(10, rRook2.getValidNextPositions().Count);
+
+        }
     }
 
 }
