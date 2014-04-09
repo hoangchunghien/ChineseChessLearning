@@ -16,5 +16,18 @@ namespace Intelli.Core.Game.Board.Pieces
         {
             throw new NotImplementedException();
         }
+
+        private List<Position> _getValidNextPositions()
+        {
+            int row = this.getCurrentPosition().getRow();
+            int col = this.getCurrentPosition().getCol();
+
+            List<Position> validPositions = new List<Position>();
+
+            // 
+            
+
+            return validPositions;
+        }
     }
 }
