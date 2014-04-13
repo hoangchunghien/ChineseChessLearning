@@ -1,4 +1,8 @@
-﻿using System;
+﻿using Intelli.Core.Game.Board.Events;
+using Intelli.Core.Game.Board.Notifies;
+using Intelli.Core.Game.Board.Pieces;
+using NLog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,26 +11,63 @@ namespace Intelli.Core.Game.Board
 {
     public class BoardMovingState : IState
     {
+        public static readonly String NAME = "Board_MovingState";
+        private static Logger LOG = LogManager.GetCurrentClassLogger();
 
-        public BoardMovingState(BoardStateMachine board)
+        private Dictionary<String, IState> transitionableStates = new Dictionary<string, IState>();
+        private BoardStateMachine boardMachine;
+
+        public BoardMovingState(BoardStateMachine boardMachine)
         {
-
+            this.boardMachine = boardMachine;
         }
 
         public string getName()
         {
-            throw new NotImplementedException();
+            return NAME;
         }
 
-        public void run()
+        public void run(IEvent e)
         {
-            throw new NotImplementedException();
+            MovingNotify notify = new MovingNotify();
+            this.boardMachine.fireStateChangedNotification(notify);
+
+            LOG.Info(NAME);
+            if (e.GetType().Equals(typeof(MoveEvent)))
+            {
+                bool accepted = false;
+                Position cPos = ((MoveEvent)e).getCurrentPosition();
+                Position nPos = ((MoveEvent)e).getNextPosition();
+                Piece p = this.boardMachine.getBoard().getPieces()[cPos.getRow(), cPos.getCol()];
+                if (p != null && p.getValidNextPositions().Contains(nPos))
+                {
+                    accepted = true;
+                }
+
+                if (accepted)
+                {
+                    LOG.Info("Old: \n" + this.boardMachine.getBoard().ToString());
+                    this.boardMachine.getBoard().getPieces()[cPos.getRow(), cPos.getCol()] = null;
+                    this.boardMachine.getBoard().getPieces()[nPos.getRow(), nPos.getCol()] = p;
+                    LOG.Info("New: \n" + this.boardMachine.getBoard().ToString());
+                    this.boardMachine.consumeEvent(new MovedEvent());
+                }
+                else
+                {
+                    this.boardMachine.consumeEvent(new RejectEvent());
+                    LOG.Info("Rejected move from: " + cPos.ToString() + " to: " + nPos.ToString());
+                }
+            }
+            else
+            {
+                LOG.Error("Receive unexpected event, name: " + e.getName());
+            }
         }
 
 
         public Dictionary<string, IState> getTransitionableState()
         {
-            throw new NotImplementedException();
+            return this.transitionableStates;
         }
     }
 }

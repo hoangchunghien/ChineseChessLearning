@@ -1,0 +1,101 @@
+2014-04-13 13:07:58.6787 Intelli.Core.Game.Board.BoardInitializingState.run INFO Initializing
+2014-04-13 13:07:58.6987 Intelli.Core.Game.Board.BoardReadyState.run INFO Ready
+2014-04-13 13:07:58.7127 Intelli.Core.Game.Board.BoardMovingState.run INFO Board_MovingState
+2014-04-13 13:07:58.7127 Intelli.Core.Game.Board.BoardMovingState.run INFO Old: 
+[
+[r k m a g a m k r ]
+[                  ]
+[  c           c   ]
+[p   p   p   p   p ]
+[                  ]
+[                  ]
+[P   P   P   P   P ]
+[  C           C   ]
+[                  ]
+[R K M A G A M K R ]
+
+]
+2014-04-13 13:07:58.7127 Intelli.Core.Game.Board.BoardMovingState.run INFO New: 
+[
+[  k m a g a m k r ]
+[r                 ]
+[  c           c   ]
+[p   p   p   p   p ]
+[                  ]
+[                  ]
+[P   P   P   P   P ]
+[  C           C   ]
+[                  ]
+[R K M A G A M K R ]
+
+]
+2014-04-13 13:07:58.7257 Intelli.Core.Game.Board.BoardMovedState.run INFO BoardMovedState
+2014-04-13 13:07:58.7257 Intelli.Core.Game.Board.BoardReadyState.run INFO Ready
+2014-04-13 13:52:55.5829 Intelli.Core.Game.Board.BoardStateMachine.fireStateChangedNotification INFO State changed: initializing
+2014-04-13 13:52:55.6059 Intelli.Core.Game.Board.BoardInitializingState.run INFO Initializing
+2014-04-13 13:52:55.6179 Intelli.Core.Game.Board.BoardReadyState.run INFO Ready
+2014-04-13 13:52:55.6179 Intelli.Core.Game.Board.BoardStateMachine.fireStateChangedNotification INFO State changed: moving
+2014-04-13 13:52:55.6179 Intelli.Core.Game.Board.BoardMovingState.run INFO Board_MovingState
+2014-04-13 13:52:55.6339 Intelli.Core.Game.Board.BoardMovingState.run INFO Old: 
+[
+[r k m a g a m k r ]
+[                  ]
+[  c           c   ]
+[p   p   p   p   p ]
+[                  ]
+[                  ]
+[P   P   P   P   P ]
+[  C           C   ]
+[                  ]
+[R K M A G A M K R ]
+]
+2014-04-13 13:52:55.6339 Intelli.Core.Game.Board.BoardMovingState.run INFO New: 
+[
+[  k m a g a m k r ]
+[r                 ]
+[  c           c   ]
+[p   p   p   p   p ]
+[                  ]
+[                  ]
+[P   P   P   P   P ]
+[  C           C   ]
+[                  ]
+[R K M A G A M K R ]
+]
+2014-04-13 13:52:55.6339 Intelli.Core.Game.Board.BoardStateMachine.fireStateChangedNotification INFO State changed: ready
+2014-04-13 13:52:55.6500 Intelli.Core.Game.Board.BoardMovedState.run INFO BoardMovedState
+2014-04-13 13:52:55.6500 Intelli.Core.Game.Board.BoardReadyState.run INFO Ready
+2014-04-13 13:54:52.9370 Intelli.Core.Game.Board.BoardStateMachine.fireStateChangedNotification INFO State changed: initializing
+2014-04-13 13:54:52.9500 Intelli.Core.Game.Board.BoardInitializingState.run INFO Initializing
+2014-04-13 13:54:52.9620 Intelli.Core.Game.Board.BoardReadyState.run INFO Ready
+2014-04-13 13:54:52.9770 Intelli.Core.Game.Board.BoardStateMachine.fireStateChangedNotification INFO State changed: moving
+2014-04-13 13:54:52.9770 Intelli.Core.Game.Board.BoardMovingState.run INFO Board_MovingState
+2014-04-13 13:54:52.9910 Intelli.Core.Game.Board.BoardMovingState.run INFO Old: 
+[
+[r k m a g a m k r ]
+[                  ]
+[  c           c   ]
+[p   p   p   p   p ]
+[                  ]
+[                  ]
+[P   P   P   P   P ]
+[  C           C   ]
+[                  ]
+[R K M A G A M K R ]
+]
+2014-04-13 13:54:52.9910 Intelli.Core.Game.Board.BoardMovingState.run INFO New: 
+[
+[  k m a g a m k r ]
+[r                 ]
+[  c           c   ]
+[p   p   p   p   p ]
+[                  ]
+[                  ]
+[P   P   P   P   P ]
+[  C           C   ]
+[                  ]
+[R K M A G A M K R ]
+]
+2014-04-13 13:54:52.9910 Intelli.Core.Game.Board.BoardStateMachine.fireStateChangedNotification INFO State changed: ready
+2014-04-13 13:54:52.9910 Intelli.Core.Game.Board.BoardMovedState.run INFO BoardMovedState
+2014-04-13 13:54:53.0100 Intelli.Core.Game.Board.BoardReadyState.run INFO Ready

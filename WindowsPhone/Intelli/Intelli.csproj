@@ -90,6 +90,75 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Core\Game\Board\Events\InitializedEvent.cs" />
+    <Compile Include="Core\Game\Board\Events\MovedEvent.cs" />
+    <Compile Include="Core\Game\Board\Events\MoveEvent.cs" />
+    <Compile Include="Core\Game\Board\Events\ReadyEvent.cs" />
+    <Compile Include="Core\Game\Board\Events\RejectEvent.cs" />
+    <Compile Include="Core\Game\Board\Notifies\InitializingNotify.cs" />
+    <Compile Include="Core\Game\Board\Notifies\MovedNotify.cs" />
+    <Compile Include="Core\Game\Board\Notifies\MovingNotify.cs" />
+    <Compile Include="Core\Game\Board\Notifies\ReadyNotify.cs" />
+    <Compile Include="Core\Game\Board\Notifies\RejectedNotify.cs" />
+    <Compile Include="Core\Game\Events\GameEndEvent.cs" />
+    <Compile Include="Core\Game\Events\GameInitializedEvent.cs" />
+    <Compile Include="Core\Game\Events\GamePlayedEvent.cs" />
+    <Compile Include="Core\Game\Events\GamePlayEvent.cs" />
+    <Compile Include="Core\Game\Events\GameRedoedEvent.cs" />
+    <Compile Include="Core\Game\Events\GameRedoEvent.cs" />
+    <Compile Include="Core\Game\Events\GameUndoedEvent.cs" />
+    <Compile Include="Core\Game\Events\GameUndoEvent.cs" />
+    <Compile Include="Core\Game\GameStateMachine.cs" />
+    <Compile Include="Core\Game\IEvent.cs" />
+    <Compile Include="Core\Game\INotify.cs" />
+    <Compile Include="Core\Game\Player\Events\PlayerChessEvent.cs" />
+    <Compile Include="Core\Game\Player\Events\PlayerInitializedEvent.cs" />
+    <Compile Include="Core\Game\Player\Events\PlayerJoinEvent.cs" />
+    <Compile Include="Core\Game\Player\Events\PlayerLoseEvent.cs" />
+    <Compile Include="Core\Game\Player\Events\PlayerNoValidMoveEvent.cs" />
+    <Compile Include="Core\Game\Player\Events\PlayerPlayEvent.cs" />
+    <Compile Include="Core\Game\Player\Events\PlayerReadyEvent.cs" />
+    <Compile Include="Core\Game\Player\Events\PlayerRejectEvent.cs" />
+    <Compile Include="Core\Game\Player\Events\PlayerResignEvent.cs" />
+    <Compile Include="Core\Game\Player\Events\PlayerSaveEvent.cs" />
+    <Compile Include="Core\Game\Player\Events\PlayerTurnEvent.cs" />
+    <Compile Include="Core\Game\Player\Events\PlayerUndoAcceptedEvent.cs" />
+    <Compile Include="Core\Game\Player\Events\PlayerUndoAcceptEvent.cs" />
+    <Compile Include="Core\Game\Player\Events\PlayerUndoEvent.cs" />
+    <Compile Include="Core\Game\Player\Events\PlayerUndoRejectEvent.cs" />
+    <Compile Include="Core\Game\Player\Events\PlayerWaitEvent.cs" />
+    <Compile Include="Core\Game\Player\Events\PlayerWinEvent.cs" />
+    <Compile Include="Core\Game\Player\Notifies\PlayerInitializingNotify.cs" />
+    <Compile Include="Core\Game\Player\PlayerStateMachine.cs" />
+    <Compile Include="Core\Game\Player\States\PlayerChessedState.cs" />
+    <Compile Include="Core\Game\Player\States\PlayerInitializingState.cs" />
+    <Compile Include="Core\Game\Player\States\PlayerJoinedState.cs" />
+    <Compile Include="Core\Game\Player\States\PlayerJoiningState.cs" />
+    <Compile Include="Core\Game\Player\States\PlayerLostState.cs" />
+    <Compile Include="Core\Game\Player\States\PlayerPlayingState.cs" />
+    <Compile Include="Core\Game\Player\States\PlayerReadyState.cs" />
+    <Compile Include="Core\Game\Player\States\PlayerRejectedState.cs" />
+    <Compile Include="Core\Game\Player\States\PlayerResignedState.cs" />
+    <Compile Include="Core\Game\Player\States\PlayerSafeState.cs" />
+    <Compile Include="Core\Game\Player\States\PlayerTurningState.cs" />
+    <Compile Include="Core\Game\Player\States\PlayerUndoAcceptedState.cs" />
+    <Compile Include="Core\Game\Player\States\PlayerUndoAcceptingState.cs" />
+    <Compile Include="Core\Game\Player\States\PlayerUndoingState.cs" />
+    <Compile Include="Core\Game\Player\States\PlayerUndoRejectedState.cs" />
+    <Compile Include="Core\Game\Player\States\PlayerUndoState.cs" />
+    <Compile Include="Core\Game\Player\States\PlayerWaitingState.cs" />
+    <Compile Include="Core\Game\Player\States\PlayerWinState.cs" />
+    <Compile Include="Core\Game\States\GameEndedState.cs" />
+    <Compile Include="Core\Game\States\GameInitializingState.cs" />
+    <Compile Include="Core\Game\States\GamePlayedState.cs" />
+    <Compile Include="Core\Game\States\GamePlayingState.cs" />
+    <Compile Include="Core\Game\States\GameRedoingState.cs" />
+    <Compile Include="Core\Game\States\GameRedoState.cs" />
+    <Compile Include="Core\Game\States\GameUndoingState.cs" />
+    <Compile Include="Core\Game\States\GameUndoedState.cs" />
+    <Compile Include="Event\Game\BoardDetail.cs" />
+    <Compile Include="Event\Game\GameMovedEvent.cs" />
+    <Compile Include="Event\Game\RequestGameMoveEvent.cs" />
     <Compile Include="Gui\TMP\App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
@@ -110,7 +179,6 @@
     <Compile Include="Core\Game\Board\States\BoardMovingState.cs" />
     <Compile Include="Core\Game\Board\States\BoardReadyState.cs" />
     <Compile Include="Core\Game\Board\States\BoardRejectedState.cs" />
-    <Compile Include="Core\Game\GameState.cs" />
     <Compile Include="Core\Game\IState.cs" />
     <Compile Include="Core\Game\IStateMachine.cs" />
     <Compile Include="Core\Services\EventHandlers\GameCoreEventHandler.cs" />
@@ -199,6 +267,12 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\AppManifest.xml" />
     <None Include="Properties\WMAppManifest.xml">
@@ -258,6 +332,7 @@
     <Folder Include="Config\Timer\" />
     <Folder Include="Core\Course\" />
     <Folder Include="Core\Engine\" />
+    <Folder Include="Core\Game\Notifies\" />
     <Folder Include="Gui\Services\" />
     <Folder Include="Gui\TMP\Controls\" />
     <Folder Include="Gui\TMP\Log\" />
@@ -268,6 +343,9 @@
     <Folder Include="Timer\Services\" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="NLog">
+      <HintPath>..\packages\NLog.2.1.0\lib\sl4-windowsphone71\NLog.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
     </Reference>

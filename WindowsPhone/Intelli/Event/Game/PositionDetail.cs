@@ -7,23 +7,23 @@ namespace Intelli.Event.Game
 {
     public class PositionDetail
     {
-        private int x;
+        private int r;
 
-        private int y;
+        private int c;
 
-        public PositionDetail(int x, int y)
+        public PositionDetail(int r, int c)
         {
-            this.x = x;
-            this.y = y;
+            this.r = r;
+            this.c = c;
         }
 
-        public int getX()
+        public int getRow()
         {
-            return this.x;
+            return this.r;
         }
 
-        public int getY() {
-            return this.y;
+        public int getCol() {
+            return this.c;
         }
 
     }

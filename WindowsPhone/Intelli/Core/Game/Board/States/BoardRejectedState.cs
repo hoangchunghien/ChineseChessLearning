@@ -9,6 +9,7 @@ namespace Intelli.Core.Game.Board
     {
 
         private BoardStateMachine board;
+        private Dictionary<String, IState> transitionableStates = new Dictionary<string, IState>();
 
         public BoardRejectedState(BoardStateMachine board)
         {
@@ -20,14 +21,14 @@ namespace Intelli.Core.Game.Board
             return "board_rejected_state";
         }
 
-        public void run()
+        public void run(IEvent e)
         {
             throw new NotImplementedException();
         }
 
         public Dictionary<string, IState> getTransitionableState()
         {
-            throw new NotImplementedException();
+            return this.transitionableStates;
         }
     }
 }

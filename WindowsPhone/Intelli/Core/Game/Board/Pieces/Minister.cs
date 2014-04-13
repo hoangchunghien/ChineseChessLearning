@@ -47,6 +47,7 @@ namespace Intelli.Core.Game.Board.Pieces
             // 4h30
             if (row < 9 && col < 8)
             {
+                // TODO, move checking to a checking method
                 if (this.board.getPieces()[row + 1, col + 1] == null)
                 {
                     Position p = new Position(row + 2, col + 2);
@@ -136,7 +137,6 @@ namespace Intelli.Core.Game.Board.Pieces
 
             return validPositions;
 
-            throw new NotImplementedException();
         }
     }
 }

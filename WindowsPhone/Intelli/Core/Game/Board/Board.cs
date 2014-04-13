@@ -234,6 +234,37 @@ namespace Intelli.Core.Game.Board
             }
         }
 
+        public char[,] serialize()
+        {
+            char[,] cBoards = new char[10, 9];
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    cBoards[i, j] = _getChar(this.getPieces()[i, j]);
+                }
+            }
+            return cBoards;
+        }
+
+        public override String ToString()
+        {
+            char [,] b = this.serialize();
+            String result = "[\n";
+            for (int i = 0; i < 10; i++)
+            {
+                result += "[";
+                for (int j = 0; j < 9; j++)
+                {
+                    result += b[i,j] + " ";
+                }
+                result += "]\n";
+            }
+            result += "]";
+
+            return result;
+        }
+
         private Piece _getPiece(char c)
         {
             Piece p;
@@ -301,6 +332,53 @@ namespace Intelli.Core.Game.Board
             }
 
             return p;
+        }
+
+        private char _getChar(Piece p)
+        {
+            char c = ' ';
+            if (p == null)
+            {
+                return c;
+            }
+            if (p.GetType().Equals(typeof(Advisor)))
+            {
+                c = 'a';
+            }
+            else if (p.GetType().Equals(typeof(Cannon)))
+            {
+                c = 'c';
+            }
+            else if (p.GetType().Equals(typeof(Knight)))
+            {
+                c = 'k';
+            }
+            else if (p.GetType().Equals(typeof(Master)))
+            {
+                c = 'g';
+            }
+            else if (p.GetType().Equals(typeof(Minister)))
+            {
+                c = 'm';
+            }
+            else if (p.GetType().Equals(typeof(Pawn)))
+            {
+                c = 'p';
+            }
+            else if (p.GetType().Equals(typeof(Rook)))
+            {
+                c = 'r';
+            }
+
+            if (p.getColor() == Color.BLACK)
+            {
+                c = Char.ToLower(c);
+            }
+            else
+            {
+                c = Char.ToUpper(c);
+            }
+            return c;
         }
     }
 }

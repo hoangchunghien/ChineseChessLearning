@@ -45,5 +45,13 @@ namespace Intelli.Core.Game.Board
             else
                 return false;
         }
+
+        public override String ToString()
+        {
+            String result = "";
+
+            result += "(" + this.r + ", " + this.c + ")";
+            return result;
+        }
     }
 }

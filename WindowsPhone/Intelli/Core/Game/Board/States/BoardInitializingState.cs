@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Intelli.Core.Game.Board.Events;
+using Intelli.Core.Game.Board.Notifies;
+using NLog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,13 +10,14 @@ namespace Intelli.Core.Game.Board
 {
     public class BoardInitializingState : IState
     {
+        private static readonly Logger LOG = LogManager.GetCurrentClassLogger();
 
         private Dictionary<String, IState> transitionableStates = new Dictionary<string, IState>();
-        private BoardStateMachine board;
+        private BoardStateMachine boardMachine;
 
-        public BoardInitializingState(BoardStateMachine board)
+        public BoardInitializingState(BoardStateMachine boardMachine)
         {
-            this.board = board;
+            this.boardMachine = boardMachine;
         }
 
         public string getName()
@@ -21,9 +25,13 @@ namespace Intelli.Core.Game.Board
             throw new NotImplementedException();
         }
 
-        public void run()
+        public void run(IEvent e)
         {
-            throw new NotImplementedException();
+            this.boardMachine.fireStateChangedNotification(new InitializingNotify());
+            LOG.Info("Initializing");
+            Board board = new Board();
+            this.boardMachine.setBoard(board);
+            boardMachine.consumeEvent(new InitializedEvent());
         }
 
 

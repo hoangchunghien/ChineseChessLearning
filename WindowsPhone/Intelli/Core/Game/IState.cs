@@ -8,7 +8,7 @@ namespace Intelli.Core.Game
     public interface IState
     {
         String getName();
-        void run();
+        void run(IEvent e);
         Dictionary<String, IState> getTransitionableState();
     }
 }

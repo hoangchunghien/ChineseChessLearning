@@ -7,6 +7,8 @@ namespace Intelli.Core.Game
 {
     interface IStateMachine
     {
-        void consumeEvent(String eventName);
+        void consumeEvent(IEvent e);
+
+        void fireStateChangedNotification(INotify notify);
     }
 }
