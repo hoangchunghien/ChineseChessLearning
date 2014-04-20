@@ -11,7 +11,6 @@ namespace Intelli.Core.Game.Board
     public class BoardInitializingState : IState
     {
         public static readonly String NAME = "BoardInitializingState";
-
         private static readonly Logger LOG = LogManager.GetCurrentClassLogger();
 
         private Dictionary<String, IState> transitionableStates = new Dictionary<string, IState>();
@@ -33,7 +32,7 @@ namespace Intelli.Core.Game.Board
             LOG.Info("Initializing");
             Board board = new Board();
             this.boardMachine.setBoard(board);
-            boardMachine.consumeEvent(new InitializedEvent());
+            boardMachine.consumeEvent(new BoardInitializedEvent());
         }
 
 

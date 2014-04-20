@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Intelli.Core.Game.States
 {
-    public class GameRedoState : IState
+    public class GameRedoState : IGameState
     {
         public static readonly String NAME = "GameRedoState";
 
@@ -33,6 +33,21 @@ namespace Intelli.Core.Game.States
         public Dictionary<string, IState> getTransitionableState()
         {
             return this.transitionableStates;
+        }
+
+        public bool isSubmachineEvent(IEvent e)
+        {
+            // In this state, allow only these event
+            //     1. PlayerUndoEvent
+            //     2. BoardMoveEvent (This will bring the game back to state playing,
+            //        if the move is valid)
+
+            return false;
+        }
+
+        public void submachineConsumeEvent(IEvent e)
+        {
+            throw new NotImplementedException();
         }
     }
 }

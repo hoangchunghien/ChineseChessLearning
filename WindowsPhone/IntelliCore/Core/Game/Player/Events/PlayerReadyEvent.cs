@@ -9,9 +9,22 @@ namespace Intelli.Core.Game.Player.Events
     public class PlayerReadyEvent : IEvent
     {
         public static readonly String NAME = "PlayerReadyEvent";
+
+        private int id;
+
+        public int getId()
+        {
+            return this.id;
+        }
+
+        public void setId(int id)
+        {
+            this.id = id;
+        }
+
         public string getName()
         {
-            throw new NotImplementedException();
+            return NAME;
         }
     }
 }

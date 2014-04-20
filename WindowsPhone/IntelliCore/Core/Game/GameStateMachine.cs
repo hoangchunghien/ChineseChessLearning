@@ -15,9 +15,9 @@ namespace Intelli.Core.Game
     {
         private static readonly Logger LOG = LogManager.GetCurrentClassLogger();
 
-        private IState currentState;
+        private IGameState currentState;
 
-        private List<IState> states;
+        private List<IGameState> states;
 
         private PlayerStateMachine[] players;
 
@@ -26,22 +26,18 @@ namespace Intelli.Core.Game
         public GameStateMachine()
         {
             _initialize();
-            boardMachine = new BoardStateMachine();
-            players = new PlayerStateMachine[2];
-            players[0] = new PlayerStateMachine(boardMachine.getPieces(Board.Pieces.Color.BLACK));
-            players[1] = new PlayerStateMachine(boardMachine.getPieces(Board.Pieces.Color.RED));
         }
 
         private void _initialize()
         {
-            IState initializing = new GameInitializingState(this);
-            IState playing = new GamePlayingState(this);
-            IState played = new GamePlayedState(this);
-            IState redoing = new GameRedoingState(this);
-            IState redo = new GameRedoState(this);
-            IState undoing = new GameUndoingState(this);
-            IState undoed = new GameUndoedState(this);
-            IState ended = new GameEndedState(this);
+            IGameState initializing = new GameInitializingState(this);
+            IGameState playing = new GamePlayingState(this);
+            IGameState played = new GamePlayedState(this);
+            IGameState redoing = new GameRedoingState(this);
+            IGameState redo = new GameRedoState(this);
+            IGameState undoing = new GameUndoingState(this);
+            IGameState undoed = new GameUndoedState(this);
+            IGameState ended = new GameEndedState(this);
 
             // From intitializing
             initializing.getTransitionableState().Add(GameInitializedEvent.NAME, playing);
@@ -74,12 +70,24 @@ namespace Intelli.Core.Game
 
         public void consumeEvent(IEvent e)
         {
-            throw new NotImplementedException();
+            if (currentState.getTransitionableState().Keys.Contains(e.getName()))
+            {
+
+            }
+            else if (currentState.isSubmachineEvent(e))
+            {
+                // Transport event to submachine like PlayerMachine or BoardMachine
+                currentState.submachineConsumeEvent(e);
+            }
+            else
+            {
+                // Reject unvalid event
+            }
         }
 
         public void fireStateChangedNotification(INotify notify)
         {
-            throw new NotImplementedException();
+            LOG.Info("Not supported yet");
         }
 
         public PlayerStateMachine[] getPlayers()
@@ -87,9 +95,19 @@ namespace Intelli.Core.Game
             return this.players;
         }
 
+        public void setPlayers(PlayerStateMachine[] players)
+        {
+            this.players = players;
+        }
+
         public BoardStateMachine getBoardMachine()
         {
             return this.boardMachine;
+        }
+
+        public void setBoardMachine(BoardStateMachine boardMachine)
+        {
+            this.boardMachine = boardMachine;
         }
     }
 }

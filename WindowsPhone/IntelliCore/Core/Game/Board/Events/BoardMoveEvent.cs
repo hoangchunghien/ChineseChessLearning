@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Intelli.Core.Game.Board.Events
 {
-    public class MoveEvent : IEvent
+    public class BoardMoveEvent : IEvent
     {
         public static readonly String NAME = "BoardMoveEvent";
 
@@ -18,7 +18,7 @@ namespace Intelli.Core.Game.Board.Events
             return NAME;
         }
 
-        public MoveEvent(Position current, Position next)
+        public BoardMoveEvent(Position current, Position next)
         {
             this.currentPosition = current;
             this.nextPosition = next;

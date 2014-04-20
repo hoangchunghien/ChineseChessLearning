@@ -12,6 +12,7 @@ namespace Intelli.Core.Game.Player.Events
 
         private int id;
 
+        // Id of the player
         public int getId()
         {
             return this.id;
@@ -24,7 +25,7 @@ namespace Intelli.Core.Game.Player.Events
 
         public string getName()
         {
-            throw new NotImplementedException();
+            return NAME;
         }
     }
 }

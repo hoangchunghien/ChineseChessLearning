@@ -46,20 +46,20 @@ namespace Intelli.Core.Game.Board
             this.states.Add(rejectedState);
 
             // From initializing state
-            initializingState.getTransitionableState().Add(InitializedEvent.NAME, readyState);
+            initializingState.getTransitionableState().Add(BoardInitializedEvent.NAME, readyState);
 
             // From ready state
-            readyState.getTransitionableState().Add(MoveEvent.NAME, movingState);
+            readyState.getTransitionableState().Add(BoardMoveEvent.NAME, movingState);
 
             // From moving state
-            movingState.getTransitionableState().Add(RejectEvent.NAME, rejectedState);
-            movingState.getTransitionableState().Add(MovedEvent.NAME, movedState);
+            movingState.getTransitionableState().Add(BoardRejectEvent.NAME, rejectedState);
+            movingState.getTransitionableState().Add(BoardMovedEvent.NAME, movedState);
 
             // From rejected state
-            rejectedState.getTransitionableState().Add(ReadyEvent.NAME, readyState);
+            rejectedState.getTransitionableState().Add(BoardReadyEvent.NAME, readyState);
 
             // From moved state
-            movedState.getTransitionableState().Add(ReadyEvent.NAME, readyState);
+            movedState.getTransitionableState().Add(BoardReadyEvent.NAME, readyState);
 
             this.currentState = initializingState;
             this.currentState.run(null);

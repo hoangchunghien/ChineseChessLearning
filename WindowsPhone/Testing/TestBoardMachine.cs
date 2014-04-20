@@ -30,11 +30,11 @@ namespace Testing
         [Test]
         public void TestConsumeEvent()
         {
-            IEvent e = new MoveEvent(new Position(0, 0), new Position(1, 0));
+            IEvent e = new BoardMoveEvent(new Position(0, 0), new Position(1, 0));
             boardMachine.consumeEvent(e);
             Assert.AreEqual(BoardReadyState.NAME, boardMachine.getCurrentState().getName());
 
-            IEvent invalidEvent = new ReadyEvent();
+            IEvent invalidEvent = new BoardReadyEvent();
             boardMachine.consumeEvent(invalidEvent);
         }
     }

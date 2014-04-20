@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Intelli.Core.Game.Board.Events
 {
-    public class InitializedEvent : IEvent
+    public class BoardInitializedEvent : IEvent
     {
         public static readonly String NAME = "InitializedEvent";
         public string getName()

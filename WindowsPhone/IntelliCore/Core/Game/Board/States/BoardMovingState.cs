@@ -33,11 +33,11 @@ namespace Intelli.Core.Game.Board
             this.boardMachine.fireStateChangedNotification(notify);
 
             LOG.Info(NAME);
-            if (e.GetType().Equals(typeof(MoveEvent)))
+            if (e.GetType().Equals(typeof(BoardMoveEvent)))
             {
                 bool accepted = false;
-                Position cPos = ((MoveEvent)e).getCurrentPosition();
-                Position nPos = ((MoveEvent)e).getNextPosition();
+                Position cPos = ((BoardMoveEvent)e).getCurrentPosition();
+                Position nPos = ((BoardMoveEvent)e).getNextPosition();
                 Piece p = this.boardMachine.getBoard().getPieces()[cPos.getRow(), cPos.getCol()];
                 if (p != null && p.getValidNextPositions().Contains(nPos))
                 {
@@ -50,11 +50,11 @@ namespace Intelli.Core.Game.Board
                     this.boardMachine.getBoard().getPieces()[cPos.getRow(), cPos.getCol()] = null;
                     this.boardMachine.getBoard().getPieces()[nPos.getRow(), nPos.getCol()] = p;
                     LOG.Info("New: \n" + this.boardMachine.getBoard().ToString());
-                    this.boardMachine.consumeEvent(new MovedEvent());
+                    this.boardMachine.consumeEvent(new BoardMovedEvent());
                 }
                 else
                 {
-                    this.boardMachine.consumeEvent(new RejectEvent());
+                    this.boardMachine.consumeEvent(new BoardRejectEvent());
                     LOG.Info("Rejected move from: " + cPos.ToString() + " to: " + nPos.ToString());
                 }
             }

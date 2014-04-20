@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace Intelli.Core.Game.Board.Events
 {
-    public class RejectEvent : IEvent
+    public class BoardMovedEvent : IEvent
     {
-        public static readonly String NAME = "BoardRejectEvent";
-
-
+        public static readonly String NAME = "BoardMovedEvent";
 
         public string getName()
         {

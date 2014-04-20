@@ -65,6 +65,10 @@
     <Content Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="bin\Debug\logs\2014-04-13.log" />
+    <None Include="bin\Debug\logs\2014-04-20.log" />
+    <None Include="bin\Debug\logs\error_2014-04-13.log" />
+    <None Include="bin\Debug\logs\error_2014-04-20.log" />
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>

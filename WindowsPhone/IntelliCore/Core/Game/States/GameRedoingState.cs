@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Intelli.Core.Game.States
 {
-    public class GameRedoingState : IState
+    public class GameRedoingState : IGameState
     {
         public static readonly String NAME = "GameRedoingState";
 
@@ -33,6 +33,19 @@ namespace Intelli.Core.Game.States
         public Dictionary<string, IState> getTransitionableState()
         {
             return this.transitionableStates;
+        }
+
+        public bool isSubmachineEvent(IEvent e)
+        {
+            // In redoing state, allow only these event
+            //     Not allow any event, this will auto change to redo state
+
+            return false;
+        }
+
+        public void submachineConsumeEvent(IEvent e)
+        {
+            throw new NotImplementedException();
         }
     }
 }

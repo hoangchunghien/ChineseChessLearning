@@ -86,11 +86,11 @@
     <Compile Include="Config\Core\GameConfig.cs" />
     <Compile Include="Core\Game\Board\Board.cs" />
     <Compile Include="Core\Game\Board\BoardStateMachine.cs" />
-    <Compile Include="Core\Game\Board\Events\InitializedEvent.cs" />
-    <Compile Include="Core\Game\Board\Events\MovedEvent.cs" />
-    <Compile Include="Core\Game\Board\Events\MoveEvent.cs" />
-    <Compile Include="Core\Game\Board\Events\ReadyEvent.cs" />
-    <Compile Include="Core\Game\Board\Events\RejectEvent.cs" />
+    <Compile Include="Core\Game\Board\Events\BoardInitializedEvent.cs" />
+    <Compile Include="Core\Game\Board\Events\BoardMovedEvent.cs" />
+    <Compile Include="Core\Game\Board\Events\BoardMoveEvent.cs" />
+    <Compile Include="Core\Game\Board\Events\BoardReadyEvent.cs" />
+    <Compile Include="Core\Game\Board\Events\BoardRejectEvent.cs" />
     <Compile Include="Core\Game\Board\Notifies\InitializingNotify.cs" />
     <Compile Include="Core\Game\Board\Notifies\MovedNotify.cs" />
     <Compile Include="Core\Game\Board\Notifies\MovingNotify.cs" />
@@ -120,6 +120,7 @@
     <Compile Include="Core\Game\Events\GameUndoEvent.cs" />
     <Compile Include="Core\Game\GameStateMachine.cs" />
     <Compile Include="Core\Game\IEvent.cs" />
+    <Compile Include="Core\Game\IGameState.cs" />
     <Compile Include="Core\Game\INotify.cs" />
     <Compile Include="Core\Game\IState.cs" />
     <Compile Include="Core\Game\IStateMachine.cs" />
@@ -203,9 +204,6 @@
     <Folder Include="Persistence\Services\" />
     <Folder Include="Sound\Services\" />
     <Folder Include="Timer\Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="NLog">

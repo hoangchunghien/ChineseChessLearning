@@ -31,7 +31,7 @@ namespace Intelli.Core.Game.Board
             ReadyNotify notify = new ReadyNotify();
             this.boardMachine.fireStateChangedNotification(notify);
             LOG.Info(NAME);
-            this.boardMachine.consumeEvent(new ReadyEvent());
+            this.boardMachine.consumeEvent(new BoardReadyEvent());
         }
 
 
