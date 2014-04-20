@@ -17,9 +17,9 @@ C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\obj\D
 C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\obj\Debug\IntelliUI.dll
 C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\obj\Debug\IntelliUI.pdb
 C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\obj\Debug\XapCacheFile.xml
-C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Bin\Debug\NLog.config
-C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Bin\Debug\Intelli.dll
 C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Bin\Debug\NLog.dll
-C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Bin\Debug\Intelli.pdb
 C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Bin\Debug\NLog.xml
 C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\obj\Debug\IntelliUI.csprojResolveAssemblyReference.cache
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Bin\Debug\IntelliCore.dll
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Bin\Debug\IntelliCore.pdb
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Bin\Debug\NLog.config

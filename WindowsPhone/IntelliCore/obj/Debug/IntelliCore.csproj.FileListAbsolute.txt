@@ -1,0 +1,7 @@
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliCore\Bin\Debug\IntelliCore.dll
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliCore\Bin\Debug\IntelliCore.pdb
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliCore\Bin\Debug\NLog.dll
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliCore\Bin\Debug\NLog.xml
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliCore\obj\Debug\IntelliCore.dll
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliCore\obj\Debug\IntelliCore.pdb
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliCore\obj\Debug\IntelliCore.csprojResolveAssemblyReference.cache

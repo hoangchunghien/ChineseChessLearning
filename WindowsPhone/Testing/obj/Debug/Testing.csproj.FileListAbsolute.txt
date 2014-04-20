@@ -13,19 +13,10 @@ C:\Users\Hien\Documents\Visual Studio 2013\Projects\Intelli\Testing\bin\Debug\nu
 C:\Users\Hien\Documents\Visual Studio 2013\Projects\Intelli\Testing\obj\Debug\Testing.csprojResolveAssemblyReference.cache
 C:\Users\Hien\Documents\Visual Studio 2013\Projects\Intelli\Testing\obj\Debug\Testing.dll
 C:\Users\Hien\Documents\Visual Studio 2013\Projects\Intelli\Testing\obj\Debug\Testing.pdb
-C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\bin\Debug\Assets\ApplicationIcon.png
-C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
-C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
-C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
-C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
-C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\bin\Debug\Assets\Tiles\IconicTileSmall.png
 C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\bin\Debug\Testing.dll
 C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\bin\Debug\Testing.pdb
-C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\bin\Debug\Intelli.dll
 C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\bin\Debug\nunit.framework.dll
-C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\bin\Debug\Intelli.pdb
 C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\bin\Debug\nunit.framework.xml
-C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\obj\Debug\Testing.csprojResolveAssemblyReference.cache
 C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\obj\Debug\Testing.dll
 C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\obj\Debug\Testing.pdb
 C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\bin\Debug\NLog.config
@@ -49,3 +40,6 @@ C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\bin\Debug
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\bin\Debug\nunit.framework.xml
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\obj\Debug\Testing.dll
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\obj\Debug\Testing.pdb
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\bin\Debug\IntelliCore.dll
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\bin\Debug\IntelliCore.pdb
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\obj\Debug\Testing.csprojResolveAssemblyReference.cache
