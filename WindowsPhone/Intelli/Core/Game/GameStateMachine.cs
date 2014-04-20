@@ -81,5 +81,15 @@ namespace Intelli.Core.Game
         {
             throw new NotImplementedException();
         }
+
+        public PlayerStateMachine[] getPlayers()
+        {
+            return this.players;
+        }
+
+        public BoardStateMachine getBoardMachine()
+        {
+            return this.boardMachine;
+        }
     }
 }

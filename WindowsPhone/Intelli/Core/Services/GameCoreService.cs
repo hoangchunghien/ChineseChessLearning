@@ -6,8 +6,10 @@ using System.Text;
 
 namespace Intelli.Core.Services
 {
-    interface GameCoreService
+    public interface GameCoreService
     {
         Event.Game.ValidMovesEvent requestValidMoves(Event.Game.RequestValidMovesEvent e);
+
+        Event.Game.GameCreatedEvent createGame(Event.Game.CreateGameEvent e);
     }
 }

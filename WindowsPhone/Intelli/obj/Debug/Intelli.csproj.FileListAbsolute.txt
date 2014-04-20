@@ -39,11 +39,6 @@ C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\Bin\Deb
 C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\Bin\Debug\NLog.xml
 C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\Bin\Debug\nunit.framework.xml
 C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\obj\Debug\Intelli.csprojResolveAssemblyReference.cache
-C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\obj\Debug\Gui\TMP\App.g.cs
-C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\obj\Debug\Gui\TMP\SquareControl.g.cs
-C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\obj\Debug\Gui\TMP\SquareControl2.g.cs
-C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\obj\Debug\Gui\TMP\MainPage.g.cs
-C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\obj\Debug\Intelli.g.resources
 C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\obj\Debug\Intelli.Resources.AppResources.resources
 C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\obj\Debug\Intelli.csproj.GenerateResource.Cache
 C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Intelli\obj\Debug\Intelli.dll

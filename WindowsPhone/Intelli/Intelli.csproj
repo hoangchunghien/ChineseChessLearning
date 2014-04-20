@@ -21,7 +21,7 @@
     <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
     <XapFilename>Intelli_$(Configuration)_$(Platform).xap</XapFilename>
     <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
-    <SilverlightAppEntry>Intelli.App</SilverlightAppEntry>
+    <SilverlightAppEntry>Intelli.GUI.App</SilverlightAppEntry>
     <ValidateXaml>true</ValidateXaml>
     <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
     <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
@@ -157,11 +157,12 @@
     <Compile Include="Core\Game\States\GameUndoingState.cs" />
     <Compile Include="Core\Game\States\GameUndoedState.cs" />
     <Compile Include="Event\Game\BoardDetail.cs" />
+    <Compile Include="Event\Game\CreateGameEvent.cs" />
+    <Compile Include="Event\Game\GameCreatedEvent.cs" />
+    <Compile Include="Event\Game\GameDetail.cs" />
     <Compile Include="Event\Game\GameMovedEvent.cs" />
+    <Compile Include="Event\Game\PlayerDetail.cs" />
     <Compile Include="Event\Game\RequestGameMoveEvent.cs" />
-    <Compile Include="Gui\TMP\App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Config\Core\GameConfig.cs" />
     <Compile Include="Core\Game\Board\Board.cs" />
     <Compile Include="Core\Game\Board\BoardStateMachine.cs" />
@@ -195,51 +196,6 @@
     <Compile Include="Event\Game\PositionDetail.cs" />
     <Compile Include="Event\Game\RequestValidMovesEvent.cs" />
     <Compile Include="Event\Game\ValidMovesEvent.cs" />
-    <Compile Include="Gui\TMP\Advisor.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Gui\TMP\Board.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Gui\TMP\Cannon.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Gui\TMP\Game.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Gui\TMP\King.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Gui\TMP\Knight.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Gui\TMP\Minister.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Gui\TMP\Pawn.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Gui\TMP\Pieces.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Gui\TMP\Player.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Gui\TMP\Rook.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Gui\TMP\SquareControl.xaml.cs">
-      <DependentUpon>SquareControl.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Gui\TMP\SquareControl2.xaml.cs">
-      <DependentUpon>SquareControl2.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="LocalizedStrings.cs" />
-    <Compile Include="Gui\TMP\MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\AppResources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -247,24 +203,6 @@
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
     <Compile Include="Timer\Domain\Timer.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ApplicationDefinition Include="Gui\TMP\App.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </ApplicationDefinition>
-    <Page Include="Gui\TMP\SquareControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Gui\TMP\SquareControl2.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Gui\TMP\MainPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Content Include="NLog.config">
@@ -299,26 +237,6 @@
     <Content Include="Assets\Tiles\IconicTileSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Gui\TMP\PNG\ba.png" />
-    <Content Include="Gui\TMP\PNG\bb.png" />
-    <Content Include="Gui\TMP\PNG\bc.png" />
-    <Content Include="Gui\TMP\PNG\bk.png" />
-    <Content Include="Gui\TMP\PNG\bn.png" />
-    <Content Include="Gui\TMP\PNG\board.png" />
-    <Content Include="Gui\TMP\PNG\bp.png" />
-    <Content Include="Gui\TMP\PNG\br.png" />
-    <Content Include="Gui\TMP\PNG\mask.png" />
-    <Content Include="Gui\TMP\PNG\off.png" />
-    <Content Include="Gui\TMP\PNG\on.png" />
-    <Content Include="Gui\TMP\PNG\ra.png" />
-    <Content Include="Gui\TMP\PNG\rb.png" />
-    <Content Include="Gui\TMP\PNG\rc.png" />
-    <Content Include="Gui\TMP\PNG\rk.png" />
-    <Content Include="Gui\TMP\PNG\rn.png" />
-    <Content Include="Gui\TMP\PNG\rp.png" />
-    <Content Include="Gui\TMP\PNG\rr.png" />
-    <Content Include="Gui\TMP\PNG\xy1.png" />
-    <Content Include="Gui\TMP\PNG\xy2.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\AppResources.resx">
@@ -333,10 +251,6 @@
     <Folder Include="Core\Course\" />
     <Folder Include="Core\Engine\" />
     <Folder Include="Core\Game\Notifies\" />
-    <Folder Include="Gui\Services\" />
-    <Folder Include="Gui\TMP\Controls\" />
-    <Folder Include="Gui\TMP\Log\" />
-    <Folder Include="Gui\TMP\NewFolder1\" />
     <Folder Include="Notification\Services\" />
     <Folder Include="Persistence\Services\" />
     <Folder Include="Sound\Services\" />

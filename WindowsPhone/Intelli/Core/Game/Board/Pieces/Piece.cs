@@ -44,6 +44,7 @@ namespace Intelli.Core.Game.Board.Pieces
                 this.validNextPositions.Add(p);
         }
 
+
     }
 
     public enum Color

@@ -9,9 +9,10 @@ namespace Intelli.Config
 {
     public class GameConfig
     {
-        //public static Core.Services.GameCoreService getGameService()
-        //{
-        //    return new GameCoreEventHandler();
-        //}
+        public static Intelli.Core.Services.GameCoreService getGameService()
+        {
+            return new GameCoreEventHandler();
+        }
+
     }
 }
