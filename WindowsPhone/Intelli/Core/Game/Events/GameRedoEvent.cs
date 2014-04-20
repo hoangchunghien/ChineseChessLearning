@@ -8,7 +8,7 @@ namespace Intelli.Core.Game.Events
 {
     public class GameRedoEvent : IEvent
     {
-        public static readonly Stirng NAME = "GameRedoEvent";
+        public static readonly String NAME = "GameRedoEvent";
         public string getName()
         {
             throw new NotImplementedException();

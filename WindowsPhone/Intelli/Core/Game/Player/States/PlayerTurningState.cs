@@ -15,5 +15,20 @@ namespace Intelli.Core.Game.Player.States
             // TODO: Complete member initialization
             this.playerStateMachine = playerStateMachine;
         }
+
+        public string getName()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void run(IEvent e)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Dictionary<string, IState> getTransitionableState()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -597,6 +597,18 @@ namespace Testing
             Assert.AreEqual(2, rMinister1.getValidNextPositions().Count);
             Assert.AreEqual(2, bMinister1.getValidNextPositions().Count);
 
+            Assert.True(rMinister.getValidNextPositions().Contains(new Position(5, 2)));
+            Assert.True(rMinister.getValidNextPositions().Contains(new Position(9, 2)));
+
+            Assert.True(bMinister.getValidNextPositions().Contains(new Position(0, 2)));
+            Assert.True(bMinister.getValidNextPositions().Contains(new Position(4, 2)));
+
+            Assert.True(rMinister1.getValidNextPositions().Contains(new Position(5, 6)));
+            Assert.True(rMinister1.getValidNextPositions().Contains(new Position(9, 6)));
+
+            Assert.True(bMinister1.getValidNextPositions().Contains(new Position(0, 6)));
+            Assert.True(bMinister1.getValidNextPositions().Contains(new Position(4, 6)));
+
             // 24, 74
             rMinister = board.getPieces()[7, 4];
             bMinister = board.getPieces()[2, 4];
@@ -905,6 +917,304 @@ namespace Testing
             Assert.AreEqual(0, endTest.getValidNextPositions().Count);
             Assert.AreEqual(9, endTest1.getValidNextPositions().Count);
             Assert.AreEqual(14, endTest2.getValidNextPositions().Count);
+        }
+
+        [Test]
+        public void testKnightIntheCornerNoneBlocker1()
+        {
+            char[,] testCase = {
+                {'k',' ','m','a','g','a','m',' ','k'},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ','P',' ',' ',' ',' ',' '},
+
+                {' ',' ',' ','p',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {'K',' ',' ',' ',' ',' ',' ',' ','K'}
+            };
+
+            Board board = new Board();
+            board.deserialize(testCase);
+            Piece k1 = board.getPieces()[0, 0];
+            Piece k2 = board.getPieces()[0, 8];
+            Piece k3 = board.getPieces()[9, 0];
+            Piece k4 = board.getPieces()[9, 8];
+
+            Assert.AreEqual(2, k1.getValidNextPositions().Count);
+            Assert.AreEqual(2, k2.getValidNextPositions().Count);
+            Assert.AreEqual(2, k3.getValidNextPositions().Count);
+            Assert.AreEqual(2, k4.getValidNextPositions().Count);
+
+            Assert.True(k1.getValidNextPositions().Contains(new Position(1, 2)));
+            Assert.True(k1.getValidNextPositions().Contains(new Position(2, 1)));
+
+            Assert.True(k2.getValidNextPositions().Contains(new Position(2, 7)));
+            Assert.True(k2.getValidNextPositions().Contains(new Position(1, 6)));
+
+            Assert.True(k3.getValidNextPositions().Contains(new Position(7, 1)));
+            Assert.True(k3.getValidNextPositions().Contains(new Position(8, 2)));
+
+            Assert.True(k4.getValidNextPositions().Contains(new Position(8, 6)));
+            Assert.True(k4.getValidNextPositions().Contains(new Position(7, 7)));
+        }
+
+        [Test]
+        public void testKnightIntheCornerNoneBlocker2()
+        {
+            char[,] testCase = {
+                {' ',' ','m','a','g','a','m',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ','k',' ',' ',' ',' '},
+
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ','K',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '}
+            };
+
+            Board board = new Board();
+            board.deserialize(testCase);
+            Piece bk = board.getPieces()[4, 4];
+            Piece rk = board.getPieces()[6, 4];
+
+            Assert.AreEqual(8, bk.getValidNextPositions().Count);
+            Assert.AreEqual(8, rk.getValidNextPositions().Count);
+
+            Assert.True(bk.getValidNextPositions().Contains(new Position(2, 3)));
+            Assert.True(bk.getValidNextPositions().Contains(new Position(2, 5)));
+            Assert.True(bk.getValidNextPositions().Contains(new Position(3, 6)));
+            Assert.True(bk.getValidNextPositions().Contains(new Position(5, 6)));
+            Assert.True(bk.getValidNextPositions().Contains(new Position(6, 3)));
+            Assert.True(bk.getValidNextPositions().Contains(new Position(6, 5)));
+            Assert.True(bk.getValidNextPositions().Contains(new Position(3, 2)));
+            Assert.True(bk.getValidNextPositions().Contains(new Position(5, 2)));
+
+            Assert.True(rk.getValidNextPositions().Contains(new Position(4, 3)));
+            Assert.True(rk.getValidNextPositions().Contains(new Position(4, 5)));
+            Assert.True(rk.getValidNextPositions().Contains(new Position(5, 6)));
+            Assert.True(rk.getValidNextPositions().Contains(new Position(7, 6)));
+            Assert.True(rk.getValidNextPositions().Contains(new Position(8, 3)));
+            Assert.True(rk.getValidNextPositions().Contains(new Position(8, 5)));
+            Assert.True(rk.getValidNextPositions().Contains(new Position(5, 2)));
+            Assert.True(rk.getValidNextPositions().Contains(new Position(7, 2)));
+        }
+
+        [Test]
+        public void testKnightIntheCornerWithBlocker1()
+        {
+            char[,] testCase = {
+                {'k','r','m','a','g','a','m','r','k'},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ','P',' ',' ',' ',' ',' '},
+
+                {' ',' ',' ','p',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {'K','R',' ',' ',' ',' ',' ','R','K'}
+            };
+
+            Board board = new Board();
+            board.deserialize(testCase);
+            Piece k1 = board.getPieces()[0, 0];
+            Piece k2 = board.getPieces()[0, 8];
+            Piece k3 = board.getPieces()[9, 0];
+            Piece k4 = board.getPieces()[9, 8];
+
+            Assert.AreEqual(1, k1.getValidNextPositions().Count);
+            Assert.AreEqual(1, k2.getValidNextPositions().Count);
+            Assert.AreEqual(1, k3.getValidNextPositions().Count);
+            Assert.AreEqual(1, k4.getValidNextPositions().Count);
+
+            Assert.True(k1.getValidNextPositions().Contains(new Position(2, 1)));
+
+            Assert.True(k2.getValidNextPositions().Contains(new Position(2, 7)));
+
+            Assert.True(k3.getValidNextPositions().Contains(new Position(7, 1)));
+
+            Assert.True(k4.getValidNextPositions().Contains(new Position(7, 7)));
+        }
+
+        [Test]
+        public void testKnightIntheCornerWithBlocker2()
+        {
+            char[,] testCase = {
+                {'k',' ','m','a','g','a','m',' ','k'},
+                {'r',' ',' ',' ',' ',' ',' ',' ','r'},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ','P',' ',' ',' ',' ',' '},
+
+                {' ',' ',' ','p',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {'R',' ',' ',' ',' ',' ',' ',' ','R'},
+                {'K',' ',' ',' ',' ',' ',' ',' ','K'}
+            };
+
+            Board board = new Board();
+            board.deserialize(testCase);
+            Piece k1 = board.getPieces()[0, 0];
+            Piece k2 = board.getPieces()[0, 8];
+            Piece k3 = board.getPieces()[9, 0];
+            Piece k4 = board.getPieces()[9, 8];
+
+            Assert.AreEqual(1, k1.getValidNextPositions().Count);
+            Assert.AreEqual(1, k2.getValidNextPositions().Count);
+            Assert.AreEqual(1, k3.getValidNextPositions().Count);
+            Assert.AreEqual(1, k4.getValidNextPositions().Count);
+
+            Assert.True(k1.getValidNextPositions().Contains(new Position(1, 2)));
+
+            Assert.True(k2.getValidNextPositions().Contains(new Position(1, 6)));
+
+            Assert.True(k3.getValidNextPositions().Contains(new Position(8, 2)));
+
+            Assert.True(k4.getValidNextPositions().Contains(new Position(8, 6)));
+        }
+
+        [Test]
+        public void testKnightIntheCornerWithBlocker3()
+        {
+            char[,] testCase = {
+                {'k','P','m','a','g','a','m','P','k'},
+                {'r',' ',' ',' ',' ',' ',' ',' ','r'},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ','P',' ',' ',' ',' ',' '},
+
+                {' ',' ',' ','p',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {'R',' ',' ',' ',' ',' ',' ',' ','R'},
+                {'K','p',' ',' ',' ',' ',' ','p','K'}
+            };
+
+            Board board = new Board();
+            board.deserialize(testCase);
+            Piece k1 = board.getPieces()[0, 0];
+            Piece k2 = board.getPieces()[0, 8];
+            Piece k3 = board.getPieces()[9, 0];
+            Piece k4 = board.getPieces()[9, 8];
+
+            Assert.AreEqual(0, k1.getValidNextPositions().Count);
+            Assert.AreEqual(0, k2.getValidNextPositions().Count);
+            Assert.AreEqual(0, k3.getValidNextPositions().Count);
+            Assert.AreEqual(0, k4.getValidNextPositions().Count);
+        }
+
+        [Test]
+        public void testKnightIntheCornerWithBlocker4()
+        {
+            char[,] testCase = {
+                {' ',' ','m','a','g','a','m',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ','P',' ',' ',' ',' '},
+                {' ',' ',' ','P','k','P',' ',' ',' '},
+
+                {' ',' ',' ',' ','p',' ',' ',' ',' '},
+                {' ',' ',' ','p','K','p',' ',' ',' '},
+                {' ',' ',' ',' ','p',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '}
+            };
+
+            Board board = new Board();
+            board.deserialize(testCase);
+            Piece bk = board.getPieces()[4, 4];
+            Piece rk = board.getPieces()[6, 4];
+
+            Assert.AreEqual(0, bk.getValidNextPositions().Count);
+            Assert.AreEqual(0, rk.getValidNextPositions().Count);
+        }
+
+        [Test]
+        public void testKnightIntheEdgeNoneBlocker()
+        {
+            char[,] testCase = {
+                {' ',' ',' ',' ','k',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+
+                {'k',' ',' ',' ',' ',' ',' ',' ','K'},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ','K',' ',' ',' ',' '}
+            };
+
+            Board board = new Board();
+            board.deserialize(testCase);
+            Piece k1 = board.getPieces()[0, 4];
+            Piece k2 = board.getPieces()[5, 8];
+            Piece k3 = board.getPieces()[9, 4];
+            Piece k4 = board.getPieces()[5, 0];
+
+            Assert.AreEqual(4, k1.getValidNextPositions().Count);
+            Assert.AreEqual(4, k2.getValidNextPositions().Count);
+            Assert.AreEqual(4, k3.getValidNextPositions().Count);
+            Assert.AreEqual(4, k4.getValidNextPositions().Count);
+
+            Assert.True(k1.getValidNextPositions().Contains(new Position(1, 6)));
+            Assert.True(k1.getValidNextPositions().Contains(new Position(2, 5)));
+            Assert.True(k1.getValidNextPositions().Contains(new Position(2, 3)));
+            Assert.True(k1.getValidNextPositions().Contains(new Position(1, 2)));
+
+            Assert.True(k2.getValidNextPositions().Contains(new Position(7, 7)));
+            Assert.True(k2.getValidNextPositions().Contains(new Position(6, 6)));
+            Assert.True(k2.getValidNextPositions().Contains(new Position(4, 6)));
+            Assert.True(k2.getValidNextPositions().Contains(new Position(3, 7)));
+
+            Assert.True(k3.getValidNextPositions().Contains(new Position(7, 5)));
+            Assert.True(k3.getValidNextPositions().Contains(new Position(8, 6)));
+            Assert.True(k3.getValidNextPositions().Contains(new Position(8, 2)));
+            Assert.True(k3.getValidNextPositions().Contains(new Position(7, 3)));
+
+            Assert.True(k4.getValidNextPositions().Contains(new Position(3, 1)));
+            Assert.True(k4.getValidNextPositions().Contains(new Position(4, 2)));
+            Assert.True(k4.getValidNextPositions().Contains(new Position(6, 2)));
+            Assert.True(k4.getValidNextPositions().Contains(new Position(7, 1)));
+        }
+
+        [Test]
+        public void testKnightIntheEdgeWithBlocker()
+        {
+            char[,] testCase = {
+                {' ',' ',' ','P','k','P',' ',' ',' '},
+                {' ',' ',' ',' ','P',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {'R',' ',' ',' ',' ',' ',' ',' ','r'},
+
+                {'k','C',' ',' ',' ',' ',' ','c','K'},
+                {'R',' ',' ',' ',' ',' ',' ',' ','r'},
+                {' ',' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ','p',' ',' ',' ',' '},
+                {' ',' ',' ','p','K','p',' ',' ',' '}
+            };
+
+            Board board = new Board();
+            board.deserialize(testCase);
+            Piece k1 = board.getPieces()[0, 4];
+            Piece k2 = board.getPieces()[5, 8];
+            Piece k3 = board.getPieces()[9, 4];
+            Piece k4 = board.getPieces()[5, 0];
+
+            Assert.AreEqual(0, k1.getValidNextPositions().Count);
+            Assert.AreEqual(0, k2.getValidNextPositions().Count);
+            Assert.AreEqual(0, k3.getValidNextPositions().Count);
+            Assert.AreEqual(0, k4.getValidNextPositions().Count);
         }
     }
 
