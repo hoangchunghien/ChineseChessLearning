@@ -2,6 +2,7 @@
 using Intelli.Core.Game.Events;
 using Intelli.Core.Game.Player;
 using Intelli.Core.Game.States;
+using IntelliCore.Core.Game.Player.Notifies;
 using NLog;
 using System;
 using System.Collections.Generic;
@@ -68,26 +69,37 @@ namespace Intelli.Core.Game
             this.currentState.run(null);
         }
 
-        public void consumeEvent(IEvent e)
+        public bool consumeEvent(IEvent e)
         {
             if (currentState.getTransitionableState().Keys.Contains(e.getName()))
             {
-
+                LOG.Info("Consuming game event name=" + e.getName());
+                this.currentState = (IGameState)this.currentState.getTransitionableState()[e.getName()];
+                this.currentState.run(e);
+                return true;
             }
             else if (currentState.isSubmachineEvent(e))
             {
                 // Transport event to submachine like PlayerMachine or BoardMachine
+                LOG.Info("Transport submachine event with name=" + e.getName());
                 currentState.submachineConsumeEvent(e);
+                return true;
             }
             else
             {
                 // Reject unvalid event
+                LOG.Info("Unvalid event in current state (" + this.currentState.getName() + ") event name=" + e.getName());
+                return false;
             }
+            
         }
 
         public void fireStateChangedNotification(INotify notify)
         {
-            LOG.Info("Not supported yet");
+            if (notify.GetType().Equals(typeof(PlayerJoinedNotify)))
+            {
+
+            }
         }
 
         public PlayerStateMachine[] getPlayers()

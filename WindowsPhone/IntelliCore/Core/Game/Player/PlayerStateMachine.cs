@@ -1,6 +1,7 @@
 ﻿using Intelli.Core.Game.Board.Pieces;
 using Intelli.Core.Game.Player.Events;
 using Intelli.Core.Game.Player.States;
+using IntelliCore.Core.Game.Player.Notifies;
 using NLog;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,8 @@ namespace Intelli.Core.Game.Player
         private IState currentState;
 
         private List<IState> states;
+
+        private List<IStateMachine> listeners = new List<IStateMachine>();
 
         List<Piece> listPieces;
 
@@ -131,14 +134,47 @@ namespace Intelli.Core.Game.Player
             this.currentState.run(null);
 
         }
-        public void consumeEvent(IEvent e)
+        public bool consumeEvent(IEvent e)
         {
-            LOG.Info("Implementing");
+            if (currentState.getTransitionableState().Keys.Contains(e.getName()))
+            {
+                currentState = currentState.getTransitionableState()[e.getName()];
+                currentState.run(e);
+                return true;
+            }
+            else
+            {
+                LOG.Error("Unexcepted event occur: " + e.getName());
+                return false;
+            }
         }
 
         public void fireStateChangedNotification(INotify notify)
         {
             LOG.Info("state changed");
+            if (notify.GetType().Equals(typeof(PlayerJoinedNotify)))
+            {
+                LOG.Info("Player joined");
+                _notifyListeners(notify); // Notify to listeners
+            }
+        }
+
+        private void _notifyListeners(INotify notify)
+        {
+            foreach (IStateMachine machine in listeners)
+            {
+                machine.fireStateChangedNotification(notify);
+            }
+        }
+
+        public void addListener(IStateMachine listener)
+        {
+            this.listeners.Add(listener);
+        }
+
+        public void removeListener(IStateMachine listener)
+        {
+            this.listeners.Remove(listener);
         }
     }
 }

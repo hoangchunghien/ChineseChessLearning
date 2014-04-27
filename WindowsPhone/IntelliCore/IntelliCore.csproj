@@ -142,6 +142,7 @@
     <Compile Include="Core\Game\Player\Events\PlayerWaitEvent.cs" />
     <Compile Include="Core\Game\Player\Events\PlayerWinEvent.cs" />
     <Compile Include="Core\Game\Player\Notifies\PlayerInitializingNotify.cs" />
+    <Compile Include="Core\Game\Player\Notifies\PlayerJoinedNotify.cs" />
     <Compile Include="Core\Game\Player\PlayerStateMachine.cs" />
     <Compile Include="Core\Game\Player\States\PlayerChessedState.cs" />
     <Compile Include="Core\Game\Player\States\PlayerInitializingState.cs" />
@@ -186,8 +187,10 @@
     <Compile Include="Event\Game\GameMovedEvent.cs" />
     <Compile Include="Event\Game\GameStateDetail.cs" />
     <Compile Include="Event\Game\PlayerDetail.cs" />
+    <Compile Include="Event\Game\PlayerJoinedEvent.cs" />
     <Compile Include="Event\Game\PositionDetail.cs" />
     <Compile Include="Event\Game\RequestGameMoveEvent.cs" />
+    <Compile Include="Event\Game\RequestPlayerJoinEvent.cs" />
     <Compile Include="Event\Game\RequestValidMovesEvent.cs" />
     <Compile Include="Event\Game\ValidMovesEvent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

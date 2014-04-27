@@ -1,4 +1,5 @@
-﻿using NLog;
+﻿using IntelliCore.Core.Game.Player.Notifies;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +31,7 @@ namespace Intelli.Core.Game.Player.States
         public void run(IEvent e)
         {
             LOG.Info("Player joined");
+            playerStateMachine.fireStateChangedNotification(new PlayerJoinedNotify());
         }
 
         public Dictionary<string, IState> getTransitionableState()

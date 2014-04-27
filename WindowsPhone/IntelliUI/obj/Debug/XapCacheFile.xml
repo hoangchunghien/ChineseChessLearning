@@ -1,5 +1,5 @@
-﻿<xapCache source="C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Bin\Debug\IntelliUI_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="4/20/2014 7:32:13 PM">
-  <file source="C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\obj\Debug\IntelliUI.dll" archivePath="IntelliUI.dll" lastWriteTime="4/20/2014 7:32:13 PM" />
+﻿<xapCache source="C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Bin\Debug\IntelliUI_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="4/27/2014 9:22:35 PM">
+  <file source="C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\obj\Debug\IntelliUI.dll" archivePath="IntelliUI.dll" lastWriteTime="4/27/2014 9:22:34 PM" />
   <file source="C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\NLog.config" archivePath="NLog.config" lastWriteTime="4/20/2014 6:21:58 PM" />
   <file source="C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="4/20/2014 3:36:12 PM" />
   <file source="C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="4/20/2014 3:36:12 PM" />
@@ -29,7 +29,7 @@
   <file source="C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="4/20/2014 5:55:12 PM" />
   <file source="C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Bin\Debug\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="4/20/2014 3:36:12 PM" />
   <file source="C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="4/20/2014 3:36:12 PM" />
-  <file source="C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliCore\Bin\Debug\IntelliCore.dll" archivePath="IntelliCore.dll" lastWriteTime="4/20/2014 7:32:12 PM" />
+  <file source="C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliCore\Bin\Debug\IntelliCore.dll" archivePath="IntelliCore.dll" lastWriteTime="4/27/2014 9:22:32 PM" />
   <file source="C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\packages\NLog.2.1.0\lib\sl4-windowsphone71\NLog.dll" archivePath="NLog.dll" lastWriteTime="4/13/2014 10:30:04 AM" />
   <file source="C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\packages\NLog.2.1.0\lib\sl4-windowsphone71\NLog.xml" archivePath="NLog.xml" lastWriteTime="4/13/2014 10:30:04 AM" />
   <file source="C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="4/20/2014 5:55:14 PM" />

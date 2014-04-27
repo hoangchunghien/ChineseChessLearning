@@ -5,9 +5,9 @@ using System.Text;
 
 namespace Intelli.Core.Game
 {
-    interface IStateMachine
+    public interface IStateMachine
     {
-        void consumeEvent(IEvent e);
+        bool consumeEvent(IEvent e);
 
         void fireStateChangedNotification(INotify notify);
     }

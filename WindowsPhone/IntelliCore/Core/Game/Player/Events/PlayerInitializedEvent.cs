@@ -11,7 +11,7 @@ namespace Intelli.Core.Game.Player.Events
         public static readonly String NAME = "PlayerInitializedEvent";
         public string getName()
         {
-            throw new NotImplementedException();
+            return NAME;
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Intelli.Event.Game;
+using IntelliCore.Event.Game;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,7 @@ namespace Intelli.Core.Services
         Event.Game.ValidMovesEvent requestValidMoves(Event.Game.RequestValidMovesEvent e);
 
         Event.Game.GameCreatedEvent createGame(Event.Game.CreateGameEvent e);
+
+        PlayerJoinedEvent requestPlayerJoinEvent(RequestPlayerJoinEvent e);
     }
 }

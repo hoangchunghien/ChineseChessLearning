@@ -39,6 +39,8 @@ namespace Intelli.Core.Game.States
             PlayerStateMachine[] players = new PlayerStateMachine[2];
             players[0] = new PlayerStateMachine(this.gameStateMachine.getBoardMachine().getPieces(Board.Pieces.Color.BLACK));
             players[1] = new PlayerStateMachine(this.gameStateMachine.getBoardMachine().getPieces(Board.Pieces.Color.RED));
+            players[0].addListener(this.gameStateMachine);
+            players[1].addListener(this.gameStateMachine);
             this.gameStateMachine.setPlayers(players);
         }
 

@@ -65,7 +65,7 @@ namespace Intelli.Core.Game.Board
             this.currentState.run(null);
         }
 
-        public void consumeEvent(IEvent e)
+        public bool consumeEvent(IEvent e)
         {
             if (currentState.getTransitionableState().Keys.Contains(e.getName()))
             {
@@ -76,6 +76,7 @@ namespace Intelli.Core.Game.Board
             {
                 LOG.Error("Unexcepted event occur: " + e.getName());
             }
+            return true;
         }
 
         public Board getBoard()
