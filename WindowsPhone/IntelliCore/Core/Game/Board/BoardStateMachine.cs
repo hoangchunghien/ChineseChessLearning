@@ -109,7 +109,7 @@ namespace Intelli.Core.Game.Board
             {
                 LOG.Info("State changed: moving");
             }
-            else if (notify.GetType().Equals(typeof(MovedNotify)))
+            else if (notify.GetType().Equals(typeof(BoardMovedNotify)))
             {
                 LOG.Info("State changed: moved");
             }

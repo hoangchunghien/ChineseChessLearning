@@ -1,7 +1,11 @@
 ﻿using Intelli.Core.Game.Board;
+using Intelli.Core.Game.Board.Notifies;
 using Intelli.Core.Game.Events;
 using Intelli.Core.Game.Player;
+using Intelli.Core.Game.Player.Events;
+using Intelli.Core.Game.Player.States;
 using Intelli.Core.Game.States;
+using IntelliCore.Core.Game.Exceptions;
 using IntelliCore.Core.Game.Player.Notifies;
 using NLog;
 using System;
@@ -82,7 +86,14 @@ namespace Intelli.Core.Game
             {
                 // Transport event to submachine like PlayerMachine or BoardMachine
                 LOG.Info("Transport submachine event with name=" + e.getName());
-                currentState.submachineConsumeEvent(e);
+                try
+                {
+                    currentState.submachineConsumeEvent(e);
+                }
+                catch (EventNotAcceptableException ex)
+                {
+                    return false;
+                }
                 return true;
             }
             else
@@ -91,20 +102,70 @@ namespace Intelli.Core.Game
                 LOG.Info("Unvalid event in current state (" + this.currentState.getName() + ") event name=" + e.getName());
                 return false;
             }
-            
+
         }
 
         public void fireStateChangedNotification(INotify notify)
         {
-            if (notify.GetType().Equals(typeof(PlayerJoinedNotify)))
+            LOG.Info("Received notification '" + notify.GetType() + "'");
+            if (notify.GetType().Equals(typeof(PlayerReadyNotify)))
             {
+                bool allReady = true;
+                for (int i = 0; i < 2; i++)
+                {
+                    if (!this.players[i].getCurrentState().GetType().Equals(typeof(PlayerReadyState)))
+                    {
+                        allReady = false;
+                        break;
+                    }
+                }
+                if (allReady)
+                {
+                    LOG.Info("All players is ready");
+                    for (int i = 0; i < 2; i++)
+                    {
+                        PlayerPlayEvent playerPlayEvent = new PlayerPlayEvent();
+                        this.players[i].consumeEvent(playerPlayEvent);
+                    }
 
+                    GameInitializedEvent _initializedEvent = new GameInitializedEvent();
+                    this.consumeEvent(_initializedEvent);
+                }
+                else
+                {
+                    LOG.Info("All player not ready");
+                }
+            }
+            else if (notify.GetType().Equals(typeof(BoardMovedNotify)))
+            {
+                for (int i = 0; i < 2; i++)
+                {
+                    if (this.players[i].getCurrentState().GetType().Equals(typeof(PlayerPlayingState)))
+                    {
+                        this.players[i].consumeEvent(new PlayerWaitEvent());
+                    }
+                    else if (this.players[i].getCurrentState().GetType().Equals(typeof(PlayerWaitingState)))
+                    {
+                        this.players[i].consumeEvent(new PlayerTurnEvent());
+                    }
+                    else
+                    {
+                        LOG.Info("Current state: " + players[i].getCurrentState().GetType());
+                    }
+                }
             }
         }
+
+
 
         public PlayerStateMachine[] getPlayers()
         {
             return this.players;
+        }
+
+        public IGameState getCurrentState()
+        {
+            return this.currentState;
         }
 
         public void setPlayers(PlayerStateMachine[] players)

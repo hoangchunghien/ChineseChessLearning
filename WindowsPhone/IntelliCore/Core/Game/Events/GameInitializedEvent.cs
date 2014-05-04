@@ -11,7 +11,7 @@ namespace Intelli.Core.Game.Events
         public static readonly String NAME = "GameInitializedEvent";
         public string getName()
         {
-            throw new NotImplementedException();
+            return NAME;
         }
     }
 }

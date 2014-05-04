@@ -92,7 +92,7 @@
     <Compile Include="Core\Game\Board\Events\BoardReadyEvent.cs" />
     <Compile Include="Core\Game\Board\Events\BoardRejectEvent.cs" />
     <Compile Include="Core\Game\Board\Notifies\InitializingNotify.cs" />
-    <Compile Include="Core\Game\Board\Notifies\MovedNotify.cs" />
+    <Compile Include="Core\Game\Board\Notifies\BoardMovedNotify.cs" />
     <Compile Include="Core\Game\Board\Notifies\MovingNotify.cs" />
     <Compile Include="Core\Game\Board\Notifies\ReadyNotify.cs" />
     <Compile Include="Core\Game\Board\Notifies\RejectedNotify.cs" />
@@ -141,8 +141,11 @@
     <Compile Include="Core\Game\Player\Events\PlayerUndoRejectEvent.cs" />
     <Compile Include="Core\Game\Player\Events\PlayerWaitEvent.cs" />
     <Compile Include="Core\Game\Player\Events\PlayerWinEvent.cs" />
+    <Compile Include="Core\Game\Exceptions\EventNotAcceptableException.cs" />
+    <Compile Include="Core\Game\Player\Exceptions\PlayerJoinException.cs" />
     <Compile Include="Core\Game\Player\Notifies\PlayerInitializingNotify.cs" />
     <Compile Include="Core\Game\Player\Notifies\PlayerJoinedNotify.cs" />
+    <Compile Include="Core\Game\Player\Notifies\PlayerReadyNotify.cs" />
     <Compile Include="Core\Game\Player\PlayerStateMachine.cs" />
     <Compile Include="Core\Game\Player\States\PlayerChessedState.cs" />
     <Compile Include="Core\Game\Player\States\PlayerInitializingState.cs" />
@@ -188,9 +191,13 @@
     <Compile Include="Event\Game\GameStateDetail.cs" />
     <Compile Include="Event\Game\PlayerDetail.cs" />
     <Compile Include="Event\Game\PlayerJoinedEvent.cs" />
+    <Compile Include="Event\Game\PlayerMovedEvent.cs" />
+    <Compile Include="Event\Game\PlayerReadyEvent.cs" />
     <Compile Include="Event\Game\PositionDetail.cs" />
     <Compile Include="Event\Game\RequestGameMoveEvent.cs" />
     <Compile Include="Event\Game\RequestPlayerJoinEvent.cs" />
+    <Compile Include="Event\Game\RequestPlayerMoveEvent.cs" />
+    <Compile Include="Event\Game\RequestPlayerReadyEvent.cs" />
     <Compile Include="Event\Game\RequestValidMovesEvent.cs" />
     <Compile Include="Event\Game\ValidMovesEvent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

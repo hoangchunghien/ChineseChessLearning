@@ -5,7 +5,13 @@ using System.Text;
 
 namespace Intelli.Event.Base
 {
-    interface ReadEvent
+    public class ReadEvent
     {
+        protected bool accepted = true;
+
+        public bool isAccepted()
+        {
+            return accepted;
+        }
     }
 }

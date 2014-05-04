@@ -1,4 +1,8 @@
-﻿using NLog;
+﻿using Intelli.Core.Game.Board;
+using Intelli.Core.Game.Board.Events;
+using Intelli.Core.Game.Board.Pieces;
+using Intelli.Core.Game.Player.Events;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,12 +46,43 @@ namespace Intelli.Core.Game.States
             //     2. PlayerUndoEvent
             //     3. PlayerResignEvent
 
-            return false;
+            if (e.GetType().Equals(typeof(BoardMoveEvent)))
+            {
+                return true;
+            }
+            else if (e.GetType().Equals(typeof(PlayerUndoEvent)))
+            {
+                return true;
+            }
+            else if (e.GetType().Equals(typeof(PlayerResignEvent)))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public void submachineConsumeEvent(IEvent e)
         {
-            throw new NotImplementedException();
+
+            if (e.GetType().Equals(typeof(BoardMoveEvent)))
+            {
+                BoardMoveEvent _e = ((BoardMoveEvent)e);
+                int pid = _e.getPid();
+                Position currentPosition = _e.getCurrentPosition();
+                Position nextPosition = _e.getNextPosition();
+                Piece selectionPiece = this.gameStateMachine.getBoardMachine().getBoard().
+                    getPieces()[currentPosition.getRow(), currentPosition.getCol()];
+
+                if (this.gameStateMachine.getPlayers()[pid].getListPieces().Contains(selectionPiece))
+                {
+                    this.gameStateMachine.getBoardMachine().consumeEvent(e);
+
+                }
+            }
+
         }
     }
 }

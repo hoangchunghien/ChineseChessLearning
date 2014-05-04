@@ -1,6 +1,7 @@
 ﻿using Intelli.Core.Game.Board.Pieces;
 using Intelli.Core.Game.Player.Events;
 using Intelli.Core.Game.Player.States;
+using IntelliCore.Core.Game.Exceptions;
 using IntelliCore.Core.Game.Player.Notifies;
 using NLog;
 using System;
@@ -100,7 +101,7 @@ namespace Intelli.Core.Game.Player
             chessed.getTransitionableState().Add(PlayerNoValidMoveEvent.NAME, lost);
 
             // From win
-            
+
 
             // From undoAccepting
             undoAccepting.getTransitionableState().Add(PlayerUndoAcceptEvent.NAME, undoAccepted);
@@ -138,27 +139,34 @@ namespace Intelli.Core.Game.Player
         {
             if (currentState.getTransitionableState().Keys.Contains(e.getName()))
             {
+                LOG.Info("Consume event '" + e.getName() + "'");
                 currentState = currentState.getTransitionableState()[e.getName()];
                 currentState.run(e);
                 return true;
             }
             else
             {
-                LOG.Error("Unexcepted event occur: " + e.getName());
-                return false;
+                LOG.Error("Unexpected event occur: " + e.getName());
+                throw new EventNotAcceptableException(e.getName()
+                    + " not acceptable in '" + currentState.getName() + "'");
             }
         }
 
         public void fireStateChangedNotification(INotify notify)
         {
             LOG.Info("state changed");
-            if (notify.GetType().Equals(typeof(PlayerJoinedNotify)))
-            {
-                LOG.Info("Player joined");
-                _notifyListeners(notify); // Notify to listeners
-            }
+            _notifyListeners(notify);
         }
 
+        public IState getCurrentState()
+        {
+            return this.currentState;
+        }
+
+        public List<Piece> getListPieces()
+        {
+            return this.listPieces; 
+        }
         private void _notifyListeners(INotify notify)
         {
             foreach (IStateMachine machine in listeners)

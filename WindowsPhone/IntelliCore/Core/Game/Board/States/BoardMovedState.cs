@@ -28,7 +28,7 @@ namespace Intelli.Core.Game.Board
 
         public void run(IEvent e)
         {
-            ReadyNotify notify = new ReadyNotify();
+            BoardMovedNotify notify = new BoardMovedNotify();
             this.boardMachine.fireStateChangedNotification(notify);
             LOG.Info(NAME);
             this.boardMachine.consumeEvent(new BoardReadyEvent());

@@ -10,12 +10,23 @@ namespace Intelli.Core.Game.Board.Events
     {
         public static readonly String NAME = "BoardMoveEvent";
 
+        private int pid;
         private Position currentPosition;
         private Position nextPosition;
 
         public string getName()
         {
             return NAME;
+        }
+
+        public int getPid()
+        {
+            return this.pid;
+        }
+
+        public void setPid(int pid)
+        {
+            this.pid = pid;
         }
 
         public BoardMoveEvent(Position current, Position next)
@@ -33,5 +44,6 @@ namespace Intelli.Core.Game.Board.Events
         {
             return this.nextPosition;
         }
+
     }
 }

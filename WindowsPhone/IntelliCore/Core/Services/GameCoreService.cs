@@ -14,5 +14,9 @@ namespace Intelli.Core.Services
         Event.Game.GameCreatedEvent createGame(Event.Game.CreateGameEvent e);
 
         PlayerJoinedEvent requestPlayerJoinEvent(RequestPlayerJoinEvent e);
+
+        PlayerReadyEvent requestPlayerReadyEvent(RequestPlayerReadyEvent e);
+
+        PlayerMovedEvent requestPlayerMoveEvent(RequestPlayerMoveEvent e);
     }
 }

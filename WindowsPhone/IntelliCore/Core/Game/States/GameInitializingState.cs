@@ -1,6 +1,7 @@
 ﻿using Intelli.Core.Game.Board;
 using Intelli.Core.Game.Player;
 using Intelli.Core.Game.Player.Events;
+using IntelliCore.Core.Game.Exceptions;
 using NLog;
 using System;
 using System.Collections.Generic;
@@ -74,21 +75,29 @@ namespace Intelli.Core.Game.States
 
         public void submachineConsumeEvent(IEvent e)
         {
-            if (e.GetType().Equals(typeof(PlayerJoinEvent)))
+            try
             {
-                int pid = ((PlayerJoinEvent)e).getId();
-                // Transport event to player machine
-                this.gameStateMachine.getPlayers()[pid].consumeEvent(e);
+                if (e.GetType().Equals(typeof(PlayerJoinEvent)))
+                {
+                    int pid = ((PlayerJoinEvent)e).getId();
+                    // Transport event to player machine
+                    this.gameStateMachine.getPlayers()[pid].consumeEvent(e);
+                }
+                else if (e.GetType().Equals(typeof(PlayerRejectEvent)))
+                {
+                    int pid = ((PlayerRejectEvent)e).getId();
+                    this.gameStateMachine.getPlayers()[pid].consumeEvent(e);
+                }
+                else if (e.GetType().Equals(typeof(PlayerReadyEvent)))
+                {
+                    int pid = ((PlayerReadyEvent)e).getId();
+                    this.gameStateMachine.getPlayers()[pid].consumeEvent(e);
+                }
             }
-            else if (e.GetType().Equals(typeof(PlayerRejectEvent)))
+            catch (IndexOutOfRangeException ioore)
             {
-                int pid = ((PlayerRejectEvent)e).getId();
-                this.gameStateMachine.getPlayers()[pid].consumeEvent(e);
-            }
-            else if (e.GetType().Equals(typeof(PlayerReadyEvent)))
-            {
-                int pid = ((PlayerReadyEvent)e).getId();
-                this.gameStateMachine.getPlayers()[pid].consumeEvent(e);
+                LOG.Error("Invalid player id: " + ((PlayerJoinEvent)e).getId());
+                throw new EventNotAcceptableException("Invalid player id");
             }
         }
     }
