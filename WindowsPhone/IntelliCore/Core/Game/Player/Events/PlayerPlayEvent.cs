@@ -9,7 +9,7 @@ namespace Intelli.Core.Game.Player.Events
     public class PlayerPlayEvent : IEvent
     {
         public static readonly String NAME = "PlayerPlayEvent";
-        public string getName()
+        public string getEventName()
         {
             return NAME;
         }

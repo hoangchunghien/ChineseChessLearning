@@ -9,7 +9,7 @@ namespace Intelli.Core.Game.Player.Events
     public class PlayerUndoRejectEvent : IEvent
     {
         public static readonly String NAME = "PlayerUndoRejectEvent";
-        public string getName()
+        public string getEventName()
         {
             throw new NotImplementedException();
         }

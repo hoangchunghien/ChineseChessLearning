@@ -32,7 +32,7 @@ namespace Testing
         {
             IEvent e = new BoardMoveEvent(new Position(0, 0), new Position(1, 0));
             boardMachine.consumeEvent(e);
-            Assert.AreEqual(BoardReadyState.NAME, boardMachine.getCurrentState().getName());
+            Assert.AreEqual(BoardReadyState.NAME, boardMachine.getCurrentState().getStateName());
 
             IEvent invalidEvent = new BoardReadyEvent();
             boardMachine.consumeEvent(invalidEvent);

@@ -22,7 +22,7 @@ namespace Intelli.Core.Game.Board
             this.boardMachine = boardMachine;
         }
 
-        public string getName()
+        public string getStateName()
         {
             return NAME;
         }
@@ -60,7 +60,7 @@ namespace Intelli.Core.Game.Board
             }
             else
             {
-                LOG.Error("Receive unexpected event, name: " + e.getName());
+                LOG.Error("Receive unexpected event, name: " + e.getEventName());
             }
         }
 

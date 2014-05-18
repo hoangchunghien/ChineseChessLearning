@@ -22,7 +22,7 @@ namespace Intelli.Core.Game.Player.States
             this.playerStateMachine = playerStateMachine;
         }
 
-        public string getName()
+        public string getStateName()
         {
             return NAME;
         }

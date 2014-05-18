@@ -9,9 +9,9 @@ namespace Intelli.Core.Game.Player.Events
     public class PlayerWaitEvent: IEvent
     {
         public static readonly String NAME = "PlayerWaitEvent";
-        public string getName()
+        public string getEventName()
         {
-            throw new NotImplementedException();
+            return NAME;
         }
     }
 }

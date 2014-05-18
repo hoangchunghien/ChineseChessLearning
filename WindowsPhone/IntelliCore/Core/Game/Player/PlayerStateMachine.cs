@@ -137,25 +137,26 @@ namespace Intelli.Core.Game.Player
         }
         public bool consumeEvent(IEvent e)
         {
-            if (currentState.getTransitionableState().Keys.Contains(e.getName()))
+            if (currentState.getTransitionableState().Keys.Contains(e.getEventName()))
             {
-                LOG.Info("Consume event '" + e.getName() + "'");
-                currentState = currentState.getTransitionableState()[e.getName()];
+                LOG.Info("Consume event '" + e.getEventName() + "'");
+                // Get next state
+                currentState = currentState.getTransitionableState()[e.getEventName()];
                 currentState.run(e);
                 return true;
             }
             else
             {
-                LOG.Error("Unexpected event occur: " + e.getName());
-                throw new EventNotAcceptableException(e.getName()
-                    + " not acceptable in '" + currentState.getName() + "'");
+                LOG.Error("Unexpected event occur: " + e.getEventName());
+                throw new EventNotAcceptableException(e.getEventName()
+                    + " not acceptable in '" + currentState.getStateName() + "'");
             }
         }
 
         public void fireStateChangedNotification(INotify notify)
         {
             LOG.Info("state changed");
-            _notifyListeners(notify);
+            this._notifyListeners(notify);
         }
 
         public IState getCurrentState()

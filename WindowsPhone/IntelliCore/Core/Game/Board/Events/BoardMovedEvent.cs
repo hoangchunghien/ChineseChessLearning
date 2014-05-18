@@ -10,7 +10,7 @@ namespace Intelli.Core.Game.Board.Events
     {
         public static readonly String NAME = "BoardMovedEvent";
 
-        public string getName()
+        public string getEventName()
         {
             return NAME;
         }

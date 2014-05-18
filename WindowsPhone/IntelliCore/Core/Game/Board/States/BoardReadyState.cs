@@ -19,7 +19,7 @@ namespace Intelli.Core.Game.Board
             this.board = board;
         }
 
-        public string getName()
+        public string getStateName()
         {
             return NAME;
         }

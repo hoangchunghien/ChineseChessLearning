@@ -24,7 +24,7 @@ namespace Intelli.Core.Game.States
         {
             this.gameStateMachine = gameStateMachine;
         }
-        public string getName()
+        public string getStateName()
         {
             return NAME;
         }
@@ -35,6 +35,7 @@ namespace Intelli.Core.Game.States
 
             LOG.Info("Init board state machine");
             this.gameStateMachine.setBoardMachine(new BoardStateMachine());
+            this.gameStateMachine.getBoardMachine().addListener(this.gameStateMachine);
 
             LOG.Info("Init players state machine");
             PlayerStateMachine[] players = new PlayerStateMachine[2];
@@ -43,6 +44,7 @@ namespace Intelli.Core.Game.States
             players[0].addListener(this.gameStateMachine);
             players[1].addListener(this.gameStateMachine);
             this.gameStateMachine.setPlayers(players);
+            //Uwhy don't consume initializedEvent? to get next state playing
         }
 
         public Dictionary<string, IState> getTransitionableState()
@@ -52,7 +54,7 @@ namespace Intelli.Core.Game.States
 
         public bool isSubmachineEvent(IEvent e)
         {
-            // In game initializing state, receive only 3 event is
+            // In game initializing state, receive only 3 events are:
             //    1. PlayerJoinEvent
             //    2. PlayerRejectEvent
             //    3. PlayerReadyEvent
@@ -86,11 +88,13 @@ namespace Intelli.Core.Game.States
                 else if (e.GetType().Equals(typeof(PlayerRejectEvent)))
                 {
                     int pid = ((PlayerRejectEvent)e).getId();
+                    // Transport event to player machine
                     this.gameStateMachine.getPlayers()[pid].consumeEvent(e);
                 }
                 else if (e.GetType().Equals(typeof(PlayerReadyEvent)))
                 {
                     int pid = ((PlayerReadyEvent)e).getId();
+                    // Transport event to player machine
                     this.gameStateMachine.getPlayers()[pid].consumeEvent(e);
                 }
             }

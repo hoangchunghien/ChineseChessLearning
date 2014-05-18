@@ -9,7 +9,7 @@ namespace Intelli.Core.Game.Player.Events
     public class PlayerLoseEvent : IEvent
     {
         public static readonly String NAME = "PlayerLoseEvent";
-        public string getName()
+        public string getEventName()
         {
             throw new NotImplementedException();
         }

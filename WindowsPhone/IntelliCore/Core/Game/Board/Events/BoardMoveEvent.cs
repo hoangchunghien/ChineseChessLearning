@@ -14,7 +14,7 @@ namespace Intelli.Core.Game.Board.Events
         private Position currentPosition;
         private Position nextPosition;
 
-        public string getName()
+        public string getEventName()
         {
             return NAME;
         }

@@ -1,0 +1,32 @@
+2014-05-11 23:50:50.8359 Intelli.Core.Game.States.GameInitializingState.run INFO Game initializing
+2014-05-11 23:50:50.9387 Intelli.Core.Game.States.GameInitializingState.run INFO Init board state machine
+2014-05-11 23:50:50.9967 Intelli.Core.Game.Board.BoardStateMachine.fireStateChangedNotification INFO State changed: initializing
+2014-05-11 23:50:50.9967 Intelli.Core.Game.Board.BoardInitializingState.run INFO Initializing
+2014-05-11 23:50:51.0217 Intelli.Core.Game.Board.BoardReadyState.run INFO Ready
+2014-05-11 23:50:51.0327 Intelli.Core.Game.States.GameInitializingState.run INFO Init players state machine
+2014-05-11 23:50:51.1257 Intelli.Core.Game.Player.PlayerStateMachine.fireStateChangedNotification INFO state changed
+2014-05-11 23:50:51.1367 Intelli.Core.Game.Player.States.PlayerInitializingState.run INFO Player initializing
+2014-05-11 23:50:51.1367 Intelli.Core.Game.Player.PlayerStateMachine.consumeEvent INFO Consume event 'PlayerInitializedEvent'
+2014-05-11 23:50:51.1567 Intelli.Core.Game.Player.States.PlayerJoiningState.run INFO Player joining
+2014-05-11 23:50:51.1727 Intelli.Core.Game.Player.PlayerStateMachine.fireStateChangedNotification INFO state changed
+2014-05-11 23:50:51.1727 Intelli.Core.Game.Player.States.PlayerInitializingState.run INFO Player initializing
+2014-05-11 23:50:51.1887 Intelli.Core.Game.Player.PlayerStateMachine.consumeEvent INFO Consume event 'PlayerInitializedEvent'
+2014-05-11 23:50:51.2017 Intelli.Core.Game.Player.States.PlayerJoiningState.run INFO Player joining
+2014-05-11 23:50:51.2017 Intelli.Core.Services.EventHandlers.GameCoreEventHandler.requestPlayerJoinEvent INFO player id=0
+2014-05-11 23:50:51.2297 Intelli.Core.Game.GameStateMachine.consumeEvent INFO Transport submachine event with name=PlayerJoinEvent
+2014-05-11 23:50:51.2297 Intelli.Core.Game.Player.PlayerStateMachine.consumeEvent INFO Consume event 'PlayerJoinEvent'
+2014-05-11 23:50:51.2437 Intelli.Core.Game.Player.States.PlayerJoinedState.run INFO Player joined
+2014-05-11 23:50:51.2437 Intelli.Core.Game.Player.PlayerStateMachine.fireStateChangedNotification INFO state changed
+2014-05-11 23:50:51.2437 Intelli.Core.Game.GameStateMachine.fireStateChangedNotification INFO Received notification 'IntelliCore.Core.Game.Player.Notifies.PlayerJoinedNotify'
+2014-05-11 23:50:51.2687 Intelli.Core.Services.EventHandlers.GameCoreEventHandler.requestPlayerJoinEvent INFO Player join accepted
+2014-05-11 23:50:51.2787 Intelli.Core.Services.EventHandlers.GameCoreEventHandler.requestPlayerReadyEvent INFO player id=0
+2014-05-11 23:50:51.3037 Intelli.Core.Game.GameStateMachine.consumeEvent INFO Transport submachine event with name=PlayerReadyEvent
+2014-05-11 23:50:51.3167 Intelli.Core.Game.Player.PlayerStateMachine.consumeEvent INFO Consume event 'PlayerReadyEvent'
+2014-05-11 23:50:51.3227 Intelli.Core.Game.Player.States.PlayerReadyState.run INFO Player ready
+2014-05-11 23:50:51.3227 Intelli.Core.Game.Player.PlayerStateMachine.fireStateChangedNotification INFO state changed
+2014-05-11 23:50:51.3227 Intelli.Core.Game.GameStateMachine.fireStateChangedNotification INFO Received notification 'IntelliCore.Core.Game.Player.Notifies.PlayerReadyNotify'
+2014-05-11 23:50:51.3377 Intelli.Core.Game.GameStateMachine.fireStateChangedNotification INFO All player not ready
+2014-05-11 23:50:51.3377 Intelli.Core.Services.EventHandlers.GameCoreEventHandler.requestPlayerReadyEvent INFO Player ready accepted
+2014-05-11 23:50:58.7155 Intelli.Core.Services.EventHandlers.GameCoreEventHandler.requestPlayerJoinEvent INFO player id=0
+2014-05-11 23:51:05.2483 Intelli.Core.Game.GameStateMachine.consumeEvent INFO Transport submachine event with name=PlayerJoinEvent
+2014-05-11 23:52:36.2966 Intelli.Core.Services.EventHandlers.GameCoreEventHandler.requestPlayerJoinEvent INFO Player join rejected

@@ -1,4 +1,5 @@
-﻿using Intelli.Core.Game.Board;
+﻿using Intelli.Config;
+using Intelli.Core.Game.Board;
 using Intelli.Core.Game.Board.Notifies;
 using Intelli.Core.Game.Events;
 using Intelli.Core.Game.Player;
@@ -75,17 +76,17 @@ namespace Intelli.Core.Game
 
         public bool consumeEvent(IEvent e)
         {
-            if (currentState.getTransitionableState().Keys.Contains(e.getName()))
+            if (currentState.getTransitionableState().Keys.Contains(e.getEventName()))
             {
-                LOG.Info("Consuming game event name=" + e.getName());
-                this.currentState = (IGameState)this.currentState.getTransitionableState()[e.getName()];
+                LOG.Info("Consuming game event name=" + e.getEventName());
+                this.currentState = (IGameState)this.currentState.getTransitionableState()[e.getEventName()];
                 this.currentState.run(e);
                 return true;
             }
             else if (currentState.isSubmachineEvent(e))
             {
                 // Transport event to submachine like PlayerMachine or BoardMachine
-                LOG.Info("Transport submachine event with name=" + e.getName());
+                LOG.Info("Transport submachine event with name=" + e.getEventName());
                 try
                 {
                     currentState.submachineConsumeEvent(e);
@@ -99,7 +100,7 @@ namespace Intelli.Core.Game
             else
             {
                 // Reject unvalid event
-                LOG.Info("Unvalid event in current state (" + this.currentState.getName() + ") event name=" + e.getName());
+                LOG.Info("Unvalid event in current state (" + this.currentState.getStateName() + ") event name=" + e.getEventName());
                 return false;
             }
 
@@ -127,6 +128,8 @@ namespace Intelli.Core.Game
                         PlayerPlayEvent playerPlayEvent = new PlayerPlayEvent();
                         this.players[i].consumeEvent(playerPlayEvent);
                     }
+                    int first = GameConfig.getPlayFirst();
+                    this.players[1 - first].consumeEvent(new PlayerWaitEvent());
 
                     GameInitializedEvent _initializedEvent = new GameInitializedEvent();
                     this.consumeEvent(_initializedEvent);
@@ -142,10 +145,12 @@ namespace Intelli.Core.Game
                 {
                     if (this.players[i].getCurrentState().GetType().Equals(typeof(PlayerPlayingState)))
                     {
+                        LOG.Info("Change player " + i + "  Playing to Waiting");
                         this.players[i].consumeEvent(new PlayerWaitEvent());
                     }
                     else if (this.players[i].getCurrentState().GetType().Equals(typeof(PlayerWaitingState)))
                     {
+                        LOG.Info("Change player " + i +" Waiting to Turning");
                         this.players[i].consumeEvent(new PlayerTurnEvent());
                     }
                     else

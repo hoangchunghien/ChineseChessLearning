@@ -7,7 +7,7 @@ namespace Intelli.Core.Game
 {
     public interface IState
     {
-        String getName();
+        String getStateName();
         void run(IEvent e);
         Dictionary<String, IState> getTransitionableState();
     }

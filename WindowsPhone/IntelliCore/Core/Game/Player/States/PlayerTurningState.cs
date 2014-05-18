@@ -1,4 +1,6 @@
-﻿using NLog;
+﻿using Intelli.Core.Game.Player.Events;
+using IntelliCore.Core.Game.Player.Notifies;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +24,7 @@ namespace Intelli.Core.Game.Player.States
             this.playerStateMachine = playerStateMachine;
         }
 
-        public string getName()
+        public string getStateName()
         {
             return NAME;
         }
@@ -30,6 +32,8 @@ namespace Intelli.Core.Game.Player.States
         public void run(IEvent e)
         {
             LOG.Info("Player turning");
+            this.playerStateMachine.fireStateChangedNotification(new PlayerTurningNotify());
+            this.playerStateMachine.consumeEvent(new PlayerPlayEvent());
         }
 
         public Dictionary<string, IState> getTransitionableState()

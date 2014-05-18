@@ -20,7 +20,7 @@ namespace Intelli.Core.Game.States
         {
             this.gameStateMachine = gameStateMachine;
         }
-        public string getName()
+        public string getStateName()
         {
             return NAME;
         }

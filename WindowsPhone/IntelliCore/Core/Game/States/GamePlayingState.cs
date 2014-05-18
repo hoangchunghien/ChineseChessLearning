@@ -24,7 +24,7 @@ namespace Intelli.Core.Game.States
         {
             this.gameStateMachine = gameStateMachine;
         }
-        public string getName()
+        public string getStateName()
         {
             return NAME;
         }
@@ -41,7 +41,7 @@ namespace Intelli.Core.Game.States
 
         public bool isSubmachineEvent(IEvent e)
         {
-            // In playing state, only allow these event
+            // In playing state, only allow these events:
             //     1. BoardMoveEvent
             //     2. PlayerUndoEvent
             //     3. PlayerResignEvent
@@ -66,9 +66,10 @@ namespace Intelli.Core.Game.States
 
         public void submachineConsumeEvent(IEvent e)
         {
-
+            LOG.Info("Consuming event '" + e.getEventName() + "'");
             if (e.GetType().Equals(typeof(BoardMoveEvent)))
             {
+                LOG.Info("Processing move event");
                 BoardMoveEvent _e = ((BoardMoveEvent)e);
                 int pid = _e.getPid();
                 Position currentPosition = _e.getCurrentPosition();
@@ -76,8 +77,10 @@ namespace Intelli.Core.Game.States
                 Piece selectionPiece = this.gameStateMachine.getBoardMachine().getBoard().
                     getPieces()[currentPosition.getRow(), currentPosition.getCol()];
 
+                LOG.Info("Selection piece: " + selectionPiece.getColor());
                 if (this.gameStateMachine.getPlayers()[pid].getListPieces().Contains(selectionPiece))
                 {
+
                     this.gameStateMachine.getBoardMachine().consumeEvent(e);
 
                 }

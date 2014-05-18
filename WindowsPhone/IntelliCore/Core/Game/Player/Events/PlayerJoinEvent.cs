@@ -23,7 +23,7 @@ namespace Intelli.Core.Game.Player.Events
             this.id = id;
         }
 
-        public string getName()
+        public string getEventName()
         {
             return NAME;
         }

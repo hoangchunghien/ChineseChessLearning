@@ -9,7 +9,7 @@ namespace Intelli.Core.Game.Events
     public class GameEndEvent : IEvent
     {
         public static readonly String NAME = "GameEndEvent";
-        public string getName()
+        public string getEventName()
         {
             throw new NotImplementedException();
         }

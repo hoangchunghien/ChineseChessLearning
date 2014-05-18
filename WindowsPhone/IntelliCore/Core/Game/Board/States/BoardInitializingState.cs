@@ -21,7 +21,7 @@ namespace Intelli.Core.Game.Board
             this.boardMachine = boardMachine;
         }
 
-        public string getName()
+        public string getStateName()
         {
             return NAME;
         }

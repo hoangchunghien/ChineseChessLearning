@@ -20,6 +20,8 @@ namespace Intelli.Core.Game.Board
 
         private IState currentState;
 
+        private List<IStateMachine> listeners = new List<IStateMachine>();
+
         private List<IState> states;
 
         private Board board;
@@ -67,14 +69,14 @@ namespace Intelli.Core.Game.Board
 
         public bool consumeEvent(IEvent e)
         {
-            if (currentState.getTransitionableState().Keys.Contains(e.getName()))
+            if (currentState.getTransitionableState().Keys.Contains(e.getEventName()))
             {
-                currentState = currentState.getTransitionableState()[e.getName()];
+                currentState = currentState.getTransitionableState()[e.getEventName()];
                 currentState.run(e);
             }
             else
             {
-                LOG.Error("Unexcepted event occur: " + e.getName());
+                LOG.Error("Unexcepted event occur: " + e.getEventName());
             }
             return true;
         }
@@ -117,6 +119,8 @@ namespace Intelli.Core.Game.Board
             {
                 LOG.Info("State changed: rejected");
             }
+
+            _notifyListeners(notify);
         }
 
         public List<Piece> getPieces(Color color)
@@ -136,6 +140,24 @@ namespace Intelli.Core.Game.Board
             }
 
             return result;
+        }
+
+        private void _notifyListeners(INotify notify)
+        {
+            foreach (IStateMachine machine in listeners)
+            {
+                machine.fireStateChangedNotification(notify);
+            }
+        }
+
+        public void addListener(IStateMachine listener)
+        {
+            this.listeners.Add(listener);
+        }
+
+        public void removeListener(IStateMachine listener)
+        {
+            this.listeners.Remove(listener);
         }
     }
 }

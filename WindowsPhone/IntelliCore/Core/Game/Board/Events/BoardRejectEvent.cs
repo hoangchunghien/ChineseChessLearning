@@ -12,7 +12,7 @@ namespace Intelli.Core.Game.Board.Events
 
 
 
-        public string getName()
+        public string getEventName()
         {
             return NAME;
         }

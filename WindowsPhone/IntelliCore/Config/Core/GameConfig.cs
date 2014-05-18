@@ -9,10 +9,15 @@ namespace Intelli.Config
 {
     public class GameConfig
     {
+        public static int playFirst = 1;
         public static Intelli.Core.Services.GameCoreService getGameService()
         {
             return new GameCoreEventHandler();
         }
 
+        public static int getPlayFirst()
+        {
+            return playFirst;
+        }
     }
 }

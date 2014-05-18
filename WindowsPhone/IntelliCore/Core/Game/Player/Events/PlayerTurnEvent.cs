@@ -9,9 +9,9 @@ namespace Intelli.Core.Game.Player.Events
     public class PlayerTurnEvent : IEvent
     {
         public static readonly String NAME = "PlayerTurnEvent";
-        public string getName()
+        public string getEventName()
         {
-            throw new NotImplementedException();
+            return NAME;
         }
     }
 }

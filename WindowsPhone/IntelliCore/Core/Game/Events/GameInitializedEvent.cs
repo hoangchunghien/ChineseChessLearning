@@ -9,7 +9,7 @@ namespace Intelli.Core.Game.Events
     public class GameInitializedEvent : IEvent
     {
         public static readonly String NAME = "GameInitializedEvent";
-        public string getName()
+        public string getEventName()
         {
             return NAME;
         }

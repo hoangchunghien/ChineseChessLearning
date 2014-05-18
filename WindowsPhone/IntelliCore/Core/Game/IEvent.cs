@@ -8,6 +8,6 @@ namespace Intelli.Core.Game
 {
     public interface IEvent
     {
-        String getName();
+        String getEventName();
     }
 }

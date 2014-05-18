@@ -9,7 +9,7 @@ namespace Intelli.Core.Game.Events
     public class GameUndoEvent : IEvent
     {
         public static readonly String NAME = "GameUndoEvent";
-        public string getName()
+        public string getEventName()
         {
             throw new NotImplementedException();
         }

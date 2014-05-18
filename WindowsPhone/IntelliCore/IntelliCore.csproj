@@ -146,6 +146,7 @@
     <Compile Include="Core\Game\Player\Notifies\PlayerInitializingNotify.cs" />
     <Compile Include="Core\Game\Player\Notifies\PlayerJoinedNotify.cs" />
     <Compile Include="Core\Game\Player\Notifies\PlayerReadyNotify.cs" />
+    <Compile Include="Core\Game\Player\Notifies\PlayerTurningNotify.cs" />
     <Compile Include="Core\Game\Player\PlayerStateMachine.cs" />
     <Compile Include="Core\Game\Player\States\PlayerChessedState.cs" />
     <Compile Include="Core\Game\Player\States\PlayerInitializingState.cs" />

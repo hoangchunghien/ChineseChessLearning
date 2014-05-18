@@ -1,4 +1,5 @@
-﻿using Intelli.Core.Game;
+﻿using Intelli.Config;
+using Intelli.Core.Game;
 using Intelli.Core.Game.Player.States;
 using Intelli.Core.Game.States;
 using Intelli.Core.Services;
@@ -32,17 +33,18 @@ namespace Testing
             gameService.requestPlayerJoinEvent(new IntelliCore.Event.Game.RequestPlayerJoinEvent(0));
             gameService.requestPlayerJoinEvent(new IntelliCore.Event.Game.RequestPlayerJoinEvent(1));
             Assert.True(machine.getPlayers()[1].getCurrentState().GetType().Equals(typeof(PlayerJoinedState)));
-
             gameService.requestPlayerReadyEvent(new IntelliCore.Event.Game.RequestPlayerReadyEvent(1));
-            Assert.True(machine.getPlayers()[1].getCurrentState().GetType().Equals(typeof(PlayerPlayingState)));
-            Assert.True(machine.getPlayers()[0].getCurrentState().GetType().Equals(typeof(PlayerPlayingState)));
 
-            Assert.True(machine.getCurrentState().GetType().Equals(typeof(GamePlayingState)));
+            int f = GameConfig.getPlayFirst();
+            Assert.True(machine.getPlayers()[f].getCurrentState().GetType().Equals(typeof(PlayerPlayingState)));
+            Assert.True(machine.getPlayers()[1 - f].getCurrentState().GetType().Equals(typeof(PlayerWaitingState)));
+
+            //Assert.True(machine.getCurrentState().GetType().Equals(typeof(GamePlayingState)));
 
 
-            gameService.requestPlayerMoveEvent(new IntelliCore.Event.Game.RequestPlayerMoveEvent(1, new PositionDetail(0, 0), new PositionDetail(1, 0)));
-            Assert.True(machine.getPlayers()[1].getCurrentState().GetType().Equals(typeof(PlayerWaitingState)));
-            Assert.True(machine.getPlayers()[0].getCurrentState().GetType().Equals(typeof(PlayerPlayingState)));
+            //gameService.requestPlayerMoveEvent(new IntelliCore.Event.Game.RequestPlayerMoveEvent(f, new PositionDetail(9, 8), new PositionDetail(8, 8)));
+            //Assert.True(machine.getPlayers()[f].getCurrentState().GetType().Equals(typeof(PlayerWaitingState)));
+            //Assert.True(machine.getPlayers()[1-f].getCurrentState().GetType().Equals(typeof(PlayerPlayingState)));
             
         }
     }

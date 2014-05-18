@@ -85,7 +85,7 @@ namespace Intelli.Core.Services.EventHandlers
                 = new Game.Board.Events.BoardMoveEvent(current, next);
             boardMoveEvent.setPid(e.getPid());
 
-            bool accepted = gameMachine.consumeEvent(boardMoveEvent);
+            bool accepted = this.gameMachine.consumeEvent(boardMoveEvent);
 
             if (accepted)
             {

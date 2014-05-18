@@ -9,7 +9,7 @@ namespace Intelli.Core.Game.Board.Events
     public class BoardReadyEvent : IEvent
     {
         public static readonly String NAME = "BoardReadyEvent";
-        public string getName()
+        public string getEventName()
         {
             return NAME;
         }
