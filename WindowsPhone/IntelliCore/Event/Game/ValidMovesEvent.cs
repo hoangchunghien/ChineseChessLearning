@@ -19,5 +19,12 @@ namespace Intelli.Event.Game
         {  
             return this.validMoves; 
         }
+
+        public static ValidMovesEvent notFound()
+        {
+            ValidMovesEvent ev = new ValidMovesEvent(null);
+            ev.accepted = false;
+            return ev;
+        }
     }
 }

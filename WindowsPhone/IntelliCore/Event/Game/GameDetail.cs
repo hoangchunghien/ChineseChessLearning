@@ -31,7 +31,9 @@ namespace Intelli.Event.Game
             return detail;
         }
 
-      
-
+        public BoardDetail getBoarDetail()
+        {
+            return this.boardDetail;
+        }
     }
 }

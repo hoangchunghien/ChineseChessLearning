@@ -1,5 +1,6 @@
 ﻿using Intelli.Core.Game;
 using Intelli.Core.Game.Board;
+using Intelli.Core.Game.Player.States;
 using Intelli.Event.Game;
 using IntelliCore.Event.Game;
 using NLog;
@@ -23,7 +24,25 @@ namespace Intelli.Core.Services.EventHandlers
 
         public Event.Game.ValidMovesEvent requestValidMoves(Event.Game.RequestValidMovesEvent e)
         {
-            throw new NotImplementedException();
+
+            bool isPlaying = this.gameMachine.getPlayers()[e.PlayerId()].getCurrentState().GetType().Equals(typeof(PlayerPlayingState));
+            if (isPlaying)
+            { 
+                int r = e.getPositionDetail().getRow();
+                int c = e.getPositionDetail().getCol();
+                List<Position> validPositions = this.gameMachine.getBoardMachine().getBoard().getPieces()[r, c].getValidNextPositions();
+
+                List<PositionDetail> pDetails = new List<PositionDetail>();
+                foreach (Position p in validPositions)
+                {
+                    PositionDetail pd = new PositionDetail(p.getRow(), p.getCol());
+                    pDetails.Add(pd);
+                }
+
+                return new ValidMovesEvent(pDetails);
+            }
+
+            return ValidMovesEvent.notFound();
         }
 
         public Event.Game.GameCreatedEvent createGame(Event.Game.CreateGameEvent e)
