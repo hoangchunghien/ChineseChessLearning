@@ -211,7 +211,6 @@
     <Folder Include="Core\Course\" />
     <Folder Include="Core\Engine\" />
     <Folder Include="Core\Game\Notifies\" />
-    <Folder Include="Notification\Services\" />
     <Folder Include="Persistence\Services\" />
     <Folder Include="Sound\Services\" />
     <Folder Include="Timer\Services\" />
@@ -223,6 +222,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Notification\Notification.csproj">
+      <Project>{1009B373-FB3C-4768-BF3A-771D758ADD9C}</Project>
+      <Name>Notification</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />

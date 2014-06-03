@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Notification;
 
 namespace Intelli.Core.Services.EventHandlers
 {
@@ -15,7 +16,16 @@ namespace Intelli.Core.Services.EventHandlers
     {
         private static readonly Logger LOG = LogManager.GetCurrentClassLogger();
 
+        private Channel broadcastChannel;
+        private NotificationCenter notificationCenter;
         private GameStateMachine gameMachine;
+
+        public GameCoreEventHandler()
+        {
+            this.broadcastChannel = new Channel();
+            notificationCenter = NotificationCenter.getInstance();
+            notificationCenter.registerChannel(this.broadcastChannel);
+        }
 
         public GameStateMachine getGameMachine()
         {
@@ -115,6 +125,11 @@ namespace Intelli.Core.Services.EventHandlers
             {
                 return PlayerMovedEvent.notAcceptable();
             }
+        }
+
+        public Channel getBroadcastChannel()
+        {
+            return this.broadcastChannel;
         }
     }
 }

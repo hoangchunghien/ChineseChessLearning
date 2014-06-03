@@ -1,5 +1,6 @@
 ﻿using Intelli.Event.Game;
 using IntelliCore.Event.Game;
+using Notification;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,5 +19,7 @@ namespace Intelli.Core.Services
         PlayerReadyEvent requestPlayerReadyEvent(RequestPlayerReadyEvent e);
 
         PlayerMovedEvent requestPlayerMoveEvent(RequestPlayerMoveEvent e);
+
+        Channel getBroadcastChannel();
     }
 }
