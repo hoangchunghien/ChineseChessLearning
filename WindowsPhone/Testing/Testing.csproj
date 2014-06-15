@@ -61,6 +61,7 @@
     <Compile Include="PiecesUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestBoardMachine.cs" />
+    <Compile Include="XQWLightEngineUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="NLog.config">
@@ -72,6 +73,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Engine\Engine.csproj">
+      <Project>{6733406b-5fdd-42fa-abe8-038247f52b4a}</Project>
+      <Name>Engine</Name>
+    </ProjectReference>
     <ProjectReference Include="..\IntelliCore\IntelliCore.csproj">
       <Project>{cb78c2e1-7a17-4686-aa3c-8a83706bd1db}</Project>
       <Name>IntelliCore</Name>

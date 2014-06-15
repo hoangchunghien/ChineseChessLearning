@@ -17,10 +17,11 @@ using Intelli.Core.Services.EventHandlers;
 using IntelliUI.Domain;
 using System.Windows.Media.Imaging;
 using IntelliUI.Factory;
+using Notification;
 
 namespace IntelliUI
 {
-    public partial class MainPage : PhoneApplicationPage
+    public partial class MainPage : PhoneApplicationPage, INotifiable
     {
         private Intelli.Core.Services.GameCoreService gameService = GameConfig.getGameService();
         IntelliUI.Domain.Board board;
@@ -38,6 +39,8 @@ namespace IntelliUI
         private void newGame()
         {
             GameCreatedEvent createdEvent = gameService.createGame(new Intelli.Event.Game.CreateGameEvent());
+            Channel channel = gameService.getBroadcastChannel();
+            NotificationCenter.getInstance().subscribe(this, channel);
             GameDetail gameDetail = createdEvent.getDetail();
            
             // Player 0 join
@@ -159,5 +162,10 @@ namespace IntelliUI
         //    ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem(AppResources.AppBarMenuItemText);
         //    ApplicationBar.MenuItems.Add(appBarMenuItem);
         //}
+
+        public void receiveNotification(Channel channel, object notification)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

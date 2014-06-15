@@ -43,7 +43,7 @@ namespace Notification
             if (this.channelSubcribers.ContainsKey(channel))
             {
                 foreach (INotifiable client in this.channelSubcribers[channel]) {
-                    client.receiveNotification(notification);
+                    client.receiveNotification(channel, notification);
                 }
             }
         }

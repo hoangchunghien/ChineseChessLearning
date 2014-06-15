@@ -1,0 +1,4 @@
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\UI\Bin\Debug\UI.dll
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\UI\Bin\Debug\UI.pdb
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\UI\obj\Debug\UI.dll
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\UI\obj\Debug\UI.pdb

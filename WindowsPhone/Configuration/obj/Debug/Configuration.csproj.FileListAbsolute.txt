@@ -1,0 +1,4 @@
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Configuration\Bin\Debug\Configuration.dll
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Configuration\Bin\Debug\Configuration.pdb
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Configuration\obj\Debug\Configuration.dll
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Configuration\obj\Debug\Configuration.pdb

@@ -108,11 +108,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="UICore\States\UIInitializingState.cs" />
-    <Compile Include="UICore\UIEvent.cs" />
-    <Compile Include="UICore\UIMachine.cs" />
-    <Compile Include="UICore\UINotify.cs" />
-    <Compile Include="UICore\UIState.cs" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -205,9 +200,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Events\" />
-    <Folder Include="UICore\Events\" />
-    <Folder Include="UICore\Exceptions\" />
-    <Folder Include="UICore\Notifies\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />

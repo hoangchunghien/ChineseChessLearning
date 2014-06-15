@@ -8,6 +8,6 @@ namespace Notification
 {
     public interface INotifiable
     {
-        public void receiveNotification(Object notification);
+        void receiveNotification(Channel channel, Object notification);
     }
 }

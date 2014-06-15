@@ -83,8 +83,25 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Domain\ChessMove.cs" />
+    <Compile Include="Domain\Position.cs" />
+    <Compile Include="EngineFactory.cs" />
+    <Compile Include="IEngine.cs" />
+    <Compile Include="Implements\RandomEngine.cs" />
+    <Compile Include="Implements\XQWLightEngine.cs" />
+    <Compile Include="XQWLight_AI\XQWLight_AI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Configuration\Configuration.csproj">
+      <Project>{E9973336-FA8B-473B-8471-28B99169DB1B}</Project>
+      <Name>Configuration</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="XQWLight_AI\BOOK.DAT" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
   <ProjectExtensions />

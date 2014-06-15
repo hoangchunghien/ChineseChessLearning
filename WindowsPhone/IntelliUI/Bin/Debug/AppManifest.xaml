@@ -3,5 +3,6 @@
     <AssemblyPart x:Name="IntelliUI" Source="IntelliUI.dll" />
     <AssemblyPart x:Name="IntelliCore" Source="IntelliCore.dll" />
     <AssemblyPart x:Name="NLog" Source="NLog.dll" />
+    <AssemblyPart x:Name="Notification" Source="Notification.dll" />
   </Deployment.Parts>
 </Deployment>

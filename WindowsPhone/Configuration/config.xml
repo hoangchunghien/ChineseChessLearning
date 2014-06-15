@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Configuration>
+  <Engines>
+    <Engine name="Intella" />
+    <Engine name="XQWLight" />
+    <Engine name="Random" />
+  </Engines>
+
+  <Levels>
+    <Level name="Easy" engine = "Random" selected="false" />
+    <Level name="Easy" engine = "XQWLight" selected="true" />
+  </Levels>
+
+</Configuration>
