@@ -98,6 +98,16 @@
   <ItemGroup>
     <Content Include="config.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IntelliCore\IntelliCore.csproj">
+      <Project>{CB78C2E1-7A17-4686-AA3C-8A83706BD1DB}</Project>
+      <Name>IntelliCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UI\UI.csproj">
+      <Project>{B541B52A-B9BC-4464-B1DB-9FBA1FC54F13}</Project>
+      <Name>UI</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
   <ProjectExtensions />

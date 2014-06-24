@@ -43,3 +43,9 @@ C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\bin\Debug
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\bin\Debug\Configuration.dll
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\bin\Debug\Engine.pdb
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\bin\Debug\Configuration.pdb
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\bin\Debug\Engine.dll
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\bin\Debug\Configuration.dll
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\bin\Debug\Notification.dll
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\bin\Debug\Engine.pdb
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\bin\Debug\Configuration.pdb
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Testing\bin\Debug\Notification.pdb

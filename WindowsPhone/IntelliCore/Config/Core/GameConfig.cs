@@ -19,5 +19,8 @@ namespace Intelli.Config
         {
             return playFirst;
         }
+
+        // public AbstractPlayer getFirstPlayer() 
+        // public AbstractPlayer getSecondPlayer()
     }
 }

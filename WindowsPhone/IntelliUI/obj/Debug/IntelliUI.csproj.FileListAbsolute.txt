@@ -51,3 +51,6 @@ C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Bin\Deb
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\obj\Debug\IntelliUI.dll
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\obj\Debug\IntelliUI.pdb
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\obj\Debug\XapCacheFile.xml
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Bin\Debug\Notification.dll
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Bin\Debug\Notification.pdb
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\obj\Debug\Domain\TouchItem.g.cs

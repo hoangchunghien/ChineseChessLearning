@@ -23,7 +23,19 @@ namespace IntelliUI
 {
     public partial class MainPage : PhoneApplicationPage, INotifiable
     {
+        
+        
+        // 1. GameCoreService <-- Config
         private Intelli.Core.Services.GameCoreService gameService = GameConfig.getGameService();
+        
+        // 2. Two players <-- Config
+        //    Config.getFirstPlayer()
+        //    Config.getSecondPlayer()
+
+        // 3. Set gameService for two players
+        //    player1.setGameService(*) ...
+
+
         IntelliUI.Domain.Board board;
         private TouchItem[,] touchItems;
 

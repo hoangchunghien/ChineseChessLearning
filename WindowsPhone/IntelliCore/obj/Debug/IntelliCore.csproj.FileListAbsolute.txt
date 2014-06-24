@@ -14,3 +14,5 @@ C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliCore\Bin\D
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliCore\obj\Debug\IntelliCore.csprojResolveAssemblyReference.cache
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliCore\obj\Debug\IntelliCore.dll
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliCore\obj\Debug\IntelliCore.pdb
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliCore\Bin\Debug\Notification.dll
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliCore\Bin\Debug\Notification.pdb

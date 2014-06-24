@@ -5,3 +5,10 @@ C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Engine\Bin\Debug\
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Engine\obj\Debug\Engine.csprojResolveAssemblyReference.cache
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Engine\obj\Debug\Engine.dll
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Engine\obj\Debug\Engine.pdb
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Engine\obj\Debug\Engine.csprojResolveAssemblyReference.cache
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Engine\obj\Debug\Engine.dll
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Engine\obj\Debug\Engine.pdb
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Engine\Bin\Debug\Engine.dll
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Engine\Bin\Debug\Engine.pdb
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Engine\Bin\Debug\Configuration.dll
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Engine\Bin\Debug\Configuration.pdb

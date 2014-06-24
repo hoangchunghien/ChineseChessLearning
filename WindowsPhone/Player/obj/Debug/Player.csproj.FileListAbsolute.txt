@@ -11,3 +11,16 @@ C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Player\Bin\Debug\
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Player\Bin\Debug\Configuration.pdb
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Player\obj\Debug\Player.dll
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Player\obj\Debug\Player.pdb
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Player\Bin\Debug\Player.dll
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Player\Bin\Debug\Player.pdb
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Player\Bin\Debug\Engine.dll
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Player\Bin\Debug\Notification.dll
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Player\Bin\Debug\UI.dll
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Player\Bin\Debug\Configuration.dll
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Player\Bin\Debug\Engine.pdb
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Player\Bin\Debug\Notification.pdb
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Player\Bin\Debug\UI.pdb
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Player\Bin\Debug\Configuration.pdb
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Player\obj\Debug\Player.csprojResolveAssemblyReference.cache
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Player\obj\Debug\Player.dll
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Player\obj\Debug\Player.pdb

@@ -14,8 +14,7 @@ namespace Player
         public ComputerPlayer(IEngine engine)
         {
             this.engine = engine;
-
-
+            this.nb.subscribe(this, channel)
         }
 
         public IEngine getEngine()

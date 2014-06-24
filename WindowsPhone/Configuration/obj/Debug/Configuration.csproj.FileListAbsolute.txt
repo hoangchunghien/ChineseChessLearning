@@ -2,3 +2,7 @@ C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Configuration\Bin
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Configuration\Bin\Debug\Configuration.pdb
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Configuration\obj\Debug\Configuration.dll
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Configuration\obj\Debug\Configuration.pdb
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Configuration\Bin\Debug\Configuration.dll
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Configuration\Bin\Debug\Configuration.pdb
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Configuration\obj\Debug\Configuration.dll
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Configuration\obj\Debug\Configuration.pdb

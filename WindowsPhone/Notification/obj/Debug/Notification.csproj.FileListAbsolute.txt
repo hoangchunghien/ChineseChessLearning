@@ -2,3 +2,7 @@ C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Notification\Bin\
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Notification\Bin\Debug\Notification.pdb
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Notification\obj\Debug\Notification.dll
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Notification\obj\Debug\Notification.pdb
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Notification\Bin\Debug\Notification.dll
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Notification\Bin\Debug\Notification.pdb
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Notification\obj\Debug\Notification.dll
+C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Notification\obj\Debug\Notification.pdb
