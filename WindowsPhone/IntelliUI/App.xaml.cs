@@ -7,6 +7,8 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using IntelliUI.Resources;
+using System.IO.IsolatedStorage;
+using System.IO;
 
 namespace IntelliUI
 {
@@ -55,6 +57,38 @@ namespace IntelliUI
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
 
+            this.CopyDatabase();
+        }
+
+        private void CopyDatabase()
+        {
+
+            IsolatedStorageFile ISF = IsolatedStorageFile.GetUserStoreForApplication();
+            String DBFile = "CClearning.sqlite";
+            if (!ISF.FileExists(DBFile)) CopyFromContentToStorage(ISF, "Assets/CClearning.sqlite", DBFile);
+
+        }
+
+        private void CopyFromContentToStorage(IsolatedStorageFile ISF, String SourceFile, String DestinationFile)
+        {
+            Stream Stream = Application.GetResourceStream(new Uri(SourceFile, UriKind.Relative)).Stream;
+            IsolatedStorageFileStream ISFS = new IsolatedStorageFileStream(DestinationFile, System.IO.FileMode.Create, System.IO.FileAccess.Write, ISF);
+            CopyStream(Stream, ISFS);
+            ISFS.Flush();
+            ISFS.Close();
+            Stream.Close();
+            ISFS.Dispose();
+        }
+
+        private void CopyStream(Stream Input, IsolatedStorageFileStream Output)
+        {
+            Byte[] Buffer = new Byte[5120];
+            Int32 ReadCount = Input.Read(Buffer, 0, Buffer.Length);
+            while (ReadCount > 0)
+            {
+                Output.Write(Buffer, 0, ReadCount);
+                ReadCount = Input.Read(Buffer, 0, Buffer.Length);
+            }
         }
 
         // Code to execute when the application is launching (eg, from Start)

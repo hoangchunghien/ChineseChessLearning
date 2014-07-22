@@ -16,33 +16,25 @@
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
-            <RowDefinition Height="90"/>
-            <RowDefinition Height="70"/>
-            <RowDefinition Height="10"/>
-            <RowDefinition Height="535"/>
-            <RowDefinition Height="60"/>
+            <RowDefinition Height="190"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-        </Grid.ColumnDefinitions>
+       
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="AdPanel" Margin="0,0,0,0" Grid.ColumnSpan="4">
             <!--<my:AdControl Name="MainAd" Height="100" Width="Auto" ApplicationId="10003" AdUnitId="995" />-->
         </StackPanel>
-        <Button Name="btnNew" Content="New" Margin="0,0,0,0" Height="Auto" Width="110"  Grid.Row="1" Grid.Column="0" Click="btnNew_Click"  />
-        <Button Name="btnUndo" Content="Undo" Margin="0,0,0,0" Height="Auto" Width="110" Grid.Row="1" Grid.Column="1" Click="btnUndo_Click"/>
-        <Button Name="btnRedo" Content="Redo" Margin="0,0,0,0" Height="Auto" Width="110" Grid.Row="1" Grid.Column="2" Click="btnRedo_Click"/>
-        <Button Name="btnSetting" Content="Setting" Margin="0,0,0,0" Height="Auto" Width="Auto" Grid.Row="1" Grid.Column="3" Click="btnSetting_Click"/>
+        <Button Name="btnLearningCourses" Content="Learning Course" Margin="0,0,0,0" Height="Auto" Width="Auto"  Grid.Row="1"  Click="btnLearningCourses_Click"  />
+        <Button Name="btnPractice" Content="Practice" Margin="0,0,0,0" Height="Auto" Width="Auto" Grid.Row="2"  Click="btnPractice_Click"/>
+        <Button Name="btnChessProblems" Content="Chess Problems" Margin="0,0,0,0" Height="Auto" Width="Auto" Grid.Row="3" Click="btnChessProblems_Click"/>
+        <Button Name="btnTournamentsGame" Content="Tournaments Game" Margin="0,0,0,0" Height="Auto" Width="Auto" Grid.Row="4" Click="btnTournamentsGame_Click"/>
         <!--ContentPanel - place additional content here-->
-        <Grid Name="GrdSpace" Grid.Row="2" Grid.ColumnSpan="4"></Grid>
-        <Grid Name="ContentBoard" Grid.Row="3" Grid.ColumnSpan="4">
-            <Image Name="ImgBoard" Margin="0,0,0,0" Source="/IntelliUI;component/PNG/board.png" HorizontalAlignment="Left"  VerticalAlignment="Top" />
+        <Grid Name="ContentBoard" Grid.Row="3">
         </Grid>
-        <TextBlock Name="txtResult" Margin="10" Text="" Grid.Row="4" Grid.Column="0"></TextBlock>
     </Grid>
 
 </phone:PhoneApplicationPage>

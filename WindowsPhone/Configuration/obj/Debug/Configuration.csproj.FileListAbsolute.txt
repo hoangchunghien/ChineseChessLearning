@@ -6,3 +6,12 @@ C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Configuration\B
 C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Configuration\Bin\Debug\Configuration.pdb
 C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Configuration\obj\Debug\Configuration.dll
 C:\Users\Hien\Documents\GitHub\ChineseChessLearning\WindowsPhone\Configuration\obj\Debug\Configuration.pdb
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Configuration\Bin\Debug\IntelliCore.dll
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Configuration\Bin\Debug\UI.dll
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Configuration\Bin\Debug\NLog.dll
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Configuration\Bin\Debug\Notification.dll
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Configuration\Bin\Debug\IntelliCore.pdb
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Configuration\Bin\Debug\UI.pdb
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Configuration\Bin\Debug\NLog.xml
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Configuration\Bin\Debug\Notification.pdb
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Configuration\obj\Debug\Configuration.csprojResolveAssemblyReference.cache

@@ -18,6 +18,11 @@ using IntelliUI.Domain;
 using System.Windows.Media.Imaging;
 using IntelliUI.Factory;
 using Notification;
+using System.IO;
+using Windows.Storage;
+using Persistence.ViewModel;
+using System.Collections.ObjectModel;
+using Persistence.Model;
 
 namespace IntelliUI
 {
@@ -38,12 +43,13 @@ namespace IntelliUI
 
         IntelliUI.Domain.Board board;
         private TouchItem[,] touchItems;
+        public static string DB_PATH = Path.Combine(ApplicationData.Current.LocalFolder.Path, "CClearning.sqlite");
 
         // Constructor
         public MainPage()
         {
             InitializeComponent();
-            this.newGame();
+            //this.newGame();
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
         }
@@ -138,23 +144,22 @@ namespace IntelliUI
 
         }
 
-        private void btnNew_Click(object sender, RoutedEventArgs e)
+        private void btnLearningCourses_Click(object sender, RoutedEventArgs e)
         {
-            this.newGame();
+            NavigationService.Navigate(new Uri("/View/Tactics.xaml", UriKind.Relative));
         }
 
-        private void btnUndo_Click(object sender, RoutedEventArgs e)
+        private void btnPractice_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void btnRedo_Click(object sender, RoutedEventArgs e)
-        {
-            
 
         }
 
-        private void btnSetting_Click(object sender, RoutedEventArgs e)
+        private void btnChessProblems_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnTournamentsGame_Click(object sender, RoutedEventArgs e)
         {
 
         }
@@ -179,5 +184,7 @@ namespace IntelliUI
         {
             throw new NotImplementedException();
         }
+
+       
     }
 }
