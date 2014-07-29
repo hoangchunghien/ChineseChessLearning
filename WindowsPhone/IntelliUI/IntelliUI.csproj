@@ -109,9 +109,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="View\BoardLearning.xaml.cs" />
-    <Compile Include="View\Lessons.xaml.cs" />
-    <Compile Include="View\Tactics.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -126,26 +123,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\BoardLearning.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="View\Lessons.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="View\Tactics.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Content Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Assets\CClearning.sqlite">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -211,10 +193,6 @@
       <Project>{1009B373-FB3C-4768-BF3A-771D758ADD9C}</Project>
       <Name>Notification</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Persistence\Persistence.csproj">
-      <Project>{909FFC3D-16C3-4F8A-B3BE-BF4191089532}</Project>
-      <Name>Persistence</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="NLog">
@@ -226,6 +204,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Events\" />
+    <Folder Include="View\" />
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="SQLite.WP80, Version=3.8.5">
