@@ -44,7 +44,7 @@ namespace Persistence.ViewModel
             }
             return this.Books;
         }
-
+        
         public Book GetBook(Book book)
         {
             Book rs = new Book();

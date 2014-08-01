@@ -30,6 +30,7 @@ namespace IntelliUI.Domain
         {
             InitializeComponent();
             this.p = ch;
+            //--rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RNBAKABNR w
 
             if (ch == 'G')
                 imgPiece.Source = ImageFactory.getImage('G');
@@ -56,6 +57,43 @@ namespace IntelliUI.Domain
             if (ch == 'c')
                 imgPiece.Source = ImageFactory.getImage('c');
             if (ch == 'k')
+                imgPiece.Source = ImageFactory.getImage('k');
+            if (ch == 'p')
+                imgPiece.Source = ImageFactory.getImage('p');
+
+        }
+
+        public TouchItem(char ch, string type)
+        {
+            InitializeComponent();
+            this.p = ch;
+            //--rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RNBAKABNR w
+
+            if (ch == 'K')
+                imgPiece.Source = ImageFactory.getImage('G');
+            if (ch == 'A')
+                imgPiece.Source = ImageFactory.getImage('A');
+            if (ch == 'B')
+                imgPiece.Source = ImageFactory.getImage('M');
+            if (ch == 'R')
+                imgPiece.Source = ImageFactory.getImage('R');
+            if (ch == 'C')
+                imgPiece.Source = ImageFactory.getImage('C');
+            if (ch == 'N')
+                imgPiece.Source = ImageFactory.getImage('K');
+            if (ch == 'P')
+                imgPiece.Source = ImageFactory.getImage('P');
+            if (ch == 'k')
+                imgPiece.Source = ImageFactory.getImage('g');
+            if (ch == 'a')
+                imgPiece.Source = ImageFactory.getImage('a');
+            if (ch == 'b')
+                imgPiece.Source = ImageFactory.getImage('m');
+            if (ch == 'r')
+                imgPiece.Source = ImageFactory.getImage('r');
+            if (ch == 'c')
+                imgPiece.Source = ImageFactory.getImage('c');
+            if (ch == 'n')
                 imgPiece.Source = ImageFactory.getImage('k');
             if (ch == 'p')
                 imgPiece.Source = ImageFactory.getImage('p');

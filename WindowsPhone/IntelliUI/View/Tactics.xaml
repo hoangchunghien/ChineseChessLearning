@@ -98,40 +98,18 @@
         <phone:Pivot Title="Tactics Learning">
             <!--Pivot item one-->
             <phone:PivotItem Header="Openings">
-                <ListBox x:Name="AllOpenings" 
-                         ItemsSource="{Binding Path=Books}">
-                    <ListBox.ItemsPanel>
-                        <ItemsPanelTemplate >
-                            <toolkit:WrapPanel Orientation="Horizontal" 
-                                               ItemHeight="240"
-                                               ItemWidth="220"
-                                               HorizontalAlignment="Left"
-                                               VerticalAlignment="Top"/>
-                        </ItemsPanelTemplate>
-                    </ListBox.ItemsPanel>
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <toolkit:HubTile Title="{Binding Path=CountLessons}"
-                                             Margin="-10, -20, -30, 0"
-                                             Message="{Binding Path=Name}"
-                                             Notification="{Binding Path=CountLessons}"
-                                             Source="{Binding Path=AvatarPath}"
-                                             >
-                            </toolkit:HubTile>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                </ListBox>
+                <phone:LongListSelector Name="AllOpenings"
+                                            Margin="-10, -20, -30, 0"
+                                            
+                                            ItemTemplate="{StaticResource TacticLearningTemplate }"
+                                            LayoutMode="Grid"
+                                            GridCellSize="233, 258"
+                                            Tap="AllOpenings_Tap"/>
             </phone:PivotItem>
 
             <!--Pivot item two-->
             <phone:PivotItem Header="MidGames">
-                    <phone:LongListSelector Name="AllMidGames"
-                                            Margin="-10, -20, -30, 0"
-                                            ItemsSource="{Binding Path=Books}"
-                                            ItemTemplate="{StaticResource TacticLearningTemplate }"
-                                            LayoutMode="Grid"
-                                            GridCellSize="233, 258"
-                                            SelectionChanged="AllMidGames_SelectionChanged"/>
+                    
             </phone:PivotItem>
 
             <!--Pivot item three-->
@@ -153,6 +131,30 @@
                         ItemsSource="{Binding Path=Books}" 
                         Margin="0, 0, 0, 0" Width="440" 
                         ItemTemplate="{StaticResource TacticLearningTemplate}" />-->
+
+                    <ListBox x:Name="AllTournaments" 
+                         ItemsSource="{Binding Path=Books}">
+                        <ListBox.ItemsPanel>
+                            <ItemsPanelTemplate >
+                                <toolkit:WrapPanel Orientation="Horizontal" 
+                                               ItemHeight="240"
+                                               ItemWidth="220"
+                                               HorizontalAlignment="Left"
+                                               VerticalAlignment="Top"/>
+                            </ItemsPanelTemplate>
+                        </ListBox.ItemsPanel>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <toolkit:HubTile Title="{Binding Path=CountLessons}"
+                                             Margin="-10, -20, -30, 0"
+                                             Message="{Binding Path=Name}"
+                                             Notification="{Binding Path=CountLessons}"
+                                             Source="{Binding Path=AvatarPath}"
+                                             >
+                                </toolkit:HubTile>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
                 </Grid>
             </phone:PivotItem>
         </phone:Pivot>

@@ -2,6 +2,5 @@ C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Persistence\Bin\A
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Persistence\Bin\ARM\Debug\Persistence.pdb
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Persistence\Bin\ARM\Debug\Sqlite.winmd
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Persistence\Bin\ARM\Debug\Sqlite.dll
-C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Persistence\obj\ARM\Debug\Persistence.csprojResolveAssemblyReference.cache
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Persistence\obj\ARM\Debug\Persistence.dll
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Persistence\obj\ARM\Debug\Persistence.pdb

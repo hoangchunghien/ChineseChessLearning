@@ -19,28 +19,30 @@ namespace IntelliUI.View
     public partial class Tactics : PhoneApplicationPage
     {
         ViewModelBook viewModelBook;
+        ObservableCollection<Book> books;
 
         public Tactics()
         {
             InitializeComponent();
             viewModelBook = new ViewModelBook(MainPage.DB_PATH, false);
             this.DataContext = viewModelBook;
+            books = viewModelBook.GetBooks();
         }
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            viewModelBook.GetBooks();
 
-            //AllOpenings.ItemsSource = from b in viewModelBook.GetBooks() where b.Id == 1 select b;
+            var rs = from b in this.books where b.TacticID == 1 select b;
+            AllOpenings.ItemsSource = rs.ToList();
             //     Insert into Book (Name, TacticID, AvatarPath, CountLessonsPassed, CountLessons,
             //     CountStarsPassed, CountStarsRequire, IsCompleted)
             //values ("Test3", 1, "", 0, 20, 0, 5, 0)
         }
 
-        private void AllMidGames_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void AllOpenings_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
-            var selected = AllMidGames.SelectedItem as Book;
+            var selected = AllOpenings.SelectedItem as Book;
             PhoneApplicationService.Current.State["selectedBook"] = selected;
             NavigationService.Navigate(new Uri("/View/Lessons.xaml", UriKind.Relative));
         }

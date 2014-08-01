@@ -70,5 +70,6 @@ namespace IntelliUI.Factory
 
             return bitmap;
         }
+
     }
 }

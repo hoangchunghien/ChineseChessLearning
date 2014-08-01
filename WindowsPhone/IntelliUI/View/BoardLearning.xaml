@@ -22,23 +22,24 @@
             <RowDefinition Height="63*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.8*" />
-            <ColumnDefinition Width="0.8*" />
-            <ColumnDefinition Width="1.5*" />
-            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="AdPanel" Margin="0,0,0,0" Grid.ColumnSpan="4">
             <!--<my:AdControl Name="MainAd" Height="100" Width="Auto" ApplicationId="10003" AdUnitId="995" />-->
+            <TextBlock Name="txbExplain" Text="" Grid.Row="0" Grid.ColumnSpan="4" Margin="10, 50" FontSize="26"/>
         </StackPanel>
         <Grid Name="ContentBoard" Grid.Row="1" Grid.ColumnSpan="4">
             <Image Name="ImgBoard" Margin="0,0,0,0" Source="/IntelliUI;component/PNG/board.png" HorizontalAlignment="Left"  VerticalAlignment="Top" />
         </Grid>
-        <Button Name="btnAuto" Content="Auto" Margin="80,0,0,0"  Grid.Row="2" Grid.Column="3" Click="btnAuto_Click"  />
-        <Button Name="btnExplain" Content="Explain" Grid.Row="2" Grid.Column="2" Click="btnExplain_Click"/>
-        <Button Name="btnBack" Content='>>' Width="80" Grid.Row="2" Grid.Column="0" Click="btnBack_Click"/>
-        <Button Name="btnNext" Content=">"  Width="80" Grid.Row="2" Grid.Column="1" Click="btnNext_Click"/>
+        <Button Name="btnAuto" Content="Auto" Margin="0,0,0,0"  Grid.Row="2" Grid.Column="3" Click="btnAuto_Click"  />
+        <Button Name="btnExplain" Content="Explain" Grid.Row="2" Grid.Column="2" Margin="0,0,-15,0"  Visibility="Collapsed" Click="btnExplain_Click"/>
+        <Button Name="btnBack" Content="Back"  Grid.Row="2" Grid.Column="0" Click="btnBack_Click"/>
+        <Button Name="btnNext" Content="Next" Margin="-15,0,0,0" Grid.Row="2" Grid.Column="1" Click="btnNext_Click"/>
         <!--ContentPanel - place additional content here-->
         <Grid Name="GrdSpace" Grid.Row="2" Grid.ColumnSpan="4"></Grid>
         

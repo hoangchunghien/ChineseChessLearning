@@ -1,5 +1,5 @@
-﻿<xapCache source="C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Bin\ARM\Debug\IntelliUI_Debug_ARM.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="7/29/2014 10:16:48 PM">
-  <file source="C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\obj\ARM\Debug\IntelliUI.dll" archivePath="IntelliUI.dll" lastWriteTime="7/29/2014 10:16:45 PM" />
+﻿<xapCache source="C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Bin\ARM\Debug\IntelliUI_Debug_ARM.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="8/2/2014 2:34:58 AM">
+  <file source="C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\obj\ARM\Debug\IntelliUI.dll" archivePath="IntelliUI.dll" lastWriteTime="8/2/2014 2:34:55 AM" />
   <file source="C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\NLog.config" archivePath="NLog.config" lastWriteTime="7/29/2014 9:44:30 PM" />
   <file source="C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\README_FIRST.txt" archivePath="README_FIRST.txt" lastWriteTime="7/29/2014 10:08:18 PM" />
   <file source="C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Toolkit.Content\ApplicationBar.Add.png" archivePath="Toolkit.Content\ApplicationBar.Add.png" lastWriteTime="7/29/2014 10:08:18 PM" />
@@ -12,18 +12,18 @@
   <file source="C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="7/29/2014 9:44:29 PM" />
   <file source="C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="7/29/2014 9:44:29 PM" />
   <file source="C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="7/29/2014 9:44:29 PM" />
-  <file source="C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Bin\ARM\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="7/29/2014 10:16:47 PM" />
+  <file source="C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Bin\ARM\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="8/1/2014 11:40:27 PM" />
   <file source="C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Bin\ARM\Debug\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="7/29/2014 9:44:29 PM" />
   <file source="C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Bin\ARM\Debug\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="7/29/2014 9:44:29 PM" />
-  <file source="C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Bin\ARM\Debug\Assets\CClearning.sqlite" archivePath="Assets\CClearning.sqlite" lastWriteTime="7/29/2014 10:13:54 PM" />
-  <file source="C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliCore\Bin\Debug\IntelliCore.dll" archivePath="IntelliCore.dll" lastWriteTime="7/29/2014 10:15:38 PM" />
+  <file source="C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Bin\ARM\Debug\Assets\CClearning.sqlite" archivePath="Assets\CClearning.sqlite" lastWriteTime="8/1/2014 11:29:05 PM" />
+  <file source="C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliCore\Bin\Debug\IntelliCore.dll" archivePath="IntelliCore.dll" lastWriteTime="8/1/2014 11:40:22 PM" />
   <file source="C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="7/29/2014 10:08:17 PM" />
   <file source="C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\packages\NLog.2.1.0\lib\sl4-windowsphone71\NLog.dll" archivePath="NLog.dll" lastWriteTime="7/29/2014 9:44:31 PM" />
-  <file source="C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Notification\Bin\Debug\Notification.dll" archivePath="Notification.dll" lastWriteTime="7/29/2014 10:15:36 PM" />
-  <file source="C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Persistence\Bin\ARM\Debug\Persistence.dll" archivePath="Persistence.dll" lastWriteTime="7/29/2014 10:16:44 PM" />
+  <file source="C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Notification\Bin\Debug\Notification.dll" archivePath="Notification.dll" lastWriteTime="8/1/2014 11:40:21 PM" />
+  <file source="C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Persistence\Bin\ARM\Debug\Persistence.dll" archivePath="Persistence.dll" lastWriteTime="8/1/2014 11:40:22 PM" />
   <file source="C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\packages\sqlite-net-wp8.3.8.5\build\windowsphone8\ARM\Sqlite.winmd" archivePath="Sqlite.winmd" lastWriteTime="7/29/2014 9:51:28 PM" />
   <file source="C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\packages\NLog.2.1.0\lib\sl4-windowsphone71\NLog.xml" archivePath="NLog.xml" lastWriteTime="7/29/2014 9:44:31 PM" />
   <file source="C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\packages\sqlite-net-wp8.3.8.5\build\windowsphone8\ARM\Sqlite.dll" archivePath="Sqlite.dll" lastWriteTime="7/29/2014 9:51:28 PM" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v8.0\ExtensionSDKs\SQLite.WP80\3.8.5\Redist\Debug\ARM\sqlite3.dll" archivePath="sqlite3.dll" lastWriteTime="7/25/2014 10:10:01 PM" />
-  <file source="C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Bin\ARM\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="7/29/2014 10:16:48 PM" />
+  <file source="C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Bin\ARM\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="8/1/2014 11:40:28 PM" />
 </xapCache>
