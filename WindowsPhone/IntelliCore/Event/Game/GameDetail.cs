@@ -13,7 +13,8 @@ namespace Intelli.Event.Game
         private BoardDetail boardDetail;
         private PlayerDetail[] playerDetails;
 
-        public static GameDetail fromGameStateMachine(GameStateMachine gameMachine) {
+        public static GameDetail fromGameStateMachine(GameStateMachine gameMachine)
+        {
             GameDetail detail = new GameDetail();
 
             // Convert BoardStateMachine to BoardDetail   
@@ -21,8 +22,9 @@ namespace Intelli.Event.Game
             BoardDetail boardDetail = new BoardDetail(cPieces);
 
             // Convert from PlayerStateMachine to PlayerDetail
-            // TODO
             PlayerDetail[] playerDetails = new PlayerDetail[2]; // STUB
+            playerDetails[0] = new PlayerDetail(gameMachine.getBoardMachine().getPieces(Color.BLACK));
+            playerDetails[1] = new PlayerDetail(gameMachine.getBoardMachine().getPieces(Color.RED));
 
             // Game detail
             detail.boardDetail = boardDetail;

@@ -10,8 +10,6 @@ namespace Intelli.Core.Game.Board.Events
     {
         public static readonly String NAME = "BoardRejectEvent";
 
-
-
         public string getEventName()
         {
             return NAME;

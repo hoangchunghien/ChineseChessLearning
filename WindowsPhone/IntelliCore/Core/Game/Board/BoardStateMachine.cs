@@ -13,10 +13,10 @@ namespace Intelli.Core.Game.Board
     {
         private static readonly Logger LOG = LogManager.GetCurrentClassLogger();
 
-        public static readonly String _EVENT_READY = "_board_ready";
-        public static readonly String EVENT_MOVE = "board_move";
-        public static readonly String _EVENT_MOVED = "_board_moved";
-        public static readonly String _EVENT_REJECT_MOVE = "_board_reject_move";
+        //public static readonly String _EVENT_READY = "_board_ready";
+        //public static readonly String EVENT_MOVE = "board_move";
+        //public static readonly String _EVENT_MOVED = "_board_moved";
+        //public static readonly String _EVENT_REJECT_MOVE = "_board_reject_move";
 
         private IState currentState;
 

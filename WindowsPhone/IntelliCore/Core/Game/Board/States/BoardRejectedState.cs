@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Intelli.Core.Game.Board.Events;
+using Intelli.Core.Game.Board.Notifies;
+using NLog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,13 +10,14 @@ namespace Intelli.Core.Game.Board
 {
     public class BoardRejectedState : IState
     {
-
-        private BoardStateMachine board;
+        public static readonly String NAME = "BoardRejectedState";
+        private static Logger LOG = LogManager.GetCurrentClassLogger();
+        private BoardStateMachine boardMachine;
         private Dictionary<String, IState> transitionableStates = new Dictionary<string, IState>();
 
         public BoardRejectedState(BoardStateMachine board)
         {
-            this.board = board;
+            this.boardMachine = board;
         }
 
         public string getStateName()
@@ -23,7 +27,11 @@ namespace Intelli.Core.Game.Board
 
         public void run(IEvent e)
         {
-            throw new NotImplementedException();
+            // Rejected because invalid moved position
+            RejectedNotify notify = new RejectedNotify();
+            this.boardMachine.fireStateChangedNotification(notify);
+            LOG.Info(NAME);
+            this.boardMachine.consumeEvent(new BoardReadyEvent());
         }
 
         public Dictionary<string, IState> getTransitionableState()

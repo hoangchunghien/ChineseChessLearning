@@ -17,17 +17,20 @@ using System.Threading.Tasks;
 
 namespace Intelli.Core.Game
 {
+    /// <summary>
+    /// Bigest machine consist of two sub-machines: PlayerStateMachine and BoardStateMachine
+    /// </summary>
     public class GameStateMachine : IStateMachine
     {
         private static readonly Logger LOG = LogManager.GetCurrentClassLogger();
 
-        private IGameState currentState;
+        private IGameState currentState;// Also mean IState (because it was inherited from IState)
 
         private List<IGameState> states;
 
-        private PlayerStateMachine[] players;
+        private PlayerStateMachine[] players;// One is sub-machine
 
-        private BoardStateMachine boardMachine;
+        private BoardStateMachine boardMachine;// One is sub-machine
 
         public GameStateMachine()
         {

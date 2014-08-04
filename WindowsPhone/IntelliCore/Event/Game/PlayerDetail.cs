@@ -8,5 +8,15 @@ namespace Intelli.Event.Game
 {
     public class PlayerDetail
     {
+        List<Core.Game.Board.Pieces.Piece> pieces;
+        public PlayerDetail(List<Intelli.Core.Game.Board.Pieces.Piece> pieces)
+        {
+            this.pieces = pieces;
+        }
+
+        public List<Core.Game.Board.Pieces.Piece> getPieces()
+        {
+            return this.pieces;
+        }
     }
 }

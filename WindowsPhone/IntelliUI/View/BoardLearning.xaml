@@ -33,9 +33,11 @@
             <!--<my:AdControl Name="MainAd" Height="100" Width="Auto" ApplicationId="10003" AdUnitId="995" />-->
             <TextBlock Name="txbExplain" Text="" Grid.Row="0" Grid.ColumnSpan="4" Margin="10, 50" FontSize="26"/>
         </StackPanel>
-        <Grid Name="ContentBoard" Grid.Row="1" Grid.ColumnSpan="4">
+        <Grid Grid.Row="1" Grid.ColumnSpan="4">
             <Image Name="ImgBoard" Margin="0,0,0,0" Source="/IntelliUI;component/PNG/board.png" HorizontalAlignment="Left"  VerticalAlignment="Top" />
         </Grid>
+        <Grid Name="ContentBoard" Grid.Row="1" Grid.ColumnSpan="4"/>
+        
         <Button Name="btnAuto" Content="Auto" Margin="0,0,0,0"  Grid.Row="2" Grid.Column="3" Click="btnAuto_Click"  />
         <Button Name="btnExplain" Content="Explain" Grid.Row="2" Grid.Column="2" Margin="0,0,-15,0"  Visibility="Collapsed" Click="btnExplain_Click"/>
         <Button Name="btnBack" Content="Back"  Grid.Row="2" Grid.Column="0" Click="btnBack_Click"/>

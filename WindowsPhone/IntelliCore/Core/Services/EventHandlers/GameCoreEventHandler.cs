@@ -12,19 +12,23 @@ using Notification;
 
 namespace Intelli.Core.Services.EventHandlers
 {
-    public class GameCoreEventHandler : GameCoreService// implement interface GameService, so need all of method of it
+    
+    public class GameCoreEventHandler : GameCoreService
     {
         private static readonly Logger LOG = LogManager.GetCurrentClassLogger();
 
         private Channel broadcastChannel;
         private NotificationCenter notificationCenter;
+
+        // All of event were processed by handlers in there own "GameStateMachine"
         private GameStateMachine gameMachine;
 
         public GameCoreEventHandler()
         {
             this.broadcastChannel = new Channel();
-            notificationCenter = NotificationCenter.getInstance();
-            notificationCenter.registerChannel(this.broadcastChannel);
+            this.notificationCenter = NotificationCenter.getInstance();
+            this.notificationCenter.registerChannel(this.broadcastChannel);
+            //this.gameMachine = new GameStateMachine();
         }
 
         public GameStateMachine getGameMachine()
@@ -34,7 +38,6 @@ namespace Intelli.Core.Services.EventHandlers
 
         public Event.Game.ValidMovesEvent requestValidMoves(Event.Game.RequestValidMovesEvent e)
         {
-
             bool isPlaying = this.gameMachine.getPlayers()[e.PlayerId()].getCurrentState().GetType().Equals(typeof(PlayerPlayingState));
             if (isPlaying)
             { 
@@ -55,19 +58,24 @@ namespace Intelli.Core.Services.EventHandlers
             return ValidMovesEvent.notFound();
         }
 
-        public Event.Game.GameCreatedEvent createGame(Event.Game.CreateGameEvent e)
+        public Event.Game.GameCreatedEvent createGame(Event.Game.GameCreateEvent e)
         {
-            gameMachine = new GameStateMachine();
-            GameDetail detail = GameDetail.fromGameStateMachine(gameMachine);
-            return new GameCreatedEvent(detail);
+            if (e.getIsCreated())
+            {
+                this.gameMachine = new GameStateMachine();
+                GameDetail detail = GameDetail.fromGameStateMachine(gameMachine);
+                return new GameCreatedEvent(detail);
+            }
+            return GameCreatedEvent.CreateFail();
+
         }
 
         public PlayerJoinedEvent requestPlayerJoinEvent(RequestPlayerJoinEvent e)
         {
             LOG.Info("player id=" + e.getId());
             Intelli.Core.Game.Player.Events.PlayerJoinEvent joinEvent
-                = new Game.Player.Events.PlayerJoinEvent();
-            joinEvent.setId(e.getId());
+                = new Game.Player.Events.PlayerJoinEvent(e.getId());
+            //joinEvent.setId(e.getId());
             bool accepted = gameMachine.consumeEvent(joinEvent);
 
             if (accepted)
@@ -88,8 +96,8 @@ namespace Intelli.Core.Services.EventHandlers
 
             LOG.Info("player id=" + e.getId());
             Intelli.Core.Game.Player.Events.PlayerReadyEvent playerReadyEvent 
-                = new Game.Player.Events.PlayerReadyEvent();
-            playerReadyEvent.setId(e.getId());
+                = new Game.Player.Events.PlayerReadyEvent(e.getId());
+            //playerReadyEvent.setId(e.getId());
             bool accepted = gameMachine.consumeEvent(playerReadyEvent);
 
             if (accepted)

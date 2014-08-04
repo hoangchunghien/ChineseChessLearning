@@ -52,13 +52,18 @@ namespace Intelli.Core.Game.States
             return this.transitionableStates;
         }
 
+        /// <summary>
+        /// In game initializing state, receive only 3 events are:
+        ///    1. PlayerJoinEvent
+        ///    2. PlayerRejectEvent
+        ///    3. PlayerReadyEvent
+        /// </summary>
+        /// <param name="e"></param>
+        /// <returns></returns>
         public bool isSubmachineEvent(IEvent e)
         {
-            // In game initializing state, receive only 3 events are:
-            //    1. PlayerJoinEvent
-            //    2. PlayerRejectEvent
-            //    3. PlayerReadyEvent
-            if (e.GetType().Equals(typeof(PlayerJoinEvent))) {
+            if (e.GetType().Equals(typeof(PlayerJoinEvent)))
+            {
                 return true;
             }
             else if (e.GetType().Equals(typeof(PlayerRejectEvent)))

@@ -19,5 +19,11 @@ namespace Intelli.Event.Game
         {
             return this.detail;
         }
+
+
+        internal static GameCreatedEvent CreateFail()
+        {
+            return new GameCreatedEvent(null);
+        }
     }
 }

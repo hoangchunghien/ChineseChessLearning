@@ -47,12 +47,18 @@ namespace Intelli.Core.Game.Board
                 if (accepted)
                 {
                     LOG.Info("Old: \n" + this.boardMachine.getBoard().ToString());
+
+                    // Set current Position is null after moved
                     this.boardMachine.getBoard().getPieces()[cPos.getRow(), cPos.getCol()] = null;
+
+                    // Move piece selected to new position
                     this.boardMachine.getBoard().getPieces()[nPos.getRow(), nPos.getCol()] = p;
                     LOG.Info("New: \n" + this.boardMachine.getBoard().ToString());
+
+                    // Also process "movedEvent" (don't reject) to change to state "moved"
                     this.boardMachine.consumeEvent(new BoardMovedEvent());
                 }
-                else
+                else // Different casual, consume event "RejectEvent" to comeback to ready event
                 {
                     this.boardMachine.consumeEvent(new BoardRejectEvent());
                     LOG.Info("Rejected move from: " + cPos.ToString() + " to: " + nPos.ToString());

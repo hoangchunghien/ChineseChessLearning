@@ -12,6 +12,11 @@ namespace Intelli.Core.Game.Player.Events
 
         private int id;
 
+        public PlayerReadyEvent(int id)
+        {
+            this.id = id;
+        }
+
         public int getId()
         {
             return this.id;

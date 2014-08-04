@@ -109,7 +109,7 @@ namespace IntelliUI.Domain
         public void showMask()
         {
             this.imgMask.Source = ImageFactory.getImage('-');
-            this.Visibility = System.Windows.Visibility.Visible;
+            this.Visibility = Visibility.Visible;
         }
 
         public Boolean isVisibleForTouch()

@@ -22,7 +22,7 @@ namespace Testing
         [Test]
         public void RequestPlayerJoinEventUnitTest()
         {
-            gameService.createGame(new Intelli.Event.Game.CreateGameEvent());
+            gameService.createGame(new Intelli.Event.Game.GameCreateEvent(true));
             GameStateMachine machine = ((GameCoreEventHandler)gameService).getGameMachine();
             gameService.requestPlayerJoinEvent(new IntelliCore.Event.Game.RequestPlayerJoinEvent(0));
             Assert.True(machine.getPlayers()[0].getCurrentState().GetType().Equals(typeof(PlayerJoinedState)));

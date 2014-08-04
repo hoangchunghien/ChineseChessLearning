@@ -6,8 +6,22 @@ using System.Threading.Tasks;
 
 namespace Intelli.Event.Game
 {
-    public class CreateGameEvent
+    public class GameCreateEvent
     {
+        private bool isCreated;
+        public GameCreateEvent(bool isCreated)
+        {
+            this.isCreated = isCreated;
+        }
 
+        public void setIsCreate(bool isCreated)
+        {
+            this.isCreated = isCreated;
+        }
+
+        public bool getIsCreated()
+        {
+            return this.isCreated;
+        }
     }
 }

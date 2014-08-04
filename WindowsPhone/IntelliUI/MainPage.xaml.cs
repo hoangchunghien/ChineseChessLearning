@@ -29,119 +29,14 @@ namespace IntelliUI
     public partial class MainPage : PhoneApplicationPage, INotifiable
     {
         
-        
-        // 1. GameCoreService <-- Config
-        private Intelli.Core.Services.GameCoreService gameService = GameConfig.getGameService();
-        
-        // 2. Two players <-- Config
-        //    Config.getFirstPlayer()
-        //    Config.getSecondPlayer()
-
-        // 3. Set gameService for two players
-        //    player1.setGameService(*) ...
-
-
-        IntelliUI.Domain.Board board;
-        private TouchItem[,] touchItems;
         public static string DB_PATH = Path.Combine(ApplicationData.Current.LocalFolder.Path, "CClearning.sqlite");
 
         // Constructor
         public MainPage()
         {
             InitializeComponent();
-            //this.newGame();
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
-        }
-
-        private void newGame()
-        {
-            GameCreatedEvent createdEvent = gameService.createGame(new Intelli.Event.Game.CreateGameEvent());
-            Channel channel = gameService.getBroadcastChannel();
-            NotificationCenter.getInstance().subscribe(this, channel);
-            GameDetail gameDetail = createdEvent.getDetail();
-           
-            // Player 0 join
-            gameService.requestPlayerJoinEvent(new IntelliCore.Event.Game.RequestPlayerJoinEvent(0));
-            gameService.requestPlayerReadyEvent(new IntelliCore.Event.Game.RequestPlayerReadyEvent(0));
-
-            // Player 1 join
-            gameService.requestPlayerJoinEvent(new IntelliCore.Event.Game.RequestPlayerJoinEvent(1));
-            gameService.requestPlayerReadyEvent(new IntelliCore.Event.Game.RequestPlayerReadyEvent(1));
-
-            this.board = new Board();
-            this.board.setBArr(gameDetail.getBoarDetail().getPieces());
-            this.renderBoard(this.board.getBArr());
-        }
-
-        private void renderBoard(char[,] bArr)
-        {
-            //this.ContentBoard.Children.Clear();
-            touchItems = new TouchItem[10, 9];
-            
-            for (int i = 0; i < 10; i++)
-            {
-                for (int j = 0; j < 9; j++)
-                {
-                    TouchItem item = new TouchItem(bArr[i, j]);
-                    item.R = i;
-                    item.C = j;
-                    item.Width = item.Height = 48;
-                    item.VerticalAlignment = 0;
-                    item.HorizontalAlignment = 0;
-                    item.Margin = new Thickness(5 + j * 53.1, 0 + i * 54, 0, 0);
-                    item.Visibility = System.Windows.Visibility.Visible;
-                    this.ContentBoard.Children.Add(item);
-                    item.MouseLeftButtonDown += item_MouseLeftButtonDown;
-
-                    touchItems[i, j] = item;
-                }
-            }
-        }
-
-        private void RemoveMasks()
-        {
-            foreach (TouchItem item in this.touchItems)
-            {
-                if (item.getP().Equals(' '))
-                {
-                    item.setVisibleForTouch(false);
-                }
-                else
-                    item.clearMask();
-            }
-        }
-
-        void item_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
-        {
-            TouchItem item = (TouchItem)sender;
-
-            if (!item.isVisibleForTouch())
-            {
-                return;
-            }
-
-            PositionDetail pDetail = new PositionDetail(item.R, item.C);
-            ValidMovesEvent validMovesEvent =  gameService.requestValidMoves(new RequestValidMovesEvent(pDetail, 1));
-
-            if (validMovesEvent.isAccepted())
-            {
-                this.RemoveMasks();
-                item.setVisibleForTouch(true);
-
-                List<PositionDetail> pDetails = validMovesEvent.getValidMoves();
-
-                foreach (PositionDetail dt in pDetails)
-                {
-                    touchItems[dt.getRow(), dt.getCol()].setVisibleForTouch(true);
-                }
-
-            }
-            else
-            {
-                MessageBox.Show("Not your turn");
-            }
-
         }
 
         private void btnLearningCourses_Click(object sender, RoutedEventArgs e)
@@ -151,7 +46,7 @@ namespace IntelliUI
 
         private void btnPractice_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new Uri("/View/BoardPractice.xaml", UriKind.Relative));
         }
 
         private void btnChessProblems_Click(object sender, RoutedEventArgs e)

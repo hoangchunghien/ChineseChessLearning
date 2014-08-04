@@ -53,11 +53,9 @@
         </Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel Grid.Row="0" Margin="12,0,0,18">
-            <TextBlock Name="tblTitle" 
-                       Text="Book Name Here" 
-                       Style="{StaticResource PanoramaItemHeaderTextStyle }"
-                      />
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Name="txbCollection" Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock  Name="txbPagename" Text="page name" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->

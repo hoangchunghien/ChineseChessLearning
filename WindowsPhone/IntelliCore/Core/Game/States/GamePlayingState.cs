@@ -39,12 +39,17 @@ namespace Intelli.Core.Game.States
             return this.transitionableStates;
         }
 
+        /// <summary>
+        ///  In playing state, only allow these events:
+        ///    1. BoardMoveEvent
+        ///     2. PlayerUndoEvent
+        ///     3. PlayerResignEvent
+        /// </summary>
+        /// <param name="e"></param>
+        /// <returns></returns>
         public bool isSubmachineEvent(IEvent e)
         {
-            // In playing state, only allow these events:
-            //     1. BoardMoveEvent
-            //     2. PlayerUndoEvent
-            //     3. PlayerResignEvent
+            
 
             if (e.GetType().Equals(typeof(BoardMoveEvent)))
             {

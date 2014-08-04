@@ -35,10 +35,14 @@ namespace Intelli.Core.Game.States
             return this.transitionableStates;
         }
 
+        /// <summary>
+        /// In played state, allow only these event
+        ///     1. PlayerUndoEvent
+        /// </summary>
+        /// <param name="e"></param>
+        /// <returns></returns>
         public bool isSubmachineEvent(IEvent e)
         {
-            // In played state, allow only these event
-            //     1. PlayerUndoEvent
 
             return false;
         }

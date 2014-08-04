@@ -12,7 +12,7 @@ namespace Intelli.Core.Services
     {
         Event.Game.ValidMovesEvent requestValidMoves(Event.Game.RequestValidMovesEvent e);
 
-        Event.Game.GameCreatedEvent createGame(Event.Game.CreateGameEvent e);
+        Event.Game.GameCreatedEvent createGame(Event.Game.GameCreateEvent e);
 
         PlayerJoinedEvent requestPlayerJoinEvent(RequestPlayerJoinEvent e);
 

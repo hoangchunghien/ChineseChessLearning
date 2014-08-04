@@ -112,8 +112,14 @@
     <Compile Include="View\BoardLearning.xaml.cs">
       <DependentUpon>BoardLearning.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\BoardPractice.xaml.cs">
+      <DependentUpon>BoardPractice.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Lessons.xaml.cs">
       <DependentUpon>Lessons.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Page1.xaml.cs">
+      <DependentUpon>Page1.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Tactics.xaml.cs">
       <DependentUpon>Tactics.xaml</DependentUpon>
@@ -136,9 +142,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="View\BoardPractice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Lessons.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Page1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Tactics.xaml">
       <Generator>MSBuild:Compile</Generator>
