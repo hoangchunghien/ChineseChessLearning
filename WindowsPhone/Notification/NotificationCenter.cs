@@ -20,7 +20,7 @@ namespace Notification
 
         private Dictionary<Channel, List<INotifiable>> channelSubcribers;
 
-        public NotificationCenter()
+        private NotificationCenter()
         {
             initialize();
         }
@@ -48,6 +48,11 @@ namespace Notification
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="channel"></param>
         public void subscribe(INotifiable client, Channel channel)
         {
             if (this.channelSubcribers.ContainsKey(channel) 

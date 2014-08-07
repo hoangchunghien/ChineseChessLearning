@@ -1,5 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Configuration>
+  <Players playerFirstId="0" playerOnlineId="1" autoViewer="true">
+    <player id="0" name="Human" color="RED" type="human"/>
+    <Player id="1" name="Computer" color="BLACK" type="computer"/>
+  </Players>
+  
   <Engines>
     <Engine name="Intella" />
     <Engine name="XQWLight" />
@@ -7,8 +12,15 @@
   </Engines>
 
   <Levels>
-    <Level name="Easy" engine = "Random" selected="false" />
-    <Level name="Easy" engine = "XQWLight" selected="true" />
+    <Level name="Easy" depth="1" engine = "Random" selected="false" />
+    <Level name="Easy" depth ="1" engine = "XQWLight" selected="true" />
   </Levels>
+
+  <Sounds playSound="true">
+    <Sound name="background" file="" play="true"/>
+    <Sound name="move" file="" play="true"/>
+    <Sound name="chess" file="" play="true"/>
+    <Sound name="gameover" file="" play="true"/>
+  </Sounds>
 
 </Configuration>

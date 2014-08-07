@@ -88,11 +88,14 @@
     <Compile Include="Engine\EnginesCfg.cs" />
     <Compile Include="Engine\LevelCfg.cs" />
     <Compile Include="Engine\LevelsCfg.cs" />
+    <Compile Include="Player\PlayerCfg.cs" />
+    <Compile Include="Player\PlayersCfg.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sound\SoundCfg.cs" />
+    <Compile Include="Sound\SoundsCfg.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Core\" />
-    <Folder Include="Player\" />
     <Folder Include="UI\" />
   </ItemGroup>
   <ItemGroup>

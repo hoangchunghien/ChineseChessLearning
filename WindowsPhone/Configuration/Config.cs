@@ -1,4 +1,6 @@
 ﻿using Configuration.Engine;
+using Configuration.Player;
+using Configuration.Sound;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -14,15 +16,15 @@ namespace Configuration
     {
         public static readonly string CONFIG_PATH = "config.xml";
 
-        private static Config instance;
+        private static Config instanceSingleton = null;
 
         public static Config getInstance()
         {
-            if (instance == null)
+            if (instanceSingleton == null)
             {
-                instance = Deserialize(CONFIG_PATH);
+                instanceSingleton = Deserialize(CONFIG_PATH);
             }
-            return instance;
+            return instanceSingleton;
         }
 
         [XmlElement(ElementName = "Engines")]
@@ -30,6 +32,12 @@ namespace Configuration
 
         [XmlElement(ElementName = "Levels")]
         public LevelsCfg Levels { get; set; }
+
+        [XmlElement(ElementName="Players")]
+        public PlayersCfg Players { get; set; }
+
+        [XmlElement(ElementName = "Sounds")]
+        public SoundsCfg Sounds { get; set; }
 
         public static void Serialize(string file, Config c)
         {
