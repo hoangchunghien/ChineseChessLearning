@@ -1,6 +1,8 @@
 ﻿using Configuration.Engine;
 using Configuration.Player;
 using Configuration.Sound;
+using Intelli.Core.Services;
+using Intelli.Core.Services.EventHandlers;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -38,6 +40,11 @@ namespace Configuration
 
         [XmlElement(ElementName = "Sounds")]
         public SoundsCfg Sounds { get; set; }
+
+        public static GameCoreService getGameService()
+        {
+            return new GameCoreEventHandler();
+        }
 
         public static void Serialize(string file, Config c)
         {

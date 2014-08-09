@@ -24,3 +24,7 @@ C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Player\Bin\Debug\
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Player\obj\Debug\Player.csprojResolveAssemblyReference.cache
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Player\obj\Debug\Player.dll
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Player\obj\Debug\Player.pdb
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Player\Bin\Debug\IntelliCore.dll
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Player\Bin\Debug\NLog.dll
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Player\Bin\Debug\IntelliCore.pdb
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\Player\Bin\Debug\NLog.xml

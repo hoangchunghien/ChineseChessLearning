@@ -83,7 +83,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Config\Core\GameConfig.cs" />
     <Compile Include="Core\Game\Board\Board.cs" />
     <Compile Include="Core\Game\Board\BoardStateMachine.cs" />
     <Compile Include="Core\Game\Board\Events\BoardInitializedEvent.cs" />
@@ -202,18 +201,11 @@
     <Compile Include="Event\Game\RequestValidMovesEvent.cs" />
     <Compile Include="Event\Game\ValidMovesEvent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Timer\Domain\Timer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Config\Gui\" />
-    <Folder Include="Config\Sound\" />
-    <Folder Include="Config\Timer\" />
     <Folder Include="Core\Course\" />
     <Folder Include="Core\Engine\" />
     <Folder Include="Core\Game\Notifies\" />
-    <Folder Include="Persistence\Services\" />
-    <Folder Include="Sound\Services\" />
-    <Folder Include="Timer\Services\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="NLog">

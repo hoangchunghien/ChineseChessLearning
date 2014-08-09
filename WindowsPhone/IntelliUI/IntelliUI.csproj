@@ -229,6 +229,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Configuration\Configuration.csproj">
+      <Project>{E9973336-FA8B-473B-8471-28B99169DB1B}</Project>
+      <Name>Configuration</Name>
+    </ProjectReference>
     <ProjectReference Include="..\IntelliCore\IntelliCore.csproj">
       <Project>{CB78C2E1-7A17-4686-AA3C-8A83706BD1DB}</Project>
       <Name>IntelliCore</Name>

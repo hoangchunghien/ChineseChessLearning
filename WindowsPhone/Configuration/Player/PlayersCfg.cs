@@ -23,7 +23,5 @@ namespace Configuration.Player
         [XmlElement(ElementName = "Player")]
         public List<PlayerCfg> players { get; set; }
 
-
-
     }
 }

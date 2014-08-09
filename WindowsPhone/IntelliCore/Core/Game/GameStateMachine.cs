@@ -131,7 +131,7 @@ namespace Intelli.Core.Game
                         PlayerPlayEvent playerPlayEvent = new PlayerPlayEvent();
                         this.players[i].consumeEvent(playerPlayEvent);
                     }
-                    int first = GameConfig.getPlayFirst();
+                    int first = 1; // Hard code
                     this.players[1 - first].consumeEvent(new PlayerWaitEvent());
 
                     GameInitializedEvent _initializedEvent = new GameInitializedEvent();

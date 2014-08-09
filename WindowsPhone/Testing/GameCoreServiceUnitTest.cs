@@ -17,7 +17,7 @@ namespace Testing
     [TestFixture]
     public class GameCoreServiceUnitTest
     {
-        GameCoreService gameService = new GameCoreEventHandler();
+        GameCoreService gameService = Configuration.Config.getGameService();
 
         [Test]
         public void RequestPlayerJoinEventUnitTest()
@@ -35,7 +35,7 @@ namespace Testing
             Assert.True(machine.getPlayers()[1].getCurrentState().GetType().Equals(typeof(PlayerJoinedState)));
             gameService.requestPlayerReadyEvent(new IntelliCore.Event.Game.RequestPlayerReadyEvent(1));
 
-            int f = GameConfig.getPlayFirst();
+            int f = Configuration.Config.getInstance().Players.playerFirstId;
             Assert.True(machine.getPlayers()[f].getCurrentState().GetType().Equals(typeof(PlayerPlayingState)));
             Assert.True(machine.getPlayers()[1 - f].getCurrentState().GetType().Equals(typeof(PlayerWaitingState)));
 

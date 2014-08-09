@@ -8,7 +8,7 @@ namespace Notification
 {
     public class NotificationCenter
     {
-        private static NotificationCenter instance;
+        private static NotificationCenter instance = null;
         public static NotificationCenter getInstance()
         {
             if (instance == null)
@@ -30,6 +30,10 @@ namespace Notification
             this.channelSubcribers = new Dictionary<Channel, List<INotifiable>>();
         }
 
+        /// <summary>
+        /// Add this channel and new list<Inotifiable> to channelsubcribers if this channel doens't exist
+        /// </summary>
+        /// <param name="channel"></param>
         public void registerChannel(Channel channel)
         {
             if (!this.channelSubcribers.ContainsKey(channel))
@@ -38,6 +42,11 @@ namespace Notification
             }
         }
 
+        /// <summary>
+        /// Broadcast all of clients in this channel
+        /// </summary>
+        /// <param name="channel"></param>
+        /// <param name="notification"></param>
         public void broadcastNotification(Channel channel, Object notification)
         {
             if (this.channelSubcribers.ContainsKey(channel))
@@ -49,7 +58,7 @@ namespace Notification
         }
 
         /// <summary>
-        /// 
+        /// Add Inotifiable (client) to this channel if client doesn't exist client
         /// </summary>
         /// <param name="client"></param>
         /// <param name="channel"></param>

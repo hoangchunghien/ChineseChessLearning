@@ -87,3 +87,5 @@ C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\obj\ARM
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Bin\ARM\Debug\Assets\CClearning.sqlite
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\obj\ARM\Debug\View\Page1.g.cs
 C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\obj\ARM\Debug\View\BoardPractice.g.cs
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Bin\ARM\Debug\Configuration.dll
+C:\Users\BT\Documents\GitHub\ChineseChessLearning\WindowsPhone\IntelliUI\Bin\ARM\Debug\Configuration.pdb

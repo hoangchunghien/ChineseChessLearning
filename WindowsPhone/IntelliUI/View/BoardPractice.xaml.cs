@@ -11,20 +11,21 @@ using Microsoft.Phone.Shell;
 using Intelli.Event.Game;
 using Notification;
 using IntelliUI.Domain;
-using Intelli.Config;
+using Configuration;
+using Intelli.Core.Services;
 
 namespace IntelliUI.View
 {
     public partial class BoardPractice : PhoneApplicationPage, INotifiable
     {
-        public BoardPractice()
-        {
-            InitializeComponent();
-            this.newGame();
-        }
-
         // 1. GameCoreService <-- Config
-        private Intelli.Core.Services.GameCoreService gameService = GameConfig.getGameService();
+        private static Configuration.Config cfg = Configuration.Config.getInstance();
+        private static GameCoreService gameService = Configuration.Config.getGameService();
+
+        Channel channel = gameService.getBroadcastChannel();
+        NotificationCenter nb = NotificationCenter.getInstance();
+        
+        
 
         // 2. Two players <-- Config
         //    Config.getFirstPlayer()
@@ -36,13 +37,16 @@ namespace IntelliUI.View
 
         IntelliUI.Domain.Board board;
         private TouchItem[,] touchItems;
+        public BoardPractice()
+        {
+            InitializeComponent();
+            this.newGame();
+        }
 
         private void newGame()
         {
             GameCreatedEvent createdEvent = gameService.createGame(new Intelli.Event.Game.GameCreateEvent(true));
-            Channel channel = gameService.getBroadcastChannel();
-            NotificationCenter.getInstance().subscribe(this, channel);
-            
+            nb.subscribe(this, this.channel);
             GameDetail gameDetail = createdEvent.getDetail();
 
             // Player 0 join

@@ -73,6 +73,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Configuration\Configuration.csproj">
+      <Project>{e9973336-fa8b-473b-8471-28b99169db1b}</Project>
+      <Name>Configuration</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Engine\Engine.csproj">
       <Project>{6733406b-5fdd-42fa-abe8-038247f52b4a}</Project>
       <Name>Engine</Name>
